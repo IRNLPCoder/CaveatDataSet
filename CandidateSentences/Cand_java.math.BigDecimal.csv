@@ -1,0 +1,79 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+1378156,2,1,9,java.math.BigDecimal,"If you are developing a low-latency trading program and you genuinely want to compete in latency terms, then BigDecimal is not for you, it is as simple as that."
+1768123,2,1,1,java.math.BigDecimal,"You're not dealing with money, so double should be enough, but if it isn't, then perhaps BigDecimal is more suitable."
+1973763,2,0,0,java.math.BigDecimal,People don't just use BigDecimal / BigInteger for money.
+2173530,2,0,4,java.math.BigDecimal,BigDecimal does not provide these methods because BigDecimal models a rational number.
+2406243,2,0,3,java.math.BigDecimal,"Also, when using BigDecimal, don't use the double constructor, because that would attempt to precisely represent an imprecise value."
+2916961,2,1,2,java.math.BigDecimal,"http://java.sun.com/javaee/5/docs/api/javax/persistence/Column.html#precision%28%29 So it would appear hibernate is right to ignore it, as your column type isn't a BigDecimal etc, and just make a column that holds a 32-bit integer."
+2920124,2,0,2,java.math.BigDecimal,You can't cast a BigDecimal directly to String.
+2950569,2,0,1,java.math.BigDecimal,"For decimal, I believe you risk losing precision if you don't use a BigDecimal on the Java side, as some decimal fractions can't be stored as a binary fraction."
+9874839,2,0,2,java.math.BigDecimal,BigDecimal does not seem to respect Locale settings.
+5222388,2,0,14,java.math.BigDecimal,"(Even BigDecimal won't be able to represent something like ""a third"" exactly, of course.)"
+5257191,2,0,6,java.math.BigDecimal,"But note Jon's point below: BigDecimal can't represent ""one third"" accurately, any more than double can represent ""one tenth"" accurately."
+5272419,2,0,1,java.math.BigDecimal,BigDecimal is not final.
+5721797,2,1,2,java.math.BigDecimal,"I would recommend that before you jump to the conclusion that BigDecimal doesn't suit your needs, that you actually profile your scenario."
+6476999,2,0,4,java.math.BigDecimal,"Don't extend BigDecimal, use a wrapper class around it (like you have) or another framework like Commons Math."
+6649295,2,1,0,java.math.BigDecimal,"If you make them the same, it works you don't need BigDecimal if you only want to display things."
+7124475,2,1,4,java.math.BigDecimal,However I wouldn't use BigDecimal unless performance/simplicity is not an issue.
+7525300,2,1,9,java.math.BigDecimal,Don't directly compare BigDecimal to String as this won't work.
+9526088,2,0,1,java.math.BigDecimal,"This is so interesting, because the obvious, double instead of BigDecimal, is not the case."
+22686168,2,0,0,java.math.BigDecimal,It is pretty strange that Oracle hasn't supported BigDecimal NaN or infinite in JAVA 7.
+10384695,2,0,0,java.math.BigDecimal,BigDecimal isn't intended to be used with such limitations.
+10951168,2,0,1,java.math.BigDecimal,"Alternatively, I think it is worth mentioning that the behavior of equals and compareTo methods in the class BigDecimal are not consistent with each other."
+11871799,2,1,7,java.math.BigDecimal,"Using BigDecimal does not solve this problem, by itself."
+11871799,2,1,7,java.math.BigDecimal,"First, BigDecimal will not calculate the monthly interest rate correctly, because you must divide 2.37% by 12, and 2.37/12 (or .0237/12) is not exactly representable in decimal."
+11899018,2,1,6,java.math.BigDecimal,"If you want 1.2 to be stored in the BigDecimal, use new BigDecimal(""1.2""), and you won't have a BigDecimal initialized with 1.1999999999999999555910790149937383830547332763671875."
+12010516,2,1,7,java.math.BigDecimal,BigDecimal can't fix rounding errors that have already occurred before you give it the input.
+12044359,2,0,0,java.math.BigDecimal,Perhaps using BigDecimal isn't really helping you.
+12068131,2,0,0,java.math.BigDecimal,"The ""setScale"" method doesn't change the BigDecimal itself since BigDecimals are immutable, it returns a new BigDecimal with the scale set."
+12218597,2,1,3,java.math.BigDecimal,"But, if you did that you may find you don't need BigDecimal."
+12560893,2,0,4,java.math.BigDecimal,"The problem is that you have to represent a fixed point value, but you don't know java.math.BigDecimal and try to fake it."
+13900217,2,0,3,java.math.BigDecimal,"Your BigDecimal doesn't contain the number 10.0001, because you initialized it with a double, and the double didn't quite contain the number you thought it did."
+13992648,2,0,0,java.math.BigDecimal,The BigDecimal can not be a double.
+14023584,2,0,1,java.math.BigDecimal,java.math.BigDecimal does not have a default constructor and that's where it fails.
+14030023,2,0,1,java.math.BigDecimal,"Don't use the BigDecimal(double) constructor: it is limited by the double primitive type, which cannot represent 2^1000."
+15462093,2,0,8,java.math.BigDecimal,setScale() doesn't mutate the BigDecimal it's called on.
+15865079,2,0,1,java.math.BigDecimal,"BigDecimal isn't only best choice, BigDecimal is designed for such case."
+16371162,2,0,5,java.math.BigDecimal,Converting to BigDecimal cannot fix that anymore.
+16849216,2,0,0,java.math.BigDecimal,"The variable n can only ever be a BigDecimal, but you can't call specific BigDecimal methods on it."
+24983745,2,0,1,java.math.BigDecimal,"The fundamental reason that float and double can be fast, while BigDecimal cannot, is that they are defined as lopping off as much precision as is necessary in any calculation so as to yield a result which will fit in the same size of container as the original operands."
+17542489,2,0,1,java.math.BigDecimal,BigDecimal cannot support numbers that cannot be written as a fixed length decimal.
+17883620,2,1,5,java.math.BigDecimal,Second output is false showing that BigDecimal does not find them to be of equal value and precision.
+18107310,2,1,2,java.math.BigDecimal,"Seeing as you have a repeating decimal, a BigDecimal can't hold it, even with unlimited precision."
+18228169,2,0,11,java.math.BigDecimal,"EDIT If BigDecimal is not an option, and if the number of decimals is smallish (say 3 or 4 because these are prices for example), you can use longs instead with the last 4 digits being the decimals."
+19569410,2,0,0,java.math.BigDecimal,"BigDecimal is not final, so you could definitely extend it yourself, and change its behaviour (especially by overriding the divideXXX() methods)."
+19695375,2,1,3,java.math.BigDecimal,BigDecimal does NOT know that 1 / 3 is 0.33<repeating>.
+19978366,2,0,11,java.math.BigDecimal,"If you absolutely can't use BigDecimal and would prefer not to use doubles, use longs to do fixed-point arithmetic (so each long value would represent the number of cents, for example)."
+20404026,2,0,0,java.math.BigDecimal,In your code example you don't assign BigDecimal to something so you cant convert it back.
+20701081,2,0,0,java.math.BigDecimal,Using BigDecimal doesn't bring back the precision lost in double If you need more than 15 digits of accuracy you need to use String and BigDecimal.
+20797691,2,0,1,java.math.BigDecimal,"If BigDecimal is not an option, this is a good way to compare double values: http://stackoverflow.com/a/8081911/3115739"
+20814639,2,1,5,java.math.BigDecimal,BigDecimal doesn't have the concept of infinity.
+20826616,2,0,1,java.math.BigDecimal,"You cannot cast a BigDecimal to a String using an explicit cast, simply because a BigDecimal is not a String."
+21150976,2,0,0,java.math.BigDecimal,"Unfortunately, BigDecimal doesn't have square roots built in."
+21375272,2,0,5,java.math.BigDecimal,You can't even convert it to a BigDecimal[][] (as an Object[] isn't a BigDecimal[]) but at the moment you're trying to store an array reference in a BigDecimal[]...
+21444746,2,0,0,java.math.BigDecimal,"Also, as I noted above, BigDecimal isn't capable of distinguishing between, say, a ""5000"" with one significant digit and a ""5000"" with two, for example."
+21444746,2,0,0,java.math.BigDecimal,"(with a trailing decimal point) should have exactly four significant digits, but BigDecimal isn't capable of handling that."
+21578963,2,0,1,java.math.BigDecimal,BigDecimal is not a primitive type.
+22189149,2,0,2,java.math.BigDecimal,"Unfortunately, StrictMath doesn't support BigDecimal, so you will have to use another library, or your own implementation of sin/cos/tan."
+23024287,2,0,4,java.math.BigDecimal,RoundingMode.UNNECESSARY mandates that a BigDecimal does not need to be rounded to fit the scale specified by it.
+24649992,2,1,1,java.math.BigDecimal,"Also even if you could get Integer, Float and Double to work you would find that because BigDecimal does not map directly to a Java primitive it does not work with the standard primitive arithmetic operators and because of this has it's own add method on the object."
+25200453,2,0,3,java.math.BigDecimal,Converting an imprecise value to BigDecimal cannot make it precise.
+25315327,2,0,0,java.math.BigDecimal,I don't normally recommend BigDecimal but it seems to be what you want.
+25778204,2,0,0,java.math.BigDecimal,"Unlike Integer and Double, BigDecimal does not participate in autoboxing, which is the translation from int primitives to Integer object instances (and likewise across other types)."
+25778346,2,0,0,java.math.BigDecimal,"Java doesn't have operator overloading, thus any standard operator applies to primitive type only BigDecimal isn't included in the autoboxing mechanism, because it doesn't have primitive type representation Read up BigDecimal API, it implements mathematical operators as methods (which mostly requires another BigDecimal instance as operand."
+26024766,2,1,5,java.math.BigDecimal,If you give it a BigDecimal for example it will print it even though C doesn't have a BigDecimal.
+26230705,2,1,1,java.math.BigDecimal,"We don't support BigDecimal for now, and before we do we will have to see how that plays in relation to all other language bindings since we want realm files to be compatible across all the supported platforms."
+26365081,2,0,5,java.math.BigDecimal,"BigDecimal doesn't have a constructor that takes a BigDecimal as an argument, so that explains why Eclipse would not be happy with that."
+26409345,2,1,1,java.math.BigDecimal,"There is not (if you don't like BigDecimal); however, you can make a class to represent it using BigInteger and BigDecimal."
+26652997,2,0,3,java.math.BigDecimal,"A cast on an object doesn't change the type of the object, only the type of the expression you use to refer to it, so it can't convert a BigDecimal to a Double, since a BigDecimal isn't a Double."
+26818692,2,0,1,java.math.BigDecimal,Note that you can't use BigDecimal to simply multiple or subtract double values as regular operations.
+27235713,2,1,6,java.math.BigDecimal,I'm surprised that BigDecimal doesn't already support this.
+28413760,2,0,0,java.math.BigDecimal,but then my Sorting-Sequence is not correct because the values will be sorted as a String instead of a BigDecimal...  Don't store a String in the TableModel.
+28491553,2,0,1,java.math.BigDecimal,Note however that a BigDecimal may not be able to be represented precisely using a double.
+28799861,2,1,0,java.math.BigDecimal,BigDecimal is not a supported return type.
+28970475,2,1,6,java.math.BigDecimal,"The downside of this approach is that your brand new CustomBigDecimal wouldn't be a BigDecimal, so they wouldn't be interchangeable."
+29823396,2,0,5,java.math.BigDecimal,"Adding a simple example of why BigDecimal doesn't solve all problems, but it does hid them."
+29920186,2,1,4,java.math.BigDecimal,"Also we talk about doubles, BigDecimal is not a problem here."
+30423458,2,0,2,java.math.BigDecimal,You can't cast a BigDecimal to an Integer.
+31352187,2,0,2,java.math.BigDecimal,The conversion of a decimal number in String form to a BigDecimal does not involve any calculation that has risk of loss of accuracy.
+31974902,2,0,5,java.math.BigDecimal,"BigDecimal doesn't overflow, period, it is only limited by the amount of memory in your computer."

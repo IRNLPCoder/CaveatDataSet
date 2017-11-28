@@ -1,0 +1,192 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+336709,2,0,1,javax.xml.bind.JAXB,"In case of web services JAXB doesn't come alone, but as data binding part of ws client framework."
+12107794,2,0,2,javax.xml.bind.JAXB,Demo MOXy doesn't just interpret JAXB annotations it is a JAXB implementation so the standard JAXB runtime APIs are used.
+670401,2,0,3,javax.xml.bind.JAXB,"Interfaces, of course, don't need any JAXB annotations."
+736501,2,0,1,javax.xml.bind.JAXB,"I haven't looked at JAXB in a while, when I did it was fairly bad compared to XMLBeans, but that was years ago (and I prefer to use things that are in the JDK as opposed to 3rd party ones, but I still use XMLBeans to this day)."
+2172942,2,1,146,javax.xml.bind.JAXB,"The annotation is just a convenience, however - JAXB does not require it."
+1367405,2,0,23,javax.xml.bind.JAXB,"As @Chris pointed out, sometimes JAXB cannot work with POJOs, because the schema cannot be mapped exactly on to Java."
+964102,2,0,0,javax.xml.bind.JAXB,JAXB will not be able to parse anything wrapped in a CDATA declaration: the XML parser will always report the string.
+1034405,2,0,3,javax.xml.bind.JAXB,"To get around this, JAXB doesn't even try to instantiate the property class (e.g."
+1043807,2,1,46,javax.xml.bind.JAXB,"OK, this took quite some digging, but the answer is not that surprising and not even that complicated: JAXB can't find jaxb.index, because by default, newInstance(String) uses the current thread's class loader (as returned by Thread.getContextClassLoader())."
+1315793,2,1,2,javax.xml.bind.JAXB,"I prefer the javax.oxm interfaces, because I don't care for JAXB, but that's a personal opinion."
+1454367,2,1,1,javax.xml.bind.JAXB,"If you have just a List of type Query, JAXB will not be able to determine what types of queries you want to put into the list."
+3234392,2,0,0,javax.xml.bind.JAXB,JAXB does not support marshaling/marshaling to/from CDATA xml types.
+1581506,2,0,9,javax.xml.bind.JAXB,"If you have many namespaces, then JAXB isn't really the tool for you."
+1625604,2,0,0,javax.xml.bind.JAXB,Any elements in the input XML which JAXB does not recognise will simply be ignored.
+1640701,2,1,4,javax.xml.bind.JAXB,"So you may know that good XML input conforms to the schema at runtime, but JAXB does not."
+17402537,2,0,1,javax.xml.bind.JAXB,JAXB doesn't require XML schema to work.
+13646571,2,0,1,javax.xml.bind.JAXB,"If you don't use JAXB annotated objects, but simple POJO's, you can get the correct behaviour by simply enabling the POJO mapping feature, together with the Jackson JSON library."
+2269501,2,0,4,javax.xml.bind.JAXB,"JAXB cannot marshal any old object, since it doesn't know how."
+2312238,2,0,3,javax.xml.bind.JAXB,"Secondly, you may not have schema validation on; then JAXB will not complain if your documents are broken."
+2326480,2,1,15,javax.xml.bind.JAXB,"The problem here is that JavaSE 6 doesn't have the JAXB RI (it has a JAXB implemenation but not JAXB RI) so if you want to rely on RI specific feature, you should bundle JAXB RI in your application (and that would protect you from JAXB changes in Java SE)."
+8847862,2,0,5,javax.xml.bind.JAXB,"I wasn't sure if JAXB handles cyclic graphs, so I didn't attempt recursion without knowing if that had to be dealt with."
+4784739,2,0,5,javax.xml.bind.JAXB,It seems that GSon don't support JAXB.
+2388824,2,1,4,javax.xml.bind.JAXB,"You can't distribute JAXB itself without source, though."
+2519463,2,0,10,javax.xml.bind.JAXB,"JAXB cannot marshal Date objects directly, because they don't have enough information to be unambiguous."
+2667745,2,1,11,javax.xml.bind.JAXB,"This does require the ObjectFactory to be there, otherwise, JAXB doesn't know which classes to process."
+2716835,2,0,0,javax.xml.bind.JAXB,"JAXB will not generate a class for anything that already has a type, and neither do you need one."
+10420917,2,0,1,javax.xml.bind.JAXB,The secret is.... don't use JAXB.
+2875473,2,1,2,javax.xml.bind.JAXB,"JAXB doesn't use xmlns = ""namespace"" in your case because xmlns = ""namespace"" also specifies namespace for the child elements, then your first and last elements are in default namespace (because @XmlRootElement doesn't specify namespace for the child elements)."
+2919356,2,1,14,javax.xml.bind.JAXB,"On the other hand, if   it is set to true, then JAXB will not   write its own XML preamble, so this   property may contain custom XML   preamble."
+2992252,2,0,0,javax.xml.bind.JAXB,"No, I'm afraid that's not an option, JAXB isn't that flexible."
+3214334,2,1,1,javax.xml.bind.JAXB,"The exception clearly says that JAXB can't marshal your UniqueIdentifierType, because the object being marshalled is actually an instance of the class enhanced by Javassist (com.rp.central.model.UniqueIdentifierType_$$_javassist_21), and that class contains a field (added by Javassist) which can't be marshalled."
+3265003,2,0,1,javax.xml.bind.JAXB,"(GiftingService.java:55) - same as above (3 similar here) java.sql.Connection is an interface, and JAXB can't handle interfaces., and X does not have a no-arg default constructor."
+3287279,2,0,0,javax.xml.bind.JAXB,"It seems that you try to serialize a Connection to XML which leads to   java.sql.Connection is an interface,   and JAXB can't handle interfaces."
+3939612,2,1,4,javax.xml.bind.JAXB,First things first: JAXB does NOT do JSON.
+3978993,2,1,6,javax.xml.bind.JAXB,"JAXB does not directly supports that, but you can marshal your object to ContentHandler, XMLStreamWriter or XMLEventWriter and take care of the namespace and attribute ordering in there."
+4146788,2,0,0,javax.xml.bind.JAXB,"If it's not annotated with @XmlRootElement, then JAXB does not have sufficient information to marshal it."
+4155388,2,0,3,javax.xml.bind.JAXB,JAXB doesn't want to concern itself with full-on Dependency Injection above and beyond the attribute-based setting it already does.
+4230557,2,1,26,javax.xml.bind.JAXB,"- JAXB Looking at the above categories, JAXB may not always be the best fit for a particular use case (but it is always a good fit), but it is the only library that can be used for all the use cases."
+4387428,2,0,2,javax.xml.bind.JAXB,"So, if your bean doesn't have a no-args constructor, JAXB can't create it."
+4438368,2,0,2,javax.xml.bind.JAXB,Standard JAXB does not cover this structure.
+5119805,2,0,0,javax.xml.bind.JAXB,You are seeing this error because JAXB doesn't know what name to give the root element when you return an object of type Outcome.
+5339801,2,0,6,javax.xml.bind.JAXB,"You haven't said which JAXB implementation you use, but the JAXB RI has an extension to the javaType binding customization which allows you to specify a subclass of XmlAdapter directly, rather than parseMethod/printMethod pairs."
+6546316,2,1,0,javax.xml.bind.JAXB,"However, at the time of this   writing JAXB does not appear to   properly handle XML adapters that are   used on enums (regardless of what you   do, it still uses the xs:enumeration   approach in the generated schema)."
+6385493,2,0,0,javax.xml.bind.JAXB,"I use the xml type as part of another xml type ánd as root element, so JAXB doesn't add the XmlRootElement annotation (See this article)."
+5937439,2,0,1,javax.xml.bind.JAXB,"When you marshal to a DOM Document, JAXB is not in charge of the actual serialization and escaping, it just builds the DOM tree in memory."
+5965263,2,0,1,javax.xml.bind.JAXB,"It imposes very few restrictions on what you can serialise to/from XML, and may be appropriate if you don't need JAXB specifically."
+5990319,2,1,3,javax.xml.bind.JAXB,"If your code doesn't know or care about the type of the bound classes, then JAXB isn't the tool for the job, you should just be unmarshalling into a generic DOM of some kind."
+6188960,2,0,2,javax.xml.bind.JAXB,"I can't imagine any JAXB implementation behaving differently, as it would be harder to implement and less intuitive to the users."
+6188960,2,0,2,javax.xml.bind.JAXB,Again I can't imagine any JAXB implementation behaving differently as it would be harder to implement and less intuitive.
+6609880,2,1,8,javax.xml.bind.JAXB,"Use an array instead of an ArrayList as JAXB cannot handle collections as top-level objects, only as properties of beans."
+6609880,2,1,8,javax.xml.bind.JAXB,See bug: JAXB-223: JAXB doesn't support collection classes as top level objects
+6670259,2,0,0,javax.xml.bind.JAXB,"IIRC, JAXB doesn't generate interfaces from XSD."
+6699214,2,0,0,javax.xml.bind.JAXB,"Even if you don't use JAXB, I'd still recommend using this kind of pattern to isolate the transformation from XML to Java and keep the part of your app that knows about XML in one place, away from your business logic."
+6750283,2,0,1,javax.xml.bind.JAXB,JAXB isn't very viable if the file size is larger than what will fit into memory.
+6768664,2,0,9,javax.xml.bind.JAXB,"You don't say which JAXB implementation you're using, or its configuration, but the exception is fairly clear."
+6883417,2,1,4,javax.xml.bind.JAXB,The problem was that ValueType in my adapter was List and this List here was the type that JAXB could not handle.
+7893410,2,0,1,javax.xml.bind.JAXB,"Because StackTraceElement has no zero-argument constructor, JAXB cannot de-serialize instances of this class ."
+7276392,2,1,9,javax.xml.bind.JAXB,"write code that generates the XSD, not vice versa) This is not yet supported in JAX-WS or JAXB, as far as I know (but a nice enhancement request) Sources: JAX-WS and JAXB don't have support for code generation for restrictions from XSD (e.g."
+7407845,2,1,3,javax.xml.bind.JAXB,If you could split your data to independent WorkSet elements you can write them out one at a time with JAXB's fragment mode (when JAXB does not write the headers).
+7534619,2,0,3,javax.xml.bind.JAXB,"Unfortunately, JAXB is not able to directly serialize a Map or HashMap instance directly."
+7534619,2,0,3,javax.xml.bind.JAXB,"This problem shows up a lot in Google, and the sad answer is that JAXB doesn't know how to serialize a Map."
+7710721,2,1,39,javax.xml.bind.JAXB,JAXB is not directly comparable to DOM and SAX.
+21141174,2,0,0,javax.xml.bind.JAXB,JAXB don't support XPath.
+7796879,2,1,4,javax.xml.bind.JAXB,JAXB does not require any annotations.
+7863290,2,1,3,javax.xml.bind.JAXB,I've had really good luck with JAXB which doesn't event require a third party jar.
+8434530,2,1,3,javax.xml.bind.JAXB,"2 -  Line breaks normalized to #xA on input, before parsing  JAXB doesn't retain line breaks so this doesn't really apply."
+8434530,2,1,3,javax.xml.bind.JAXB,6 - The XML declaration and document type declaration (DTD) are removed  JAXB does not write out a DTD declaration.
+8434530,2,1,3,javax.xml.bind.JAXB,7 - Empty elements are converted to start-end tag pairs  JAXB does not write out empty elements as start-end tag pairs.
+8490162,2,0,1,javax.xml.bind.JAXB,I'm guessing that the problem is you've already consumed the <person> from the event stream so JAXB doesn't know what it is doing; it needs that element to be there so it can build the object.
+8532380,2,1,3,javax.xml.bind.JAXB,"XML containing attr1=""value""attr2 aren't well-formed, thus JAXB cannot parse it and will throw an exception indicating a fatal, non-recoverable error."
+19029003,2,0,1,javax.xml.bind.JAXB,"Unfortunately, one cannot tell JAXB to ""just use PLATFORM_DEFAULT_FACTORY_CLASS"", you have to put it on a System property (-Djavax.xml.bind.JAXBContext=com.sun.xml.internal.bind.v2.ContextFactory for 1.6 and -Djavax.xml.bind.context.factory=.. for 1.7), the javax.xml.bind.ContextFinder.find(String, String, ClassLoader, Map) implementations differ for 1.6 and 1.7"
+8739684,2,1,6,javax.xml.bind.JAXB,"The shortcoming you're experiencing isn't a JAXB defect in my opinion, rather a Java oddity: primitive types can't be null, which is good and bad at the same time."
+8802524,2,0,0,javax.xml.bind.JAXB,"This is a hard problem that even JAXB doesn't completely solve, but there are incomplete solutions that you might find useful."
+9190943,2,0,1,javax.xml.bind.JAXB,A bean structure used with JAXB is not meant to be changed at runtime.
+9193910,2,0,0,javax.xml.bind.JAXB,JAXB is not made for these kind of constant changes.
+9291452,2,0,0,javax.xml.bind.JAXB,"The evolving nature of the XML schema means that using JAXB isn't scalable, as it would mean statically generating a new batch of classes every time the schema changed."
+9226708,2,1,4,javax.xml.bind.JAXB,An XmlAdapter is a JAXB mechanism that converts an object that JAXB can't map into one that it can.
+9302562,2,1,2,javax.xml.bind.JAXB,"As far as I know JAXB does not parse xsi attribute to dereference XSD, load it and use for validation."
+9454981,2,0,3,javax.xml.bind.JAXB,JAXB is not very hard to use.
+10093015,2,1,0,javax.xml.bind.JAXB,I think the answer is that JAXB isn't at all intended to support this and that it's foolish to try to force it.
+9924957,2,1,3,javax.xml.bind.JAXB,JAXB 2 which is what most people are referring to when they say JAXB does not require an XML schema.
+10071066,2,0,2,javax.xml.bind.JAXB,"You can use @XmlAccessorType(XmlAccessType.FIELD) annotation to your class, so JAXB will not care about your getters/setters signatures."
+10183218,2,1,1,javax.xml.bind.JAXB,"I would be surprised to hear that JAXB wouldn't work with I am proposing above; if you find it doesn't, please update your post with the particular version number of JAXB you're using, and a snippet of the generated class that doesn't pass your validation."
+10267867,2,0,0,javax.xml.bind.JAXB,"That cannot work, because JAXB has to create new instances (objects) of your classes when unmarshalling the xml."
+10530374,2,0,0,javax.xml.bind.JAXB,"I haven't used JAXB much since I prefer to stick with XML-oriented languages like XSLT and XQuery, but when I did try JAXB I found it pretty fast."
+11059534,2,0,1,javax.xml.bind.JAXB,You'll probably need to use XmlSeeAlso on your service definitions as JAXB can't bind to interfaces unless it has an implementation hint.
+11218017,2,0,1,javax.xml.bind.JAXB,JAXB does not require the elements be in order when unmarshalling.
+11224328,2,0,0,javax.xml.bind.JAXB,According to a JAXB tutorial the absence of a value can be expressed in three different ways:  the element is omitted  with an empty String using @XmlElement(required = true) annotation  with the sepcial xsi:nil attribute using @XmlElement(nillable = true) annotation  Answering strictly your question: JAXB does not support translating empty objects to null.
+11255170,2,1,0,javax.xml.bind.JAXB,JAXB doesn't do interfaces.
+11352124,2,0,1,javax.xml.bind.JAXB,"In this   case though, I don't see using JAXB XML adapters as a viable solution."
+11454821,2,1,4,javax.xml.bind.JAXB,"It needs this no-arg constructor ONLY when transforming from XML to Object (unmarshalling), but the issue is when you are creating the context, JAXB does not know what you want to do (marshal or unmarshal)!"
+11477017,2,0,0,javax.xml.bind.JAXB,"(Not to mention that without the XML Schema of your XML, JAXB won't even talk to you.)"
+11672121,2,0,1,javax.xml.bind.JAXB,"Since you are mapping classes for which you do not have the source (and therefore can't add JAXB annotations), I would recommend using the @XmlElements mapping."
+11675548,2,1,0,javax.xml.bind.JAXB,Updating a domain object mapped by JAXB does not cause communication with the server.
+15822086,2,0,2,javax.xml.bind.JAXB,"You'll have to put your schema's elements into a namespace, since it seems JAXB can't resolve 'reviews' (which is in the global namespace ''."
+11799612,2,0,1,javax.xml.bind.JAXB,So we will need to use @XmlTransient at the type level to indicate that we don't want our JAXB implementation to process the super type (see: http://blog.bdoughan.com/2011/06/ignoring-inheritance-with-xmltransient.html).
+11874495,2,0,0,javax.xml.bind.JAXB,"JAXB is not good at dealing with Map, hence the need for an adapter."
+11831710,2,0,0,javax.xml.bind.JAXB,"So, JAXB does not produce classes it marshalls data from instances of classes or populates instances by unmarshalling xml."
+11988904,2,1,1,javax.xml.bind.JAXB,You can see full mavenized project at http://code.google.com/p/jinahya/source/browse/trunk/com.googlecode.jinahya/stackoverflow/ JAXB doesn't need the setter if you control to use fields not properties.
+11985814,2,0,1,javax.xml.bind.JAXB,It seems that JAXB don't work properly with SAX parser unless parser is set to be namespace aware and correct namespaces are set.
+12074038,2,0,1,javax.xml.bind.JAXB,"JAXB does not require any annotations (see:  http://blog.bdoughan.com/2012/07/jaxb-no-annotations-required.html), but since the XML elements in your document do not match the default naming rules some annotations are required."
+12001926,2,1,3,javax.xml.bind.JAXB,"You get this warning because your classes implement Serializable, but JAXB doesn't require your classes to be Serializable."
+13385224,2,0,0,javax.xml.bind.JAXB,"For example, if the namespace of the  is not EXACTLY correct per the schema, JAXB will not know what to do with it."
+13507519,2,0,0,javax.xml.bind.JAXB,1) Microsoft doesn't use JAXB.
+13787059,2,0,4,javax.xml.bind.JAXB,"JAXB can't handle HashMaps as parameters/return values, maybe because they're generic."
+14441681,2,0,1,javax.xml.bind.JAXB,If JAXB wasn't so darn useful I wouldn't bother with this.
+14460551,2,0,0,javax.xml.bind.JAXB,I'd use Jersey in combination with JAXB to bind to your domain classes a good tutorial can be found here: http://www.vogella.com/articles/REST/article.html be aware when using hibernate/jpa as JAXB can't handle the lazy loaded models (you need to write adapter classes then)
+14580767,2,0,2,javax.xml.bind.JAXB,"I tried it and the XML consisted of one empty tag only,   meaning there's something about the POJO model that JAXB doesn't like."
+14580767,2,0,2,javax.xml.bind.JAXB,JAXB does not require that POJOs implement Serializable.
+15552881,2,0,2,javax.xml.bind.JAXB,"Creating Annotated JAXB Classes from Example XML Documents Often, XML documents that you need to bind with JAXB do not come with an XSD for the content, but there are some great tools for automating this work, if you have an XSD."
+15971050,2,1,6,javax.xml.bind.JAXB,Resolved It seems that JAXB doesn't work properly with SAX parser unless parser is set to be namespace aware.
+16446412,2,1,3,javax.xml.bind.JAXB,JAXB can't do validation on its own.
+16496175,2,0,1,javax.xml.bind.JAXB,"Here my advice : 1- By default, JAXB shall not serialize null fields."
+16566046,2,0,2,javax.xml.bind.JAXB,When JAXB doesn't know the type of the property it will convert it to a DOM Element.
+16587829,2,1,4,javax.xml.bind.JAXB,"Now, assuming you are using JAXB as default mbw for XML: JAXB cannot bind interfaces out of the box."
+16822827,2,1,0,javax.xml.bind.JAXB,"JAXB may not exactly match what is generated by C#, but it is a perfectly acceptable representation of the XML schema."
+16799693,2,0,1,javax.xml.bind.JAXB,"JAXB doesn't seem to accept a StreamSource directly, at least in the Oracle 1.7 implementation."
+16851364,2,0,0,javax.xml.bind.JAXB,"JAXB is not only used to serialize to xml, it can deserialize from the xml as well."
+16985298,2,0,1,javax.xml.bind.JAXB,Tag You could leverage the fact that JAXB will not marshal null attribute values and add some logic to your properties and then use JAXB to map to the field.
+17068512,2,1,1,javax.xml.bind.JAXB,"It seems that JAXB is not the best thing to use If you want to stay with XML structure like it was before (imagine that XML is REST API you not suppose to change, but still you wish to change classes around it) but change the way the classes connect to each other."
+17216797,2,0,3,javax.xml.bind.JAXB,An XML parser (including JAXB) will not preserve a newline in an XML attribute.
+17326895,2,0,1,javax.xml.bind.JAXB,"Don't base64 encoded it, don't use JAXB, don't embed it in XML."
+17339554,2,0,0,javax.xml.bind.JAXB,http://blog.bdoughan.com/2011/06/using-jaxbs-xmlaccessortype-to.html  JAXB does not currently support annotating constructors.
+17454708,2,1,1,javax.xml.bind.JAXB,"There currently isn't a standard JAXB (JSR-222) annotation to accomplish what can be done with EclipseLink JAXB (MOXy)'s @XmlPath(""."")"
+17981533,2,0,2,javax.xml.bind.JAXB,CustomerResource Since we have a stateful XmlAdapter we can't just leverage JAXB through the default binding.
+18508884,2,0,0,javax.xml.bind.JAXB,JAXB doesn't generate setters for Collections.
+18497351,2,1,4,javax.xml.bind.JAXB,"When we explored this route, we concluded that JAXB was not not going to help provide an interface to query options."
+18666107,2,0,0,javax.xml.bind.JAXB,"Domain Model JAXB doesn't require any annotations (see: http://blog.bdoughan.com/2012/07/jaxb-no-annotations-required.html), but including a root element makes things a bit easier."
+18833849,2,1,2,javax.xml.bind.JAXB,"As of JAXB 2.2, there isn't standard JAXB (JSR-222) metadata that can add to your model to cause the fixed attribute to appear in the generated XML Schema."
+18922622,2,1,1,javax.xml.bind.JAXB,JAXB does not provide an alternative to how you have described XmlBeans.compileXsd().
+18918252,2,1,0,javax.xml.bind.JAXB,When JAXB doesn't know what type of object to build it will treat it as a DOM.
+19134284,2,1,10,javax.xml.bind.JAXB,JAXB does not have a standard external mapping document.
+19408128,2,0,2,javax.xml.bind.JAXB,"Java Model (Configuration) JAXB does not required any annotations (see:  http://blog.bdoughan.com/2012/07/jaxb-no-annotations-required.html), but mapping a root element with @XmlRootElement does make things easier."
+23260902,2,0,0,javax.xml.bind.JAXB,"As your instance variables are also public along with getters and setters, So JAXB is not able to figure out proper bindings.That's why that exception is coming."
+19836908,2,0,1,javax.xml.bind.JAXB,JAXB won't marshal null values so you could change the primitive to its corresponding object form (I.e. int to Integer).
+20177280,2,1,1,javax.xml.bind.JAXB,It may be the case that JAXB cannot handle a collection of these object.
+20220905,2,1,5,javax.xml.bind.JAXB,JAXB will not generate those restrictions into the Java model.
+23789795,2,0,0,javax.xml.bind.JAXB,Note that JAXB cannot make instances of abstract classes; hence you will need to bind the xml tag to concrete sub-classes of DataObject.
+20639175,2,1,3,javax.xml.bind.JAXB,"Since &file; resolved to an XML fragment, JAXB wasn't able to match it against the text property we had mapped."
+20760346,2,1,0,javax.xml.bind.JAXB,Problems with Your Model There are a few problems with your model: Getter with no Setter By default JAXB Will not consider a get method without a corresponding set method as a property.
+20885857,2,1,5,javax.xml.bind.JAXB,"JAXB and Schema Generation JAXB can generated a Java model from any XML Schema, on the flip side JAXB does not preserve all metadata about the XML schema."
+20885857,2,1,5,javax.xml.bind.JAXB,Therefore JAXB can't generate every XML schema.
+20883478,2,0,0,javax.xml.bind.JAXB,"JAXB doesn't validate content down to that level, so having an extra generated class provides no value."
+20949185,2,0,1,javax.xml.bind.JAXB,JAXB isn't an implementation but a standard API.
+21396585,2,1,3,javax.xml.bind.JAXB,"The marshalling behviour is undefined in the specification, therefore the behaviour of the reference (and MOXy) implementations of JAXB don't conflict with the specification."
+21563812,2,1,1,javax.xml.bind.JAXB,"Debugging Tip When you can't get JAXB to unmarshal an XML document, try populating the object model and marshalling it to see the XML document that JAXB is expecting."
+21962201,2,0,1,javax.xml.bind.JAXB,"and just in case, if you're gonna use JSON only you don't need the JAXB annotations."
+22181998,2,1,2,javax.xml.bind.JAXB,"The full error message which you've got is:  Caused by: com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 2 counts of IllegalAnnotationExceptions PaymentType is an interface, and JAXB can't handle interfaces."
+22432050,2,1,1,javax.xml.bind.JAXB,When generating   getters/setters I only chose getters and that JAXB did not like at   all.
+22432050,2,1,1,javax.xml.bind.JAXB,By default JAXB won't treat properties with only a getter as mapped.
+24164437,2,1,0,javax.xml.bind.JAXB,Look for any additional calls to JAXB that shouldn't be there.
+22591621,2,0,0,javax.xml.bind.JAXB,JAXB doesn't require any annotations but you can explore the ones in the javax.xml.bind.annotation package to see what's available to customize the XML representation.
+22741127,2,0,0,javax.xml.bind.JAXB,So JAXB does not know which element is supposed to match it.
+23344659,2,0,0,javax.xml.bind.JAXB,"I think you are missed @XmlElement on User class Edit1 I got it Resource.java not have @XmlSeeAlso for the User class so the JAXB can not find it in context, you can use the below UserResource and replace all Resource with this new class, it is working now."
+23343423,2,0,1,javax.xml.bind.JAXB,"javax.xml.namespace.QName isn't a JAXB class, it is just a class that is part of Java SE that JAXB leverages."
+23507403,2,0,0,javax.xml.bind.JAXB,JAXB is not the most easy-to-use way out there but it's definitely worth learning.
+25007168,2,0,0,javax.xml.bind.JAXB,"If your JAXB doesn't do what you think it ought to do, I have confused it."
+24082942,2,0,0,javax.xml.bind.JAXB,Since by default JAXB doesn't marshal properties with a null value you will still be able to produce the XML you are looking for.
+24244889,2,1,2,javax.xml.bind.JAXB,Because the level of the XML document is wrong JAXB isn't able to match any of it to your domain model.
+24251661,2,1,6,javax.xml.bind.JAXB,"In Java SE 8, JAXB has not been updated yet to support the java.time types."
+24385830,2,1,1,javax.xml.bind.JAXB,JAXB is not part of the Android VM (remember Dalvik is not a standard Java SE or Java ME VM).
+24459669,2,1,1,javax.xml.bind.JAXB,"First, JAXB will not inject the default value into the message, if the element is not present in the original message sent."
+24553468,2,1,0,javax.xml.bind.JAXB,Apparently JAXB cannot handle lists.
+25150924,2,1,0,javax.xml.bind.JAXB,Handling a Problematic Class When you have a class that JAXB can't convert by default you can use an XmlAdapter to convert it to one that can for the purpose of marshalling & unmarshalling.
+25176136,2,0,0,javax.xml.bind.JAXB,Maybe yo'll need to employ other languages than Java (or environments which don't have adequate JAXB).
+25176136,2,0,0,javax.xml.bind.JAXB,Or you may also have schemas where application of JAXB is not adequate.
+25263281,2,0,1,javax.xml.bind.JAXB,It looks like JAXB isn't expecting the <response> root element when unmarshalling to a Customer object.
+25685725,2,1,0,javax.xml.bind.JAXB,http://blog.bdoughan.com/2010/08/jaxb-namespaces.html  If You Can't Change The Model If you can't change the JAXB model to remove the namespace qualification then you can leverage a SAX XMLFilter to apply a namespace to the XML as it's being read.
+26019173,2,0,0,javax.xml.bind.JAXB,Your first XPath refers to the xs:element and I think JAXB does not know how to bind a class to it.
+26346585,2,1,3,javax.xml.bind.JAXB,"Please don't take JAXB as the only answer, check alternatives as well."
+26515995,2,1,0,javax.xml.bind.JAXB,"Since Java classes and XML Schema are not a perfect match, and JAXB does not put any JAXB specific metadata in the generated schema some information is lost."
+26572605,2,1,1,javax.xml.bind.JAXB,It seems like JAXB does not run on Android OOTB.
+26572080,2,0,3,javax.xml.bind.JAXB,"If you don't already use JAXB, you might want to put this method into a utility class."
+26584677,2,1,2,javax.xml.bind.JAXB,You have to specify the schema if you want to turn on the validation: Validating against a Schema with JAXB JAXB is not strict on mappings.
+26678738,2,1,1,javax.xml.bind.JAXB,"This will work in most cases, if you are using JAXB annotations (which could return XML or JSON), because of the pulled in artifact jackson-module-jaxb-annotations, but that artifact doesn't support all JAXB annotations, so you might need to pull in the resteasy-jaxb-provider, if need be."
+26690945,2,0,1,javax.xml.bind.JAXB,"In addition to keeping my domain built around interfaces (something JAXB really doesn't like), which was important for different implementations like you mentioned, it also allowed me to define different JAXB value object when I did need to have different ""views"" defined."
+26715088,2,1,3,javax.xml.bind.JAXB,"Handling Interfaces  // JAXB does not deal with interfaces by default >:(  Now that JAXB is no longer aware of the Precondition query class, you could make it an interface if you wanted to."
+27128122,2,1,1,javax.xml.bind.JAXB,JAXB doesn't consider any empty element to be a valid representation of null.
+27780305,2,0,1,javax.xml.bind.JAXB,JAXB is not bad as it will ignore elements it does not know (apart from the root element).
+27783455,2,0,0,javax.xml.bind.JAXB,"Due the JAXB does not handle interfaces, only value classes and content interfaces, the adapter must use the concrete implementation."
+27845082,2,0,1,javax.xml.bind.JAXB,"Sadly I couldn't get JAXB to run with the children held by GeneralLocation, I get an UnmarshalException (could not create an instance of GeneralLocation) but I hope this helps anyway."
+27941126,2,1,1,javax.xml.bind.JAXB,"If JAXB does not have an association between the element and a class, then it will convert it to a DOM Element."
+28089691,2,0,0,javax.xml.bind.JAXB,JAXB doesn't require any annotations so you can start doing this right away.
+28159605,2,0,3,javax.xml.bind.JAXB,"No, current version of JAXB does not support XSD 1.1."
+28237376,2,0,0,javax.xml.bind.JAXB,If you want to put the xml file in a string you don't need JAXB.
+31649254,2,0,0,javax.xml.bind.JAXB,It's annoying that JPA doesn't support Converters on Ids or that it doesn't follow the JAXB convention of not requiring converters for classes with standard conversion methods (ie.
+28911043,2,1,1,javax.xml.bind.JAXB,By default JAXB shouldn't be complaining about the extra element.
+28962609,2,1,2,javax.xml.bind.JAXB,JAXB isn't compatible to FXCollections like the ObservableList in your wrapper.
+30282010,2,1,1,javax.xml.bind.JAXB,"Also, you may not face this problem with your GET request, but with POST request, when you try and send XML, JAXB will not be able to create your other classes either, because they don't have no-arg constructors."
+31750313,2,0,0,javax.xml.bind.JAXB,As per exception JAXB does not allow lists to be null when marschalling.
+32015804,2,0,0,javax.xml.bind.JAXB,"Also Axis2 doesn't use JAXB but instead offers the choice of ADB (default), Apache XmlBeans, or JiBX for data-binding."

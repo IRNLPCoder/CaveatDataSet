@@ -1,0 +1,303 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+139126,2,0,0,javax.swing.JFrame,If you don't want your JFrame to be maximize-able then then call .setResizable(false); on it.
+15035515,2,0,6,javax.swing.JFrame,JFrame doesn't derive from JComponent so you have to use another component in the JFrame to create the key binding.
+304729,2,1,2,javax.swing.JFrame,JFrame is not designed to be modal.
+431394,2,0,4,javax.swing.JFrame,Don't forget: The JFrame should be created and opened from the EDT.
+954709,2,0,0,javax.swing.JFrame,JFrame can not be made transparent as it is a heavyweight component.
+972923,2,0,2,javax.swing.JFrame,"Lets way how to create a Window: Ctrl+F don't show JFrame which is the correct answer, but it is just matter of tunning your sense :)  I hope this helps."
+1408092,2,0,2,javax.swing.JFrame,"Because the contents ( probably a JPanel ) are ""shadowing"" and consuming the events and they don't reach the JFrame."
+1481424,2,0,4,javax.swing.JFrame,"As far as I know, JFrame cannot do Modal mode."
+1822000,2,0,1,javax.swing.JFrame,"Other advice:  Don't extend JFrame (or JPanel or similar), unless it is really necessary."
+1830675,2,0,2,javax.swing.JFrame,1) A JFrame doesn't have a paintComponent() method so the code you posted won't do anything.
+1935729,2,1,1,javax.swing.JFrame,"(As Chad says, by default a JFrame isn't visible, so users won't see anything if you're using it in ""util"" mode)."
+1935738,2,0,0,javax.swing.JFrame,"In that case, remember the JFrame won't show up unless you call setVisible(true); So just make sure you never show the frame, and you can use whatever functions you want without it annoying the user."
+1937049,2,0,0,javax.swing.JFrame,"But the problem is that since your JFrame is not visible, there is no way to listen to mouse events!!!!"
+2021475,2,0,2,javax.swing.JFrame,"Also your JFrame does not have a size set, when I ran this under linux (Java 1.6), it worked but was tiny, you should add a setSize call."
+2157762,2,0,16,javax.swing.JFrame,"Also, calling validate on a top-level component (JWindow, JDialog, JFrame) will not necessarily resize that component."
+2178803,2,0,1,javax.swing.JFrame,"The error indicates, that JFrame can't be found but it is inside rt.jar."
+2353010,2,0,7,javax.swing.JFrame,"One is that JFrame does not have a close method, which has been addressed in the other answers."
+2372729,2,0,0,javax.swing.JFrame,"I'd start by changing the extends Applet to extends JFrame However, a JFrame doesn't need or use a public void init() method, so you'll want to move that code somewhere else."
+3577487,2,0,4,javax.swing.JFrame,"For me, the JFrame did not detect all exit events properly, but an inner JPanel did, so I passed in two components - one for testing descendants and one for testing the boundary."
+4523935,2,0,2,javax.swing.JFrame,"The FrameView has JFrame component, so you shouldn't recreate the JFrame."
+2823764,2,0,0,javax.swing.JFrame,"The TransferSupport object holds a reference to the component (in my case a JFrame), which isn't cleared either."
+3132005,2,1,6,javax.swing.JFrame,"JFrame shouldn't be popped as long as you don't want two standalone (top-level) applications running at once, that's why JFrames can NOT be modal."
+3377967,2,1,1,javax.swing.JFrame,"Don't extend JFrame if you're not changing it's behavior; JPanel is a good container for other components, and it can be displayed in a JFrame."
+3525627,2,1,29,javax.swing.JFrame,So here we're just doing a lot of things to the JFrame that don't return anything in particular.
+19854700,2,0,5,javax.swing.JFrame,this will launch a java.lang.ClassCastException because JFrame is NOT subclass of JButton.
+4606903,2,0,0,javax.swing.JFrame,"Additionally, A JFrame generally doesn't receive actions."
+4676586,2,0,2,javax.swing.JFrame,"You can't add a JFrame to anything, including a Container."
+4948110,2,0,1,javax.swing.JFrame,You will not be able to get the designer view of Netbeans if your form (JFrame) was not designed with Netbeans.
+14387933,2,0,0,javax.swing.JFrame,"Creating a JFrame is not all as hard as people think, all you need is a definition class and a   GUI Class."
+9541149,2,0,0,javax.swing.JFrame,"The F in the JFrame can not be lowercased, change it from Jframe to JFrame."
+5329316,2,0,0,javax.swing.JFrame,JFrame is a TopLevel Component and therefore usually you don't put a JFrame into another.
+5647816,2,1,5,javax.swing.JFrame,If you weren't already extending JFrame you could extend KeyAdapter.
+5671453,2,0,0,javax.swing.JFrame,"It just means that the JFrame does not contain the window frame (the title bar, and minimize/restore/maximize icons)."
+6001751,2,0,0,javax.swing.JFrame,"Your login form is behaving as a dialog and so shouldn't be a JFrame at all but rather a dialog window such as a JDialog, and what's more, should be one that is modal to the main application window (which is likely a JFrame)."
+6318956,2,0,1,javax.swing.JFrame,Buttons shouldn't extend JFrame if all you want to do is use it to create a JButton that you wish to add to another GUI.
+6740860,2,1,3,javax.swing.JFrame,I already know that I am supposed to override the paintComponent method  JFrame does not have a paintComponent(...) method.
+7008204,2,1,4,javax.swing.JFrame,"And if you don't want your JFrame to be clickable, you should use a modal JDialog , by extending JDialog instead of JWindow."
+7009323,2,1,2,javax.swing.JFrame,JFrame is not a modal or 'blocking' component.
+7337806,2,1,3,javax.swing.JFrame,"Also, with regards to your update, JFrame does not have a revalidate() function."
+7396965,2,0,1,javax.swing.JFrame,JFrame doesn't have a paintComponent() method so don't try to override it.
+7586377,2,1,4,javax.swing.JFrame,"JFrame is not a subclass of JComponent, but JList is."
+7778517,2,1,5,javax.swing.JFrame,"You shouldn't have a JFrame launching other JFrames, especially if you want the child windows to behave as a modal dialogs -- a dialog that halts the code in the launching window until it has been fully dealt with."
+7837311,2,0,0,javax.swing.JFrame,First Note that You can't resize the JFrame if one of the components is the same length as th JFrame.
+8078669,2,0,11,javax.swing.JFrame,"JFrame is not a JComponent, it doesn't have a paintComponent method you can override."
+8334086,2,1,21,javax.swing.JFrame,"You're trying to display the picture in a paintComponent override, but this method will never get called since your class extends JFrame (eventually) and JFrame doesn't have this method."
+8345916,2,0,3,javax.swing.JFrame,"It depends on the feature list that you will have in your second window, If feature list is quite expanded then its better to have it a separate class, also JFrame is not required even JDialog will do."
+8524302,2,1,12,javax.swing.JFrame,Caveats though: I don't recommend subclassing JFrame or JDialog unless absolutely necessary.
+8623347,2,1,5,javax.swing.JFrame,When you add the JPanel in the constructor your JFrame has not been displayed yet.
+8662360,2,1,6,javax.swing.JFrame,"Summary So (generally) for the:  JFrame, don't extend."
+8745220,2,1,3,javax.swing.JFrame,"Unfortunately, JFrame is not a JComponent; it has no UI delegate, and its decorations are supplied by the host operating system."
+8779718,2,1,3,javax.swing.JFrame,Don't have the JFrame (or better its contentPane) use FlowLayout since this won't give the JFrame the best size for its components.
+21398596,2,0,0,javax.swing.JFrame,Changing the code from applet to JFrame is not hard at all.
+9118830,2,0,3,javax.swing.JFrame,"1) don't extends javax.swing.JFrame more in Composition versus Inheritance, e.i."
+9259509,2,1,1,javax.swing.JFrame,"1) don't use two JFrames, use JDialog with parent / owner for JFrame 2) on some of event (after correct logon) you can remove WindowListener from JFrame (better would be JDialog)"
+9438426,2,0,4,javax.swing.JFrame,Don't have one JFrame create and display another JFrame.
+11425080,2,0,0,javax.swing.JFrame,"You don't need a JFrame, you actually need a Window."
+10861457,2,0,1,javax.swing.JFrame,pack again -- this guarantees only the necessary scrollbars appear (if you don't increase the JFrame sizes then both scrollbars will always appear -- there is also a need to remove the JScrollPane default border).
+9635977,2,0,1,javax.swing.JFrame,Some recommendations:  Frame2 shouldn't be a JFrame but rather a modal JDialog as it is dependent on Frame1 and should prevent user interaction with Frame1 until Frame2 has been dealt with.
+9708779,2,0,0,javax.swing.JFrame,You can't 'forbid' a JFrame from being moved.
+9796853,2,0,2,javax.swing.JFrame,"I'd suggest to use Swing Timer for repeatedly events to the Swing GUI, maybe this example can help you with another yours dreams  JFrame is not possible to be colored, but works for ContentPane g.e.JFrame.getContentPane.setColor(Color.red)"
+10107825,2,0,2,javax.swing.JFrame,"Notice that the class isn't public, so any attempt to import it leads to the compilation error ""The type javax.swing.JFrame is not visible."""
+10165681,2,1,2,javax.swing.JFrame,"As an aside, I don't recommend extending JFrame or JPanel without good reason such as the need to override methods."
+10370202,2,0,5,javax.swing.JFrame,Add and setLayout on JFrame don't do what they appear to.
+10421884,2,1,2,javax.swing.JFrame,if your JFrame is not the whole application and you want to stop the Swing thread but continue processing.
+10515434,2,0,1,javax.swing.JFrame,"1) you can't move one JFrame toFront() over another JFrame 2) don't create more than one JFrame, there are another issues with this Top-Level Container as toFront, toBack 3) you have look at JDialog or JWindow as another Window  with parent to the JFrame with setModal if required with ModalityTypes is required"
+10588595,2,1,3,javax.swing.JFrame,Don't extend JFrame or JDialog or JWindow
+10746564,2,1,3,javax.swing.JFrame,Don't extend JFrame if you are not extending its functionality.
+10881285,2,1,6,javax.swing.JFrame,"One more - your ""paintComponent"" method won't work on JFrame since JFrame does NOT extend JComponent."
+10984619,2,0,0,javax.swing.JFrame,A JFrame shouldn't have a socket in it.
+11268727,2,0,10,javax.swing.JFrame,"Don't extend a JFrame, but instead create a local JFrame variable and use it."
+11338271,2,0,0,javax.swing.JFrame,"Here is some code that doesn't ""import"" JFrame, it uses its fully qualified name to extend itself so that it has access to every method/variable inside the JFrame class (as long as the modifier is public or protected)."
+11367422,2,1,5,javax.swing.JFrame,"don't use JFrame for another window, because you can't to set parent v.s.owner, use JDialog instead then JFrame.getOwnedWindows() returns all instances of JDialog(s) where is used JDialog(myFrame owner) in all cases Window[] allWindows = Window.getWindows(); returns all instances from current JVM, returns all instances of (J)Frames, (J)Dialogs, (J)Windows or JOptionsPanes"
+11463065,2,0,4,javax.swing.JFrame,"Don't mix Swing (JFrame) with AWT (Canvas) components unless you have a compelling reason to do so, otherwise you're just asking for unusual hard to debug trouble."
+11552791,2,1,1,javax.swing.JFrame,"I tried before, repaint JFrame doesn't seems to works, but repaint JPanel works."
+11568376,2,0,3,javax.swing.JFrame,check also this topic: setSize() doesn't work for JFrame
+11856562,2,1,3,javax.swing.JFrame,Additional Ideas I wouldn't override JFrame in this manner.
+11869464,2,1,4,javax.swing.JFrame,"JFrame is not a component, therefor there's no paintComponent() function for it."
+11998912,2,1,3,javax.swing.JFrame,So JFrame does not have a method or property called txt_jtextfield Not knowing how you actually build this JFrame it becomes difficult to know what to suggest.
+11998912,2,1,3,javax.swing.JFrame,"Then it's up to the frame to provide access to the field (either by making it public, or, more preferably, by a getter) You really need to provide more information about where the text field exists and in what context you are trying to access it UPDATED You can't use a JFrame in this manner."
+12012066,2,0,2,javax.swing.JFrame,please note that JFrame is NOT a JComponent!
+12117933,2,0,5,javax.swing.JFrame,"JFrame does not have a paintComponent, so I used a JPanel instead."
+12118001,2,0,6,javax.swing.JFrame,"Now, firstly, I will tell you what you're doing wrong here -- JFrame is not a JComponent, and has no paintComponent for you to override."
+12246139,2,1,4,javax.swing.JFrame,change paintComponent(Graphic g) to paint(Graphic g) because JFrame is not a JComponent.
+12428925,2,1,7,javax.swing.JFrame,but extending a JFrame is not recommended
+12612129,2,1,2,javax.swing.JFrame,"Your gw object, despite being an instance of JFrame, is not the JFrame which you are displaying, because in your GenerateWorld constructor, a JFrame local to the constructor itself is created, designed, and shown."
+12875390,2,1,3,javax.swing.JFrame,In Swing the preferred approach is to override paintComponent although since JFrame is not actually a JComponent this method will not be called.
+13031237,2,1,6,javax.swing.JFrame,Don't extend JFrame class unnecessarily.
+13031237,2,1,6,javax.swing.JFrame,see here for good tutorials:  A Visual Guide to Layout Managers Using Layout Managers  Don't call JFrame#setSize(..) on JFrame rather just call JFrame#pack() before setting JFrame visible.
+13087680,2,0,1,javax.swing.JFrame,The good practice is to favour composition over inheritance: don't extend JFrame but delare a JFrame yourFrame; member in your class instead.
+13238468,2,0,5,javax.swing.JFrame,Do not override paint() in JFrame Do not call setSize() on JFrame rather use JFrame#pack() before setting it visible Get into the habit of using / as regardless of platform this is supported.
+13253016,2,1,2,javax.swing.JFrame,"Then, instead of dispose() do ciFrame.dispose(); Long term, please change your code such as you either extend JFrame and only use this instance of the JFrame or create one as a variable and don't extend JFrame."
+13291473,2,0,1,javax.swing.JFrame,"don't extends JFrame, create that as local variable then you can to call myFrame.setVisible(false) in this form (code posted here) current JVM never will be expired, untill PC restarted or turned off  don't create second or more JFrames, use JDialog instead"
+13417485,2,0,2,javax.swing.JFrame,Components added to JFrame are not registeder for listening by AWTEvent queue.
+13425510,2,0,1,javax.swing.JFrame,"First of all, You can use the method/function setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE) for JFrame doesn't close when you press the 'x' button."
+13446523,2,1,5,javax.swing.JFrame,"Don't extend from JFrame, you're not adding any functionality to, instead, move all you application components and logic to a separate JPanel Create an instance of a JSplitPane, add the ""main"" panel to it, add you secondary pane to it Create an instance of a JFrame, add the split pane to it..."
+13609838,2,1,4,javax.swing.JFrame,"Simple answer would be don't extend JFrame, and use  f.setDefaultOperation(EXIT_ON_CLOSE)."
+13787922,2,0,4,javax.swing.JFrame,"Further advice:  Don't extend JFrame, just keep a reference to one as long as needed."
+13899991,2,1,4,javax.swing.JFrame,"myFrame.add(infoPanel, BorderLayout.CENTER) not FlowLayout don't to extend JFrame create this Object as local variable"
+13937137,2,1,0,javax.swing.JFrame,"Assuming your extending a JFrame, JFrame doesn't extend JComponent."
+13944045,2,0,1,javax.swing.JFrame,"If doing what I have showed up here with the class inheriting JFrame does not work, I would assume it is because the JPanel is covering up anything drawn on the JFrame, so just do the same thing except with ""Background""."
+13955357,2,1,2,javax.swing.JFrame,"No, the size of the JFrame isn't related to why the PopupMenu isn't showing."
+14007370,2,1,10,javax.swing.JFrame,"However, if I can suggest a few improvements:  Don't extend JFrame Don't override paint(Graphics) of JFrame Instead create a class that extends JComponent or JPanel and set it as the content pane of the JFrame Instead of overrding paint(Graphics), rather override paintComponent(Graphics) Your okButton should not be static."
+14014638,2,1,3,javax.swing.JFrame,JFrame will not provide you with any Graphics until it is shown.
+14117874,2,0,2,javax.swing.JFrame,Overriding the Insets of JFrame would not be the soultion to your actual problem.
+14287968,2,0,2,javax.swing.JFrame,Don't create a JFrame or JTable in your ActionListener.
+14351869,2,0,3,javax.swing.JFrame,"Difference between paint, paintComponent and paintComponents in Swing  Use SwingUtilities.invokeLater() to load GUI Don't extend JFrame, it is not recommended at all, and useless in the code above private class panel extends JPanel implements class should start with capital letter like MyPanel"
+14492663,2,0,3,javax.swing.JFrame,"You've basically prevent the frame from painting any of its child components... You shouldn't be loading images within the paint method, it will slow down any future repaints You should never call repaint from any paintXxx method, it will cause an infinite loop of paints to be created, quickly devouring your CPU cycles JFrame does not have a paintComponent method."
+14547059,2,0,1,javax.swing.JFrame,you are passing in null as an argument to the constructor as the JFrame has not yet been initialized.
+14552548,2,0,2,javax.swing.JFrame,Some side notes:  Don't extend JFrame.
+14553563,2,1,4,javax.swing.JFrame,"Don't extend JFrame, rather use an instance directly."
+14673412,2,1,5,javax.swing.JFrame,"I won't  extend JFrame until and unless i don't want to do something creative, but you always CAN."
+14699036,2,0,2,javax.swing.JFrame,"To prevent this from happening, to stop the execution of the execute method until the user has handled the window and pressed the key JButton, again don't display a JFrame but rather a JDialog that is modal."
+14774094,2,0,4,javax.swing.JFrame,Call super.paintComponent(g) Don't extend JFrame but e.g.
+14791244,2,1,1,javax.swing.JFrame,Top level contains (such as JFrame) are not double buffered.
+14814517,2,1,5,javax.swing.JFrame,"this not possible with JFrame, JFrame haven't modality methods, have to use JDialog, with follows parametes  setModal(true) or setModalityTypes() don't forget to set setParent from JFrame to JDialog  or to use JOptionPane, block code execution, waiting for users action"
+14884056,2,1,3,javax.swing.JFrame,"But then you wouldn't want a JFrame because you don't want all the decoration, but a Window."
+15165333,2,0,1,javax.swing.JFrame,"don't extend JFrame, create this Object an local variable JFrame by default never react to the KeyEvents, set KeyListener to the JPanel don't to use KeyListener for Swing JComponents, otherwise have to JPanel#setFocusable use KeyBindings instead of KeyListener use Escape by @camickr  ."
+15183325,2,0,9,javax.swing.JFrame,Suggestions:  Don't draw directly in the JFrame Don't draw in the paint(...) method.
+15188264,2,0,3,javax.swing.JFrame,JFrame does not extend JComponent so does not override paintComponent.
+15188351,2,1,9,javax.swing.JFrame,JFrame does not have a paintComponent(Graphics g) method.
+15189425,2,0,4,javax.swing.JFrame,Don't use JFrame#setContentPane if you are adding components to various locations of the BorderLayout of the JFrame.
+15197756,2,1,1,javax.swing.JFrame,"I think that you looking for JFrame.setMenuBar instead of add(JMenuBar) there no required getContentPane() for Java 5 and newer version don't to extend JFrame, create this Object as local variable"
+15238080,2,0,2,javax.swing.JFrame,Don't extend from JFrame you're not adding any functionality to it that creating an instance couldn't achieve.
+15302949,2,0,3,javax.swing.JFrame,Don't create another JFrame to display your image.
+15329312,2,0,2,javax.swing.JFrame,JFrame is not a sub-class of JComponent and hence does not override the paintComponent method so the method is never called.
+15462014,2,0,1,javax.swing.JFrame,Nothing is displayed as the GridBagConstraints for the JFrame do not have any fill or weight properties set so do not expand DrawingPanel as required.
+15591642,2,0,6,javax.swing.JFrame,"Apart from not adding the KeyListener, JFrame is not focusable by default so does not send KeyEvents to the window - KeyEvents themselves require focus to work."
+27727065,2,0,0,javax.swing.JFrame,"Just to note for those just finding this, frame.setSize(height, width); Is backwards, it should have been: frame.setSize(width, height); Otherwise you will quickly notice when you run the program (unless you have a square screen) your JFrame won't cover part of the right side of your screen."
+15915474,2,1,2,javax.swing.JFrame,JFrame does not override paintComponent so Swing will not invoke it.
+16142564,2,1,3,javax.swing.JFrame,JFrame does not extends JComponent and does not have a paintComponent method.
+16142564,2,1,3,javax.swing.JFrame,JFrame cannot be added to anything.
+16126315,2,1,1,javax.swing.JFrame,Remember that setVisible for a JFrame is not a blocking call.
+16143590,2,0,2,javax.swing.JFrame,Additional remarks:  Don't extend JFrame if not needed Start your UI from the Event Dispatching Thread (EDT) by using SwingUtilities.invokeLater()
+16254102,2,1,5,javax.swing.JFrame,"Don't extend a JFrame, instead extend a JDialog In general, any application should only have a single JFrame."
+16317861,2,0,3,javax.swing.JFrame,"JFrame by default never to react to KeyEvent, put there JPanel  don't paint() directly to JFrame, use JPanel instead override paintComponent in JPanel, add super.paintComponent() as 1st code line (same for paint()) use KeyBindings (tons examples about these Keys here) instead of KeyListener for why reasons there are two JFrames, don't extend JFrame, create an local variable load Image to local variable too"
+16356400,2,1,5,javax.swing.JFrame,"Adding your ScrollPane to the center of the BorderLayout should set the maximum size to the screen size, because normally the JFrame can't become bigger."
+16431749,2,0,0,javax.swing.JFrame,"If you don't want your JFrame class to have a main method (and there's nothing wrong with this), you can instantiate the frame from another class (perhaps even from within that classes' main method if that what's called for)"
+16533919,2,1,2,javax.swing.JFrame,"What's happening in your code is that you're trying to call a method on a JFrame that doesn't exist on a JFrame, it only exists in an AddStream."
+16553597,2,1,3,javax.swing.JFrame,"If you need to open a separate window, don't use a JFrame."
+16675425,2,1,3,javax.swing.JFrame,You don't touch the JFrame at all.
+16790876,2,1,3,javax.swing.JFrame,"A few more things:  If you override paintComponent, make sure to invoke the super-method Don't extends JFrame if not needed (here it is clearly not needed) Follow Java naming conventions (class names should start with an UpperCase letter, variables and methods with a lowerCase letter) All Swing-related code must be called on the EDT."
+16930841,2,0,2,javax.swing.JFrame,Aside: JFrame is not focusable by default so KeyEvents which require focus will not be triggered without making the window focusable.
+16966379,2,0,2,javax.swing.JFrame,"Don't extend JFrame, create an instance and use instead Don't use absolute positioning (null layout), use a layout manager instead"
+17001073,2,0,2,javax.swing.JFrame,I already have my code to myFrame.toFront(); myFrame.repaint();   Don't use a JFrame as a popup window.
+17018975,2,0,2,javax.swing.JFrame,Warning: Extending JFrame is not a good Idea.
+17027872,2,1,2,javax.swing.JFrame,Use pack() over setSize() (because you don't take the JFrame insets into account Use setLocationRelativeTo(null) (after calling pack()) to center the frame.
+17158521,2,1,3,javax.swing.JFrame,"You override paint, but never call super.paint, meaning that component never prepares the Graphics context for a new paint cycle, meaning that what ever you painted before remains Your paintComponent method will never be called because JFrame does not support this method You should not be performing custom painting on a top level container (like JFrame), but should be using something like JPanel and override it's paintComponent method (making sure you call super.paintComponent first)."
+17287269,2,1,7,javax.swing.JFrame,You can't put one JFrame inside another.
+17498019,2,0,2,javax.swing.JFrame,"Since JFrame doesn't inherit from JComponent, it doesn't have setToolTipText method."
+17643530,2,1,6,javax.swing.JFrame,"That said, as Andrew Thompson said, you shouldn't extend JFrame, you should use an instance."
+17765290,2,0,3,javax.swing.JFrame,"Traditionally you're not creating a special type of frame, so you shouldn't extend JFrame."
+17771010,2,1,2,javax.swing.JFrame,"You didn't make a JFrame, and there wasn't a main method which I'm sure you know that every Java program needs to know where to start."
+17941816,2,0,1,javax.swing.JFrame,"JFrame isn't focusable JComponents, won't react to KeyEvent, then (never) KeyListener doesn't works, is required to use focusable JComponent (put there JPanel and to with setFocusable()), but not proper of possible ways Swing JComponents are designated to use KeyBindings instead of lowlevel KeyListener (with another side effect in compare with KeyBindings) use KeyListener only in the case that there are three or more Keys pressed e.i."
+17972447,2,0,2,javax.swing.JFrame,"JFrame by default never to react to KeyEvent listened by KeyListener JFrame isn't focusable JComponent, you would need to use focusable contianer e,g, JPanel, but again wrong decision, because is required to set pernament Focus - setFocusable(true) don't to use KeyListener for Swing JComponents, use hight possible abstraction, use KeyBindings (search for code examples here)"
+17984349,2,1,3,javax.swing.JFrame,"Don't use a JFrame, use a JDialog."
+18090271,2,0,3,javax.swing.JFrame,"JFrame is not a JComponent, it doesn't have a paintComponent method that can overriden."
+18184545,2,1,2,javax.swing.JFrame,"There are a number of issues  You need to add the JPanel groupBoxEncryption to the application JFrame Don't add the textarea to the frame - components can only have one parent component As already mentioned, you're using null layout which doesnt size components - forget about not a layout manager."
+18205703,2,1,1,javax.swing.JFrame,"I'm not sure what it is you how to gain, but JFrame doesn't have a paintComponent method, so it will never be called."
+18366209,2,0,2,javax.swing.JFrame,2) Don't extend JFrame instead of that use composition against inheritance if you are not overriding JFrame behaviour.
+18426613,2,1,3,javax.swing.JFrame,"Jframe can contain multiple panels, but panel can't contain JFrame."
+18604938,2,0,2,javax.swing.JFrame,"I'm guessing that you likely think that you're calling it on an object that is derived from JFrame, but the compiler is telling you that you're not, that the object isn't truly a JFrame."
+18817302,2,0,1,javax.swing.JFrame,"As MadProgrammer noted, you shouldn't override the JFrame#paint method."
+18937358,2,0,0,javax.swing.JFrame,"JFrame is not a JComponent subclass, it's a Component subclass, so it can't be converted to JComponent"
+18937367,2,0,0,javax.swing.JFrame,It's telling you that a JFrame is not a JComponent.
+18937548,2,1,2,javax.swing.JFrame,JFrame does not have a paintComponent method.
+19041188,2,0,0,javax.swing.JFrame,"Your problem is that in general, Swing (JFrame) is not thread safe."
+19180739,2,0,5,javax.swing.JFrame,"(re)validate(), JFrame.repaint() and JFrame.pack() as last code lines   maybe there is another issue, important is code ordering in the case that is there settings for JFrame.setResizable(false);   after your edit  use Cardlayout there you miss code lines (don't to extends JFrame, create this Object as Local variable) JFrame."
+19216588,2,0,1,javax.swing.JFrame,"This allows you to add the component to whatever container you like JFrame does not have a paintComponent method, so it will never be called."
+19283677,2,1,4,javax.swing.JFrame,"Let me make suggestions:  Don't use a JFrame for your JOptionPane, that's a bit wacky."
+19291700,2,0,3,javax.swing.JFrame,"The solution is to overwrite the paintComponent method, but the JFrame isn't a JComponent, so instead of JFrame, use JPanel and then add the JPanel to the JFrame."
+19309460,2,1,2,javax.swing.JFrame,"Thirdly, JFrame is not the best choice to start with, something like JPanel would be more suitable base component, allowing to place the component onto what ever top level container you wish or place it within or with other components, making the component infinitely more flexible and reusable... IMHO"
+19537183,2,0,0,javax.swing.JFrame,But the inner class B doesn't extend JFrame.
+19537183,2,0,0,javax.swing.JFrame,Since B doesn't extends JFrame and it is an inner class of A.
+19697881,2,0,1,javax.swing.JFrame,If you don't want your JFrame to be able to re-size use frame.setResizable(false); on it.
+19940886,2,0,6,javax.swing.JFrame,"Use a different name, or, better yet, don't extend JFrame unless you really need to change how a frame behaves."
+20059745,2,0,1,javax.swing.JFrame,Don't have your JFrame implement ActionListener.
+20072647,2,1,2,javax.swing.JFrame,If this is the case then it won't happen because JFrame doesn't support modality.
+20088623,2,0,2,javax.swing.JFrame,"So no, the web service can't trigger a JFrame to be shown on the client."
+20169257,2,0,2,javax.swing.JFrame,Edit   I found out that my solution -> disposing JFrame is not so good.
+20299946,2,1,3,javax.swing.JFrame,"JFrame is not a subtype of JComponent, it is a Container Also, see JPanel javadoc and JFrame javadoc"
+20418846,2,0,4,javax.swing.JFrame,setLocation of JFrame is not static.
+20424253,2,0,3,javax.swing.JFrame,Yes you can use a SwingWorker the idea is that a task that takes a lot of time you run in a separate thread (background thread) then you don't block your gui and your JFrame is not gonna to freeze.
+20445079,2,0,2,javax.swing.JFrame,"Don't extend a JFrame, you are not adding any new functionality to the frame."
+20488900,2,1,1,javax.swing.JFrame,"You can't add JFrame(or another top-level component) to another component/container, but you can use getContentPane() method of frame, to get main panel of your frame and add that to JTabbedPane tab."
+20535818,2,1,1,javax.swing.JFrame,Turns out the JFrame didn't have focus.
+20642221,2,1,0,javax.swing.JFrame,"1) You try to paint on JFrame, which doesn't have paintComponent(), it's wrong."
+20776817,2,0,3,javax.swing.JFrame,It seems like you are extending the JFrame to some Class but trying to invoke the getConsoleLabel() on the super class JFrame which doesn't have such method.
+20776817,2,0,3,javax.swing.JFrame,And DON'T USE MULTIPLE JFrame as Andrew has suggested.
+20860943,2,0,0,javax.swing.JFrame,"If you do, then it means that the JFrame isn't passing the events down to the Second, probably because the Second doesn't have focus."
+20924017,2,0,2,javax.swing.JFrame,"Also if this is the case, it looks like you're trying to add a JFrame to a JFrame, which won't work either."
+20929699,2,0,3,javax.swing.JFrame,"If I didn't extend JFrame, I would have to explicitly create a JFrame to run the program."
+20982325,2,0,1,javax.swing.JFrame,"JFrame doesn't have an Icon property, it has an IconImage property as set by setIconImage."
+21066572,2,0,0,javax.swing.JFrame,"If the JFrame doesn't freeze is only because the execution is fast and it hasn't time to freeze, but if the execution needs more than seconds the JFrame will freeze."
+21067555,2,1,2,javax.swing.JFrame,Some tips to help you:  Cashier extends JFrame: don't extend from swing components if you won't add some Swing related functionality.
+21180036,2,0,3,javax.swing.JFrame,"Again for historical reasons based around AWT, a JFrame is not double buffered."
+21298761,2,1,4,javax.swing.JFrame,"Add the class JPanel to the JFrame Don't do everything inside the main, as you'll find out, that static will cause a problem for you."
+21312043,2,0,2,javax.swing.JFrame,"One more thing, If your JFrame does not contain any title so there is no need to add empty title as it is bad practice."
+21344072,2,1,3,javax.swing.JFrame,"Extending JFrame will limit what you can do (i.e. calling certain methods), but if it is solely functioning as a JFrame, that won't matter anyway."
+21397235,2,1,3,javax.swing.JFrame,JFrame does not have a method call paintComponent.
+21400499,2,1,0,javax.swing.JFrame,"You have to use java.awt.Container, because JFrame is not a direct subclass of JComponent!"
+21421343,2,0,1,javax.swing.JFrame,"If you are already aware of this, you may be overriding paint because you are doing it on a JFrame and you found that JFrame does not have a paintComponent method."
+21439204,2,0,4,javax.swing.JFrame,"Also, your JFrame should not launch another JFrame, but rather the getProfitButton should launch a modal JDialog."
+21505930,2,0,4,javax.swing.JFrame,"Your JFrame should not be held by a static field, unless you aren't concerned with maintaining encapsulation of data and behavior."
+21731002,2,1,3,javax.swing.JFrame,"The problem here is, that JFrame is not sending on/off events for moving the frame, but instead continuously notifies movement events while a window gets moved around."
+21567109,2,0,0,javax.swing.JFrame,"Most likely, a more elegant solution would be possible with a CardLayout : http://docs.oracle.com/javase/tutorial/uiswing/layout/card.html  However, some general hints:  Create the GUI on the Event Dispatch Thread Don't extend JFrame."
+21580067,2,1,0,javax.swing.JFrame,"A JFrame is not a vehicle; it is a window, a view element used to help represent your data."
+21586945,2,0,2,javax.swing.JFrame,A JPanel isn't like a JFrame where setVisible makes it magically appear.
+21859913,2,0,3,javax.swing.JFrame,"Solution: again, don't use a JFrame here where a modal JDialog would work much better."
+21869469,2,0,1,javax.swing.JFrame,Get rid of extends JFrame Don't call your method that returns the JMenuBar the same name as your class DisplayStudent.
+22502867,2,0,0,javax.swing.JFrame,"The classics:  Don't extend JFrame Implies: Never override the update or paint method of JFrame Create the GUI on the Event Dispatch Thread Don't let your top-level classes implement these interfaces Use appropriate variable names Avoid magic constants (Loop2x3 = 380, Loop2y3 = 10 etc...)   The specific ones:  The speed of the animation should depend on the time, and not on the frame rate You should think about how you are going to model the animation."
+22160153,2,0,0,javax.swing.JFrame,"That is, JFrame doesn't support ActionListener and you don't have a reference to the buttons you want to add actions to."
+22160426,2,1,3,javax.swing.JFrame,"A JFrame does not pause the calling code's program flow, and that is causing your problem."
+22283938,2,0,1,javax.swing.JFrame,There are quite some issues in your code  Create the GUI on the event dispatch thread Don't extend JFrame (you have three (three!)
+22332917,2,0,1,javax.swing.JFrame,"Don't create another JFrame, since your class is already a JFrame."
+22332917,2,0,1,javax.swing.JFrame,OR just use the instance JFrame and don't extend JFrame for the class.
+22402291,2,1,2,javax.swing.JFrame,You will have to then create a new JPanel to put inside your JFrame because JFrame does not have a paintComponent() method to override.
+22637424,2,0,3,javax.swing.JFrame,You can't add a JFrame to a JPanel message is self-explanatory what you can do is take a look to JInternalFrame.
+22640959,2,0,0,javax.swing.JFrame,Also your JFrame is not visible yet.
+22736449,2,1,3,javax.swing.JFrame,"However, there are a few other points:  Don't extend JFrame (especially, don't override the paint method of JFrame)."
+22749144,2,0,3,javax.swing.JFrame,"General issues  Don't extend JFrame (particularly, don't override the paint method of JFrame)."
+22802134,2,1,2,javax.swing.JFrame,Either use the instance JFrame and don't extends JFrame or extend JFrame and don't use the extra instance.
+22883557,2,1,0,javax.swing.JFrame,"Apart from that, some minor things (don't extend JFrame, create the GUI on the EDT, and the naming conventions mentioned in the comments)."
+23208373,2,1,2,javax.swing.JFrame,"Solution: don't use a JFrame -- You're asking for a window that acts as a modal dialog -- so use a modal dialog, a JDialog to be exact."
+23208495,2,0,0,javax.swing.JFrame,"You will need to rebuild each frame from scratch each time you paint to it Flickering will occur for two reasons...  You are using AWT based components, which aren't double buffered You are overriding paint of a top level container like JFrame, which isn't double buffered."
+23278954,2,0,2,javax.swing.JFrame,A JFrame does not have a paintComponent() method so your code will never be executed.
+23290622,2,1,0,javax.swing.JFrame,use SwingUtilities.invokeLater() or EventQueue.invokeLater() use paintComponent() method for custom painting don't draw on JFrame directly.
+23329080,2,0,1,javax.swing.JFrame,"In your current code the loop doesn't let the JFrame to call repaint(); because it is never broken until the user clicks a button, which is impossible if the JFrame didn't yet draw the components."
+23452206,2,0,1,javax.swing.JFrame,"For example, consider using doubles to store x and y. Ssh, don't worry, your JFrame doesn't need to know."
+23480470,2,0,2,javax.swing.JFrame,"JFrame isn't focusable for KeyEvent, by default."
+23611433,2,1,1,javax.swing.JFrame,Such manipulation would also contradict your statement that you want to have the “logical code outside” as manipulating a JFrame does not belong to “logical code”.
+23598893,2,0,2,javax.swing.JFrame,"JFrame doesn't have a paintComponent method, but JPanel does!"
+23838595,2,0,0,javax.swing.JFrame,"If you use a GridLayout of your game board and either:  set the JLabel's preferred size with texture.setPreferredSize(Dimension) and call frame.pack() once when setting up your game; or  set the JLabel's size with label.setSize(Dimension) once and don't pack your JFrame  You will only need to set the size of the JLabel once, not every time you set a new ImageIcon to the label."
+23864056,2,1,2,javax.swing.JFrame,"Don't extend from JFrame, especially in the case, frame's can't be added to other frames."
+23946201,2,1,4,javax.swing.JFrame,"Don't set the JFrame to yellow, set the BallPanel object to yellow."
+23954992,2,0,0,javax.swing.JFrame,You can't add a JFrame to a JPanel.
+23954856,2,0,1,javax.swing.JFrame,JFrame can not be added in a JPanel.
+24035204,2,0,4,javax.swing.JFrame,Don't extend JFrame and don't override paint.
+24051620,2,0,2,javax.swing.JFrame,"What this means is, your paintComponent method will never be called, because top level containers, like JFrame don't actually have a paintComponent method."
+24148215,2,0,1,javax.swing.JFrame,First off all you cannot add a JFrame to a JFrame because you would be adding a window to a window.
+24169646,2,0,1,javax.swing.JFrame,"I don't see your JFrame instantiation at all, but be sure to instantiate your JFrame with the SwingUtilities invokeLater method."
+24200672,2,1,3,javax.swing.JFrame,"Don't use a JFrame, use some kind of modal dialog Take a look at How to Make Dialogs for more details"
+24213699,2,0,2,javax.swing.JFrame,The method Frame#setBackground() is inherited from Frame and JFrame doesn't do override it.
+24214971,2,0,2,javax.swing.JFrame,"If you're using LWJGL, don't use a JFrame."
+24239809,2,0,5,javax.swing.JFrame,"JFrame can't be a modal, use JDialog instead don't to create a bunch of JFrames, use JDialog instead create only one JDialog, as local variable, re_use this container for another action by JDialog.getContentPane.removeAll() before JDialog.setVisible(false) is called note Top-Level Containers never will be GC'ed, all a new instances increasing used JVM memory, more details about here"
+24496923,2,1,5,javax.swing.JFrame,This is a bit confusing as a JFrame does not by itself have a mechanism to display an image.
+24573910,2,0,0,javax.swing.JFrame,"Having said this, JFrame is not modal and thus it doesn't block the current thread waiting for an input as you wish."
+24679597,2,1,7,javax.swing.JFrame,Don't Paint on JFrame and override paint.
+24741468,2,0,2,javax.swing.JFrame,"Aside: Though paintComponent isn't defined for JFrame, I would recommend avoiding overriding JFrame's paint method."
+24883757,2,0,1,javax.swing.JFrame,"Resulting that, user cannot focus other opened frames (where exacly u have implemented buttons to open actual frame) and cannot create new JFrame until not close actual focused (opened frame)."
+24860435,2,1,2,javax.swing.JFrame,Don't use multiple JFrame instead you can use CardLayout and can switch between different views.
+24895221,2,1,3,javax.swing.JFrame,Don't use multiple JFrame instead you can use CardLayout that is designed for the same purpose.
+24934462,2,1,1,javax.swing.JFrame,"Next, you have an Applet (you don't want a JFrame)."
+24943528,2,0,1,javax.swing.JFrame,"It is not that the JFrame is not visible, but rather it was never set to be visible."
+25309207,2,1,2,javax.swing.JFrame,"etc read Initial Thread create an local variable for JFrame, don't to extend whatever in Swing, nor for Top-Level Containers, search for Java Naming Convention, e.g."
+25343806,2,1,1,javax.swing.JFrame,Don't extend JFrame unless you are adding new functionality.
+25478069,2,1,2,javax.swing.JFrame,"is doing nothing and will never be called, as nothing you've extended from implements a paintComponent method (that is, JFrame does not have a paintComponent methd) (and you class is not attached to anything displayed on the screen anyway)."
+25574468,2,0,1,javax.swing.JFrame,"When paintComponent() is called, draw onto the surface If you want to animate, call repaint() -> paintComponent() will be called never block the EDT  Last thing to consider: don't use JFrame to paint directly to it."
+25734678,2,1,5,javax.swing.JFrame,One possible solution: don't display a JFrame but rather display a JDialog.
+26027961,2,0,0,javax.swing.JFrame,If you didn't set up JFrame to scale then it will be set to the size you set it to.
+26148081,2,0,0,javax.swing.JFrame,Your JFrame won't automagically resize itself unless you tell it to.
+26147807,2,1,1,javax.swing.JFrame,More info here: http://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html Side note: You shouldn't extend JFrame for no reason.
+26165497,2,1,0,javax.swing.JFrame,I fount a solution as it seems the JFrame did not where to display i have two monitos and coordinates must have been wrong when I set the JFrame to display in center then it displayed.
+26453746,2,0,0,javax.swing.JFrame,"Okay, after several hours of debugging, I figured out what the problem was: The JFrame wasn't made visible until after I had finished adding/positioning everything, so it wasn't set to it's maximized size."
+26454683,2,1,3,javax.swing.JFrame,A JFrame does not stall the execution of the code until it is closed.
+26468367,2,1,0,javax.swing.JFrame,"Also, per your code, you aren't making the JFrame visoble until AFTER you add text to the JLabel."
+26511999,2,0,4,javax.swing.JFrame,It is because paintComponent is defined on JComponent which JFrame does not inherit from.
+26665360,2,1,2,javax.swing.JFrame,"See Concurrency in Swing for more details You override the paint method of a top level container (JFrame) and then break the paint chain...paint is complex series of method calls chained together to generate the final result, you should always call super.paint first, but as you probably know, JFrame is not double buffered."
+26959309,2,0,1,javax.swing.JFrame,(JFrame doesn't have paintComponet but paint method and it's not recommanded to override it)
+26961680,2,1,1,javax.swing.JFrame,"The way you have it, BarGraph is a JFrame, and you can't add a JFrame to a JFrame."
+27085072,2,0,2,javax.swing.JFrame,"The solution, don't extend from JFrame or any other top level container, ever, you are not adding any meaningful functionality to it and are limiting the re-use of your components."
+27240121,2,0,5,javax.swing.JFrame,"Best solution: don't ""pop-up"" a JFrame."
+27437289,2,0,3,javax.swing.JFrame,JFrame isn't the only container though.
+27434573,2,0,2,javax.swing.JFrame,JFrame does not inherit from JWindow.
+27773002,2,0,6,javax.swing.JFrame,Also you shouldn't set a JFrame visible until all the components have been added.
+27828660,2,1,2,javax.swing.JFrame,Some more notes on your code Usage by extension anti-pattern I wouldn't extend JFrame just to display a window on the screen.
+28068327,2,0,4,javax.swing.JFrame,Your class doesn't extend from JFrame actually and never is called by the painting mechanism.
+28068327,2,0,4,javax.swing.JFrame,"In fact you should probably have a compiling error saying something like ""cannot find symbol: method paint()"" at super.paint(g) line because, again, your class doesn't extend from JFrame or any other Container, where this method is defined."
+28307159,2,1,4,javax.swing.JFrame,"As an aside, don't extend JFrame unless changing existing functionality or adding new functionality."
+28527820,2,1,1,javax.swing.JFrame,"Better yet, don't use a JFrame as the Window for your tool."
+28955347,2,1,2,javax.swing.JFrame,"See How to Make Dialogs for more details JFrame is not a blocking window, that is, when you make it visible, the code will continue executing, meaning, in your case, you show the login window, but the user hasn't had time to enter anything before you try and set the label's text..."
+29023091,2,1,2,javax.swing.JFrame,How to spawn a new object (JFrame or something else  Don't use a JFrame.
+29243292,2,0,3,javax.swing.JFrame,"Assuming yours is a Swing GUI (you don't tell us), JFrame has a setLocation(...) method, a method that JFrame API will readily show you."
+29483684,2,0,1,javax.swing.JFrame,"Swing components (apart from JFrame) don't render transparent background colors well, the process results in no end of painting artifacts and other related issues."
+29585906,2,1,1,javax.swing.JFrame,"Also, while looking at the tutorial look at the better way to structure your program so that:  the GUI is created on the Event Dispatch Thread you don't extend JFrame."
+29592807,2,0,0,javax.swing.JFrame,Your image does not display because the GraphicsPanel control that has been added to your JFrame is not the same GraphicsPanel control that you set the image on.
+29758250,2,0,0,javax.swing.JFrame,"(Note: you should create your GUI on the EDT using SwingUtilities) When the Client is created on the EDT (in actionPerformed), the non-terminating loop will occur on the EDT, effectively locking it up and not allowing it to perform any tasks until it terminates (in other words, the components in the JFrame cannot paint, update, or react until the EDT is free)  If you wish to perform a long running task, then you should consider using a Thread."
+30006383,2,1,1,javax.swing.JFrame,"What's happening is that the JFrame is not combining the graphics for Player and Rabbit; rather, it is placing the player as a panel, and then placing the rabbit."
+30015658,2,0,2,javax.swing.JFrame,"Don't setSize a JFrame, use pack instead."
+30173616,2,0,0,javax.swing.JFrame,The reason you aren't seeing the JFrame pop up is because you're using invokeLater() instead of invokeAndWait().
+30198961,2,0,2,javax.swing.JFrame,"What happens is that the compiler looks at your class called JFrame, doesn't see any constants named EXIT_ON_CLOSE, and starts yelling at you."
+30395350,2,0,1,javax.swing.JFrame,JFrame doesn't have that feature.
+30446912,2,0,3,javax.swing.JFrame,The solution is simple: don't use a JFrame but rather use a modal JDialog as this behavior is exactly what the modal dialog has been built for.
+30561600,2,1,3,javax.swing.JFrame,"I understand that you are using a tutorial or demo of sorts; but, in reality, setting the bounds of a JFrame isn't a really very effective method for accomplishing most anything."
+30780946,2,0,0,javax.swing.JFrame,"You can see an example here, basically you shouldn't need a JFrame to display your primitives."
+30991508,2,1,4,javax.swing.JFrame,"A few other comments not related to your original question:    You shouldn't extend JFrame for the main frame, just create a new JFrame instance, and configure it."
+31099152,2,0,2,javax.swing.JFrame,"a few points   public class NodeViewer extends JFrame {, don't to extend JFrame, create this Obejct as local variable (as is private NodeManager _manager;)   code ordering is very important, e.g."
+31282245,2,0,4,javax.swing.JFrame,"As a general rule, you shouldn't extend from JFrame (or other top level containers), you are locking yourself into a single use case, reducing the re-usability of your component and you're not actually any new functionality to the class."
+31304190,2,0,2,javax.swing.JFrame,JFrame does NOT require inheritance.
+31491073,2,0,1,javax.swing.JFrame,"It also violates good separation of model-view-controller a class that extends JFrame, but in terms of its behavior / implementation it's not mainly a JFrame but something else, then it violates the abstraction of a JFrame, and it shouldn't extend JFrame but possibly contain it instead"
+31990575,2,0,0,javax.swing.JFrame,For closing JFrames use command yourFrame.dispose(); Setting progressBar to 100% is easy via yourBar.setValue(yourBar.getMaximum());  To hide/show components use name.setVisible(true);  I won't use separate JFrame only for progress bar by the way.
+32020489,2,0,0,javax.swing.JFrame,"(The grabFocus() method is defined in JComponent, but a JFrame isn't a JComponent.)"
+32024207,2,0,2,javax.swing.JFrame,"An application should only have one main JFrame, and so the CustomerFrame JFrame should not be a JFrame but rather should be a non-modal JDialog, or maybe better a JPanel that can be placed anywhere -- in its own JDialog, in the main JFrame."

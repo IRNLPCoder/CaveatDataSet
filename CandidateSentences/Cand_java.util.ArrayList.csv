@@ -1,0 +1,690 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+57185,2,1,10,java.util.ArrayList,"The ArrayList class in Java has only two data members, a reference to an Object[] array and a size—which you need anyway if you don't use an ArrayList."
+76393,2,0,1,java.util.ArrayList,ArrayList is not thread-safe.
+144179,2,0,0,java.util.ArrayList,It turned out that ArrayList is not too big < 100 bytes.
+25913061,2,0,0,java.util.ArrayList,"example:  File curfolder = new File( ""C:\\Users\\username\\Desktop""); File[] file = curfolder.listFiles(); ArrayList filename = Arrays.asList(file); above code generate warning because ArrayList is not of specific type."
+13681465,2,0,2,java.util.ArrayList,On the other hand ArrayList is not synchronized and fast which makes it obvious choice in a single-threaded access environment.
+303141,2,1,12,java.util.ArrayList,"Cloning the ArrayList is not ""deep""; it will only clone the references to the object."
+7710830,2,0,5,java.util.ArrayList,For the mutable objects we cannot use ArrayList(Collection) constructor because it will simple refer to the original list element and will not copy.
+962779,2,1,2,java.util.ArrayList,"However, sorting an ArrayList does not need clone() if you invoke the standard sorting mechanisms of Collections."
+986959,2,0,14,java.util.ArrayList,"That would fit with ""equals works but contains doesn't because your tests probably call the strongly-typed equals, but ArrayList doesn't."
+1005558,2,0,1,java.util.ArrayList,"If the object were no longer there, you couldn't retrieve the ArrayList from it at all."
+1074176,2,0,2,java.util.ArrayList,"I assume the problem is somehow related to type erasure, as ArrayList is not parametrized as a Scala array would be, but, rather, it's an existential type."
+1130571,2,0,2,java.util.ArrayList,In my opinion an ArrayList isn't the best datastructure for keeping a dictionary with only contains and adds.
+12986375,2,0,0,java.util.ArrayList,"Still, there are some problems if you use arrays within arrays (or ArrayLists), because a clone() of the container array (or ArrayList) won't copy their values, only their references!"
+1288388,2,0,2,java.util.ArrayList,"Arrays can deal with primitives, something an ArrayList cannot (although there are third party collection classes that wrap primitives, they aren't part of the standard collections API)."
+1290692,2,0,0,java.util.ArrayList,"An ArrayList doesn't have to declare the type of its contents when the ArrayList is declared, you must insert an item into a specific location in an array."
+1337748,2,0,5,java.util.ArrayList,"This allocates space for the fields of an ArrayList, which don't depend on the number of elements in the ArrayList, and in addition, it will create enough space for references to 10 objects, which don't depend on the size of the objects themselves; the pointers will be 32 bits on a 32-bit system, and 64 bits (or maybe compressed to something less by a really smart VM someday) on a 64-bit system."
+1348326,2,0,14,java.util.ArrayList,"A LinkedList makes a good stack or queue, an ArrayList makes a good stack but a horrific queue (again, a remove would cause a shift of the entire list) so LinkedList implements the Queue interface, ArrayList does not."
+1355627,2,1,6,java.util.ArrayList,ArrayList is not a MyList.
+1355627,2,1,6,java.util.ArrayList,Obviously ArrayList does not have the foo() method.
+1355629,2,0,1,java.util.ArrayList,You can't cast an ArrayList<String> into a MyList because MyList is not a super-class or super-interface of ArrayList<String>.
+1419817,2,0,3,java.util.ArrayList,"Something like an ArrayList doesn't really like removing things from the front multiple times, because it copies all the rest of the data down each time."
+1519111,2,0,4,java.util.ArrayList,I wouldn't try to recover from an OutOfMemoryError as some objects might end up in an undefined state (just thinking about an ArrayList that couldn't allocate its array to store date for instance).
+1658745,2,0,0,java.util.ArrayList,"The methods of ArrayList aren't synchronized, so you would need to synchronize all access yourself."
+1672272,2,0,0,java.util.ArrayList,Final means just that you can't change which ArrayList instance your variable refers to.
+1770043,2,0,1,java.util.ArrayList,"If you call addStudent, a new student will be added to the students list, but the fields ArrayList will not be modified (based on the code given)."
+1784576,2,0,0,java.util.ArrayList,"However, if the EJB spec is at issue, storing state like an ArrayList isn't compliant as well, so if you are just reading some static variable anyway, specifically using a container Timer service is likely overkill."
+1866482,2,0,3,java.util.ArrayList,Put a breakpoint in your equals method and see if anything wrong isn't happening Make sure your implementation of equals on Car is correct Check if there are no transient fields Check if what you expect to be an ArrayList isn't actually PersistentBag.
+1930742,2,0,1,java.util.ArrayList,I wouldn't return an ArrayList explictly as the caller should know or expect a specific collection type.
+1971553,2,1,6,java.util.ArrayList,"ArrayList doesn't need a loadFactor as it always grows when it is 100% filled, so you can create it with exactly the size you know in advance and it won't grow if you fill that many elements in later."
+2082488,2,1,6,java.util.ArrayList,"EDIT: saw that ArrayList is not in J2ME, but based on documentation, it does have a Vector."
+2104747,2,0,4,java.util.ArrayList,ArrayList is not synchronized via http://java.sun.com/javase/6/docs/api/java/util/ArrayList.html
+2104777,2,0,2,java.util.ArrayList,ArrayList is not synchronized out of the box.
+2147716,2,1,1,java.util.ArrayList,Each iteration over an ArrayList doesn't return a Map.Entry object at all as you seem to think.
+2185879,2,0,3,java.util.ArrayList,Note that the newly created ArrayList is not assigned to a field or variable.
+2388984,2,0,3,java.util.ArrayList,"The members of an ArrayList aren't protected by any memory barriers, so there is no guarantee that changes to them are visible between threads."
+17399230,2,0,7,java.util.ArrayList,"I disagree with the previous answers suggesting ArrayList, because ArrayList is not a Dynamic Array but a List backed by an array."
+2440857,2,1,1,java.util.ArrayList,"In general, mutable objects won't affect your use of ArrayList: you can insert mutable objects, add(object), access mutable objects using their index, get(index), and delete mutable objects using their index, remove(index), without any side effect because ArrayList does not call equals() for these methods."
+2441322,2,0,2,java.util.ArrayList,ArrayList does not implement Iterator.
+2486321,2,0,25,java.util.ArrayList,"In terms of just ArrayList<T> (Java) and List<T> (.NET), a couple of differences:  Java lists override equals/hashCode, whereas they don't in .NET ArrayList<T> grows by multiplying the current capacity by 3/2; .NET's List<T> doubles the current capacity instead  Of course there are other differences in terms of the APIs exposed - if you could give more information about the kind of difference you're interested in, we could help more."
+2557874,2,0,1,java.util.ArrayList,"This is because the ArrayList is not null, it holds five objects (all are null), anyway an ArrayList never will have a null size, at least the size is 0 (zero), and if the ArrayList is not initialized (is null) and you try to access to the function size() it will threw a NullPointerException."
+2599489,2,0,1,java.util.ArrayList,I mean calling the clone on an ArrayList is not a matter but calling it on a Collection could be dangerous since another Collection implementation could be introduced by another developper (he can even extends a Collection impl) and nothing tells you that the clone of this impl will work like you expect it to do...
+2599637,2,1,4,java.util.ArrayList,ArrayList does not extend MyCollection.
+2607006,2,0,1,java.util.ArrayList,"Maybe you can just use ArrayList, shouldn't be much difference in performance compared to a plain array."
+2673511,2,0,4,java.util.ArrayList,"An ArrayList doesn't automatically shrink back, as far as i know."
+2716009,2,0,0,java.util.ArrayList,The standard ArrayList is not thread-safe and the behavior when multiple threads update at the same time is undefined.
+2716025,2,0,3,java.util.ArrayList,The behavior is probably undefined since ArrayList isn't threadsafe.
+28007401,2,0,0,java.util.ArrayList,Thus it proves that concurrent updates of ArrayList will not give correct results.
+2770146,2,0,1,java.util.ArrayList,"ArrayList is not thread safe, so it is slightly faster than Vector (depends on the situation, may be 0% difference, may be 5% difference)."
+2787405,2,1,17,java.util.ArrayList,"ArrayList doesn't let you customize its growth policy, since you're not even supposed to know (nor care, really!)."
+2793017,2,0,1,java.util.ArrayList,"ArrayList is not an abstract type and extends List, so it is appropriate in this context."
+2798636,2,0,0,java.util.ArrayList,"However, using that method leaves the structure in a seemingly inconsistent state  the size of the backing array is increased the size field on the ArrayList isn't."
+2800836,2,0,4,java.util.ArrayList,"The new ArrayList will be allocated from some different part of the memory, the reference is changed to point to it, and if the old ArrayList is not anymore referred by something else, it will be garbage collected."
+2873007,2,1,4,java.util.ArrayList,"An ArrayList can't contain int values, as it's backed by an Object[] (even when appropriately generic)."
+2878253,2,0,1,java.util.ArrayList,Both TreeSet and ArrayList are not very 'heavy' in terms of space; which is faster depends on the use case.
+2890086,2,0,2,java.util.ArrayList,It means you don't break client code if you ever decide that ArrayList wasn't the correct thing to use in this situation.
+2917925,2,0,1,java.util.ArrayList,"I'm not sure if there's any function in ArrayList that isn't in List, but if there is, the same reasoning would apply."
+2986315,2,0,46,java.util.ArrayList,"The difference is that access to a Vector is synchronized, whereas access to an ArrayList is not."
+20517834,2,0,7,java.util.ArrayList,"Vector is synchronized by default, and ArrayList is not."
+3236530,2,0,3,java.util.ArrayList,Note that you can't use an ArrayList because this is backed by an array and an arrays maximum size is limited to Integer.MAX_VALUE.
+3289744,2,0,1,java.util.ArrayList,"What happens here that is perhaps unintuitive, and perhaps could be improved on, is that ArrayList does not implement map."
+3356180,2,0,2,java.util.ArrayList,"If you're declaring an ArrayList, I wouldn't ever use ArrayList as the type on the left side."
+3564855,2,0,14,java.util.ArrayList,Java ArrayList do not provide a way to access its current capacity.
+3607684,2,1,45,java.util.ArrayList,"So if you're mainly retrieving, and don't sort often, ArrayList is the better choice."
+3768057,2,1,16,java.util.ArrayList,"Since you index arrays with ints, an ArrayList can't hold more than Integer.MAX_VALUE elements."
+3884274,2,0,0,java.util.ArrayList,I think you've been convinced using an ArrayList isn't desirable here.
+3890964,2,0,0,java.util.ArrayList,"If you absolutely require a list to be sorted at all times, don't use an ArrayList, use a PriorityQueue."
+3920257,2,1,3,java.util.ArrayList,"ArrayList is NOT thread safe, but if you have 10 different threads with 10 different ArrayList's, you are fine."
+3957878,2,0,1,java.util.ArrayList,"ArrayList is not thread safe, from the documentation:  Note that this implementation is not   synchronized."
+4006068,2,0,2,java.util.ArrayList,"In your case capacity = 200000 If you don't initialize the ArrayList with a predefined capacity, it will have to expand from time to time, which is effectively copying the existing array backing the list into a new, larger one."
+4037498,2,0,0,java.util.ArrayList,"Besides the stated problem, you seem to be calling a newBoard() method each time, creating a new ArrayList, which wouldn't actually have anything as people have stated above."
+4063017,2,0,6,java.util.ArrayList,The difference will come if someday you will think that the features of the ArrayList are not suitable anymore for your kind of problem and you will need something different (a LinkedList for example).
+4189035,2,1,11,java.util.ArrayList,"Since ArrayList cannot apply to int, this means that creating a list of numbers means:  Creating a list of Integer, the object wrapper for int."
+4231625,2,0,1,java.util.ArrayList,You cannot assign ArrayList<ArrayList<String>> to List<List<String>> because it violates the compile time type-safety promise of generics.
+4255296,2,0,19,java.util.ArrayList,HashMap.values() doesn't return an ArrayList of values but a Values Collection.
+4302311,2,0,1,java.util.ArrayList,"It seems that the reason that ArrayList does not implement any constructor itself but just delegates the call to super class constructor, i.e. constructor of AbstractList."
+4361612,2,0,1,java.util.ArrayList,The method list() isn't available for ArrayList.
+4383147,2,1,4,java.util.ArrayList,"ArrayList is NOT slow, and it does NOT cause lags ... unless you use the class in a particularly suboptimal way."
+4382406,2,0,1,java.util.ArrayList,"To be honest, it seems like a pointless class, possibly written because the author didn't actually understand ArrayList."
+4616364,2,0,4,java.util.ArrayList,Vectors are thread-safe (meaning synchronized) while ArrayList aren't.
+4618761,2,1,1,java.util.ArrayList,I think your question is closely related to this topic: Breadth-First search in Java Don't use ArrayList unless you have a really good reason.
+4657196,2,0,2,java.util.ArrayList,it is not extended from it B extends A doesn't mean ArrayList<B>() extends ArrayList<A>()
+4687921,2,0,1,java.util.ArrayList,Although it appears that ArrayList pointCoordinates = new ArrayList(); is not part of that thread.
+4695790,2,0,0,java.util.ArrayList,"I'm going to guess from the code so far that you haven't covered ArrayList yet, and that if you submit a solution that does use it, your teacher might be a little suspicious :-)  It looks like perhaps a couple of simple arrays would help."
+4726247,2,0,0,java.util.ArrayList,ArrayList is not as efficient as queue however.
+4755493,2,0,1,java.util.ArrayList,"Only class types can be used as generic type parameters, so you can't have an ArrayList<int>."
+4779199,2,0,2,java.util.ArrayList,"Yes, ArrayList is not final."
+4779254,2,0,1,java.util.ArrayList,"ArrayList is not final class and it provides public constructor, so technically it can be extended."
+4791174,2,0,1,java.util.ArrayList,"Or if it isn't an arraylist (i.e. you get an exception trying the above...), you can generate a new ArrayList containing the same elements of the list."
+4792203,2,0,4,java.util.ArrayList,"asList() doesn't return a java.util.ArrayList, it returns a java.util.Arrays$ArrayList."
+4792203,2,0,4,java.util.ArrayList,"This class doesn't even extend java.util.ArrayList, so its behaviour can be (and is) completely different."
+4792355,2,0,4,java.util.ArrayList,"BTW you should also be getting an error like ""Cannot resolve symbol ArrayList"" which tells you what the problem is."
+4801744,2,0,2,java.util.ArrayList,Notice package of class: Your ArrayList is not java.util.ArrayList.
+4916008,2,1,1,java.util.ArrayList,It should throw a NullPointerException since your ArrayList is not initialized.
+5134496,2,0,5,java.util.ArrayList,"If getAllTasks() return an ArrayList you should change the return type in the class definition and then you won't need a cast and if it's returning something else, you can't cast to ArrayList."
+5201385,2,0,0,java.util.ArrayList,"Using a LinkedList means that each time you have to go to the next word in the list there is a lookup involved, the ArrayList doesn't have that overhead."
+5236222,2,0,0,java.util.ArrayList,"Don't extend ArrayList, implement List, and use delegation, add your own methods."
+5266756,2,1,4,java.util.ArrayList,"no, unfortunately there isn't 2d ArrayList class."
+5445277,2,0,0,java.util.ArrayList,ArrayList does not contain a .find(Class) method.
+5446399,2,0,6,java.util.ArrayList,"ArrayList is not synchronized, and so its faster if you don't access the List from different Threads simultanously."
+5520707,2,0,4,java.util.ArrayList,"Don't confuse an ArrayList with arrays, an ArrayList is a dynamic data-structure that resizes according to it's contents."
+5634333,2,0,0,java.util.ArrayList,"Actually, the difference between Vector and ArrayList is that Vector is synchronized whereas ArrayList is not."
+5683809,2,0,0,java.util.ArrayList,The only trouble is that at compile time it can't guarantee that createObject() isn't adding objects to your ArrayList that aren't of type Foo.
+5690503,2,0,13,java.util.ArrayList,An ArrayList doesn't actually know that all its elements are Strings.
+5726596,2,0,1,java.util.ArrayList,"Inserting somewhere within an ArrayList won't give you amortized constant time, as the list will have to be copied internally - this will only work as long as you insert at the end."
+5741065,2,0,10,java.util.ArrayList,"Alternatively, just use a Set from the start, and don't use an ArrayList as it is not performing the function that you require."
+5896254,2,0,3,java.util.ArrayList,"For instance, an ArrayList is not designed for the Deque interface."
+5922239,2,0,3,java.util.ArrayList,"The backing array created by the ArrayList isn't a String array, it's an Object array, and that's why you can't cast it."
+5930700,2,0,1,java.util.ArrayList,"If you need the first one (Task A), it may indicate the ArrayList is not the optimal data structure you should be using."
+6044358,2,0,4,java.util.ArrayList,"they aren't covarient ArrayList<A> aList can only refer to an ArrayList of type A  From wiki  Unlike arrays, generic classes are   neither covariant nor contravariant."
+6104725,2,0,3,java.util.ArrayList,ArrayList doesn't synchronize by default.
+6106799,2,0,1,java.util.ArrayList,"ArrayList is not thread-safe, but you can get a thread-safe list with Collections.synchronizedList()"
+6138337,2,0,8,java.util.ArrayList,"No, ArrayList doesn't attempt to detect duplicates at all - you can have an ArrayList with the exact same reference appearing multiple times."
+6138341,2,0,4,java.util.ArrayList,ArrayList isn't thread safe so you might not get desired result.
+6138355,2,0,2,java.util.ArrayList,ArrayList is NOT thread-safe...so the behaviour if you try to have two threads add at the same time is undefined.
+6147434,2,0,2,java.util.ArrayList,You cannot go from ArrayList<Double> to double[] with a single call using the sandard Java API.
+6166545,2,1,0,java.util.ArrayList,ArrayList is not an array.
+6255069,2,0,3,java.util.ArrayList,"So it's illegal to add an ArrayList to that, because we don't know if ArrayList is the specific thing that's in this collection."
+6270416,2,1,1,java.util.ArrayList,an ArrayList does not guarantee order.
+6281201,2,1,12,java.util.ArrayList,"Unfortunately, the properties of an ArrayList don't allow removeAll to do better than the above."
+6285103,2,1,3,java.util.ArrayList,Don't use ArrayList for doing contains searching.
+6490994,2,0,1,java.util.ArrayList,An ArrayList is not an Component so you can't cast it.
+6341123,2,0,12,java.util.ArrayList,"ArrayList isn't the solution, ByteArrayOutputStream is the solution."
+6524760,2,0,1,java.util.ArrayList,"Now personally:  I wouldn't avoid creating singletons unless you really have to If you have to, I'd avoid creating them in the way you have (which isn't thread-safe) I wouldn't extend ArrayList<> unless I really had to, preferring composition over inheritance"
+6529093,2,0,4,java.util.ArrayList,"Edited to answer more questions from asker An ArrayList is not an array, it is a List, whose implementation uses an internal array (that you don't have access to)."
+6539646,2,1,3,java.util.ArrayList,The iterator returned by ArrayList does not violate this.
+6577932,2,0,0,java.util.ArrayList,"If you cannot change the ArrayList to a Set (because it is passed to your code in that form), you can build a set from the ArrayList, e.g."
+6578330,2,1,8,java.util.ArrayList,ArrayList doesn't have any sort of notification mechanism.
+6578379,2,0,3,java.util.ArrayList,You can't do such thing with ArrayList because as @Jon Skeet says ArrayList doesn't have any sort of notification mechanism.
+6605151,2,1,0,java.util.ArrayList,"The downside of using this signature is that we can't return an ArrayList etc as the default, as we could have done as an alternative to throwing an exception, since the return type is guaranteed to be the same type as that passed in."
+6641039,2,0,6,java.util.ArrayList,"As the error clearly states, the class java.util.ArrayList isn't the same as nested static class java.util.Arrays.ArrayList."
+6691873,2,1,1,java.util.ArrayList,"First of all, this doesn't bind the ArrayList to type Integer."
+6703877,2,1,3,java.util.ArrayList,"The JSON structure doesn't match ArrayList<HashMap<String, Child>>."
+6720177,2,0,2,java.util.ArrayList,ArrayList is not thread-safe; Vector is.
+6798178,2,1,1,java.util.ArrayList,"It is worth noting that an ArrayList does not copy the objects added to it (it stores references to them), so perhaps what you really need is to create copies of the objects as well."
+6867509,2,0,1,java.util.ArrayList,"An ArrayList is always also a List, but an List isn't necessarily an ArrayList."
+6910551,2,0,1,java.util.ArrayList,It means that instances of ArrayList are not guaranteed to be threadsafe.
+6918835,2,0,1,java.util.ArrayList,ArrayList is not synchronized.
+17840696,2,0,13,java.util.ArrayList,"you could not assign the return value to AllSprites, because there is no type deduction at all, and you cannot convert from ArrayList<Parcelable> to ArrayList<ClSprite>."
+7004040,2,0,1,java.util.ArrayList,You can have an array of primitive types while ArrayList doesn't support the primitive types.
+7012576,2,0,0,java.util.ArrayList,You can't store an ArrayList of Grapics.
+7075672,2,0,0,java.util.ArrayList,"Assuming you are returning Generic types and the list can be heterogeneous,  returning reference to an ArrayList is not a bad idea."
+7079449,2,1,8,java.util.ArrayList,"In particular, this class has an constructor which takes a T[] as argument, which java.util.ArrayList does not have."
+7277898,2,0,1,java.util.ArrayList,won't compile because ArrayList<String> is not a subclass ArrayList<Object>.
+7281807,2,1,8,java.util.ArrayList,"Because of type erasure, the ArrayList does not know its generic type at runtime, so it can only give you the most general Object[]."
+7305957,2,0,2,java.util.ArrayList,"This is because a Map<ArrayList> is not a Map<List>, even though ArrayList is a List."
+7335077,2,0,8,java.util.ArrayList,"Due to type erasure, the parameterized type of the ArrayList won't be known at runtime."
+7388564,2,0,2,java.util.ArrayList,This is similar (but not the same) to the fact that you cannot cast ArrayList<Object> to ArrayList<Message>.
+7395626,2,1,6,java.util.ArrayList,ArrayList is not synchronized by default; Vector is.
+7397393,2,0,0,java.util.ArrayList,"When should you move: Whenever you are at a point and your ArrayList does not have a starting node in it, you will have to pick the next element in the array and move there."
+7398953,2,1,0,java.util.ArrayList,"ArrayList is not a synchronized or thread safe class, which means that it's entirely possible that downloadedComments is getting updated while at the same time .contains() is running, causing the internal loop to run basically forever."
+7419039,2,0,1,java.util.ArrayList,"ArrayList is not thread safe, but you're using it with threading."
+7535369,2,1,0,java.util.ArrayList,"For example, Java's ArrayList does not have anything like GetUpperBound()."
+7540497,2,0,0,java.util.ArrayList,If your ArrayList is not marked as private mark it as private.
+7594370,2,0,0,java.util.ArrayList,Your class doesn't use generics so you can't parameterize ArrayList with <Integer>.
+7594373,2,0,0,java.util.ArrayList,"The ArrayList class defined in your code (not java.util.ArrayList<E>) does not define any generic type parameter, so you cannot use new ArrayList<Integer>(), but only new ArrayList() (same for variable declaration)."
+7679533,2,0,1,java.util.ArrayList,List allows you to make the particular cast but ArrayList does not.
+7690744,2,0,1,java.util.ArrayList,What you need to do is either use a List (for example ArrayList) which doesn't need an require that you know the size when you create it.
+7696134,2,0,1,java.util.ArrayList,If you can't use ArrayList you have to write your own collection which at least supports add(Employee record)  a.1) employee name a.2) employee age a.3) employee phone number   These are your three fields.
+7771596,2,0,1,java.util.ArrayList,"That is, the asymptomatic bounds are the same -- if an ArrayList does not have to resize then access is truly O(1) for index operations (even though if the C [constant] might be larger for the access and the double/Double boxing and memory-locality)."
+7810241,2,0,16,java.util.ArrayList,The list of list is legal as ArrayList isn't an array.
+7909764,2,0,10,java.util.ArrayList,"Furthermore, generics are erased at runtime, so ArrayList couldn't even construct an array of the proper type if it wanted to."
+7943225,2,1,7,java.util.ArrayList,ArrayList isn't the problem; your Department object is.
+7943375,2,1,1,java.util.ArrayList,Don't use an ArrayList -- use one of the implementations of the Deque interface.
+7960076,2,0,0,java.util.ArrayList,"If your problems are due to remove() call on ArrayList, don't use it and instead:  if you remove not the last element, just replace (with set()) the removed element with the last; shrink the list size by 1."
+7963416,2,0,6,java.util.ArrayList,One important aspect of this is that you can't ask an ArrayList object at execution time what T is - that information has been erased.
+7978138,2,0,3,java.util.ArrayList,"You don't give the ArrayList to anything you don't trust - instead, you use Collections.unmodifiableList to create an immutable wrapper around the existing list, and give untrusted code that instead."
+8032500,2,0,1,java.util.ArrayList,Also note that ArrayList is not a final class - it could be extended by something that is doing the wrong thing.
+8033621,2,0,0,java.util.ArrayList,"ArrayList is not understood by the Web Service, but List is."
+8065246,2,0,3,java.util.ArrayList,"To really answer your question (why this happens), you need to look in the java.util.AbstractList.Itr inner class, which is returned by the iterator method of AbstractList (ArrayList does not overwrite that method)."
+8416608,2,0,2,java.util.ArrayList,"ArrayList isn't a subclass of List, simply a class that implements the List interface."
+8452920,2,0,9,java.util.ArrayList,"however, something of ArrayList you may want to care about , arrayList is not synchronized."
+8460021,2,0,1,java.util.ArrayList,"An ArrayList is clearly not the fastest thing here, because the ArrayList does not contain int but the Integer wrapper types."
+8481694,2,0,3,java.util.ArrayList,In short main difference between Vector and ArrayList is that Vector is synchronized while ArrayList is not.
+8486788,2,0,1,java.util.ArrayList,"By removing the synchronized on the add method, you've made the code non-threadsafe, since ArrayList is not thread-safe."
+8494502,2,0,6,java.util.ArrayList,"Since you'll be pulling one line out of the buffer for every line that you place in it, ArrayList won't perform well do to constant shifting of array indices."
+8562297,2,0,2,java.util.ArrayList,Though if you know exactly how many elements you will ever have then ArrayList doesn't add much.
+8677040,2,0,0,java.util.ArrayList,ArrayList doesn't make a copy of the objects you add to it.
+8693668,2,1,1,java.util.ArrayList,"This isn't an ArrayList<Element>, and you get a ClassCastException because you cannot cast this to an ArrayList<Element>."
+8701922,2,0,0,java.util.ArrayList,ArrayList is not thread safe.
+8851131,2,0,0,java.util.ArrayList,"Without seeing any details of what is calling addCar() I can't say for certain, but the two most obvious possibilities are that the String has not been initialised or that the ArrayList has not been initialised."
+8851138,2,0,0,java.util.ArrayList,"I assume much of your code has been omitted, but from this sample it seems that you haven't initialized your ArrayList."
+8881912,2,0,1,java.util.ArrayList,"contains() on a ArrayList doesn't assume the array is sorted, even if it is."
+8896940,2,0,5,java.util.ArrayList,Capacity of an ArrayList isn't the same as its size.
+8905207,2,0,0,java.util.ArrayList,"As others have pointed out, cloning the ArrayList does not clone its elements."
+8925779,2,0,1,java.util.ArrayList,You can't have an ArrayList<int> nor any other container class with primitives.
+9068965,2,0,0,java.util.ArrayList,The compiler don't knows your ArrayList contains an ArrayList so it doesn't recognize the get method as it trys to invoke it on Object and not ArrayList.
+15654081,2,0,5,java.util.ArrayList,"First and foremost, an ArrayList is not thread-safe."
+9151656,2,0,0,java.util.ArrayList,"First off I would advise against make a 10,000 entry ArrayList- that cannot be necessary."
+9161123,2,1,9,java.util.ArrayList,"And, as JohnB said in the comments, ArrayList isn't very efficient if you are removing lots of items from large lists..."
+9203741,2,0,4,java.util.ArrayList,"Differences between arrays and ArrayList:  Arrays are faster than ArrayLists, but cannot grow, while ArrayLists can."
+9335976,2,0,1,java.util.ArrayList,"You don't have just ArrayList and HashMap, JDK comes with a good variety of classes, in which you can find also what you are looking for: sets."
+9364012,2,0,1,java.util.ArrayList,"Since resizing is managed internally and existing items have to be moved to a new position anyway a ""resizable array"" like ArrayList doesn't make sense."
+9471275,2,0,0,java.util.ArrayList,You haven't instantiated the ArrayList.
+9524659,2,1,0,java.util.ArrayList,You can't have an ArrayList<int>; only an ArrayList<Integer>.
+9550472,2,0,1,java.util.ArrayList,"They therefore can't pass an ArrayList between themselves, unless they write it to a shared file, or pass it over the network, which is a whole other question."
+9575205,2,0,0,java.util.ArrayList,"If your main() method is indeed your main method, you probably haven't initialized your ArrayList."
+9632480,2,0,11,java.util.ArrayList,ArrayList isn't synchronised and so isn't thread safe.
+9668919,2,0,2,java.util.ArrayList,"Don't access ArrayList as if it were an array, use get(i)"
+9709491,2,0,0,java.util.ArrayList,"If you want a collection that is always sorted, ArrayList is not the tool you really want to use."
+12988354,2,0,0,java.util.ArrayList,"The class ArrayList doesn't clone it's arrays, it only calls the method copyOf in the class Array, which is harmful."
+9762163,2,0,3,java.util.ArrayList,The ArrayList won't resize if you don't add more elements than it has capacity for.
+9780801,2,1,3,java.util.ArrayList,Edit: Or don't have an ArrayList<String> but instead an ArrayList<MyCustomClass> where MyCustomClass's constructor or setter methods truncate the Strings as needed.
+9794125,2,0,0,java.util.ArrayList,"One thing that's worth noting is that you cannot declare an ArrayList of primitive types, but for each of the primitive types there exists an Object that is the boxed version of the primative."
+9874203,2,0,0,java.util.ArrayList,"ArrayList doesn't have enough information given that the ""data"" itself is stored in buckets of Object arrays."
+9957752,2,0,4,java.util.ArrayList,"And of course, you cannot cast an ArrayList to CageAnimal, that will fail at runtime with a ClassCastException, because ArrayList in not a subtype of CageAnimal."
+9959158,2,0,2,java.util.ArrayList,"Because of type erasure, you can't do new ArrayList<MyDataStruct>[w][h], because that basically becomes new ArrayList[w][h]...and things get complicated and hairy, fast, because arrays don't behave like generics."
+10067372,2,0,1,java.util.ArrayList,"ArrayList does not have this method, so as expected - you get a compilation error."
+10080723,2,0,3,java.util.ArrayList,You haven't initialized your ArrayList and you have a null pointer.
+10093183,2,0,0,java.util.ArrayList,"Retrieval of specific string,deleting specific string...i think ArrayList is not the best solution."
+10098434,2,0,0,java.util.ArrayList,"The best way to fix this is to not store things in RAM, i.e. don't use an ArrayList, etc., and instead just print out what you need (if possible)."
+10125453,2,0,0,java.util.ArrayList,Don't pass an ArrayList of ArrayList... rather use instanceof or a DataHolder class.
+10134865,2,0,2,java.util.ArrayList,This means something specific: list is an ArrayList and declaring it just the generic List collection enforces the fact that throughout the code you won't use any ArrayList specific method.
+10152938,2,1,7,java.util.ArrayList,"However, you can't assign, say, ArrayList<Long> to this list."
+10196598,2,0,9,java.util.ArrayList,"ArrayList doesn't ensure there are no duplicates, contains() is O(n) but you can control the order of the entries."
+10225564,2,1,4,java.util.ArrayList,"Furthermore, some of the code may even use methods specific to ArrayList, which aren't available or work differently in the other implementation class, making the change even costlier."
+10247579,2,0,0,java.util.ArrayList,"I didn't find any ArrayList() in your code, but if you want to extract data from ArrayList(), You can do as follow."
+10269461,2,0,7,java.util.ArrayList,ArrayList is not the best storage for primitives such as int.
+10276198,2,0,10,java.util.ArrayList,The list returned by asList isn't an ArrayList -- it doesn't support modification.
+10309414,2,0,1,java.util.ArrayList,"If this is possible, then storing it in ArrayList is not bad."
+10330461,2,1,0,java.util.ArrayList,If I run the deleteMessage method from above again the ArrayList doesn't change to null and everything works fine.
+10391156,2,1,3,java.util.ArrayList,The easiest would be if your ArrayList could be used directly as ListModel but this is not possible (as the ArrayList does not fire any events).
+10542895,2,0,1,java.util.ArrayList,"You haven't used the ArrayList, you need to add the Bill's objects at the end of the for loop."
+10557132,2,0,3,java.util.ArrayList,What comes into my mind:  check if the JDK is fully compliant with generics (so that the ArrayList class in your JSE is actually a generic class) check if you don't have another ArrayList which has scope precedence and overrides the standard library definition
+10557805,2,0,0,java.util.ArrayList,I'm trying to understand the difference in behaviour of an ArrayList   and a Vector    Vector is synchronized while ArrayList is not.
+10595131,2,0,1,java.util.ArrayList,"Use ArrayList<Byte> instead, Java arrays don't allow resizing, ArrayLists do, but make it a little bit different."
+10709668,2,0,0,java.util.ArrayList,"you can't pass an ArrayList directly between activity, you have to go to kind of object by serializing."
+10855864,2,0,1,java.util.ArrayList,"An ArrayList does not have a set length when you create it; you can simply add information to it as needed, making it perfect for reading input when you don't know how much input there is to read."
+10875350,2,1,5,java.util.ArrayList,"If the ArrayList is not referenced by your code, then the elements are not referenced and both the ArrayList and all its elements may be garbage collected."
+10989960,2,1,3,java.util.ArrayList,"Since your ArrayList doesn't have this many elements, it will throw an IndexOutOfRange exception."
+11004495,2,0,0,java.util.ArrayList,"for compatibility with very old versions of Java, then extending or wrapping ArrayList won't help - you probably want to find or make another array implementation that has the same functionality."
+11186676,2,1,3,java.util.ArrayList,ArrayList isn't a good choice if the contents can't be updated by the application itself.
+11206096,2,0,0,java.util.ArrayList,"Your assessment is misleading/incorrect, the ArrayList is not empty, and actually contains five elements."
+11261734,2,1,2,java.util.ArrayList,indexOf metod of ArrayList will not work with custom Objects unless   and until they override   public boolean equals(Object obj) You must override equals in LogList then only ArrayList will return you correct index.
+11282662,2,1,10,java.util.ArrayList,Vector was part of JDK 1.0; ArrayList was not.
+11427081,2,1,6,java.util.ArrayList,"Adding onto why you cannot use an arraylist: When you first initialize an ArrayList, the size is zero."
+11481328,2,1,1,java.util.ArrayList,"However, your collection, ArrayList, is not a thread-safe collection."
+11570615,2,0,0,java.util.ArrayList,(ArrayList) does not 'implement' ArrayList<E> (by virtue of the double nested wildcard).
+11599302,2,0,9,java.util.ArrayList,The ArrayList is not a linked list.
+11621807,2,0,2,java.util.ArrayList,"ArrayList can't be faster at simple get/set, but the difference would be very small and likely not worth worrying about in almost any realistic scenario."
+11645306,2,0,3,java.util.ArrayList,"In idiomatic Java, you wouldn't use ArrayList as a parameter type."
+11669370,2,0,2,java.util.ArrayList,"You are correct, your ArrayList cannot be used the way it is derived: there is nothing that you can put into it."
+11713317,2,0,1,java.util.ArrayList,"Not really an Answer to your question but you can solve this problem with inversion of control/dependency injection (just like you did in your code) basically: don't use ""new ArrayList()"" but instead some factory like ""injector.new(ArrayList.class)""."
+11732964,2,0,0,java.util.ArrayList,"Incidentally, this is one of the main reasons why the key Java collection classes like java.util.ArrayList are not thread safe: making them thread safe would add a performance overhead which you shouldn't have to pay for if you don't need, and in a lot of cases you don't need it because you can ensure in some other way that only one thread accesses the ArrayList at once."
+11876650,2,0,1,java.util.ArrayList,ArrayList isn't in the standard Java library which is java.lang.
+12074693,2,0,0,java.util.ArrayList,"Arrays (not ArrayLists) do not have a constant insert time, Java's ArrayList technically doesn't either (The add operation runs in amortized constant time for an ArrayList)."
+12109229,2,0,2,java.util.ArrayList,Setting the value at one position of an ArrayList WILL NOT mysteriously cause the value at another position to change.
+12127430,2,0,1,java.util.ArrayList,You cannot store an ArrayList in a varchar column.
+12144496,2,0,1,java.util.ArrayList,ArrayList doesn't have constructor with custom object.
+12159653,2,1,47,java.util.ArrayList,"ArrayList is not a thread safe collection, so if one thread adds data to your list, and another thread tries to retrieve data from the same list, you have no guarantee that the other thread will ever see the added elements."
+12238507,2,0,1,java.util.ArrayList,"Sometime you may need only a small piece of info, consider just a value from a table... then i think using something like ArrayList is not a smart move...."
+12285062,2,1,0,java.util.ArrayList,"This looks safe too because you initialized tweets as new ArrayList<Tweet>(); and even if tweet was null, an ArrayList() won't have a problem with that."
+12371923,2,0,0,java.util.ArrayList,"You cannot index an ArrayList like an array, you need the get(index) method."
+12420979,2,0,1,java.util.ArrayList,As a side note: I believe the choice of closedSet as ArrayList is not efficient.
+12494194,2,0,1,java.util.ArrayList,"Also, note that a final ArrayList means you can't replace the ArrayList, you can still call its methods to modify its content, final is not C++'s const."
+12558129,2,1,4,java.util.ArrayList,"Yes, I see no reason you cannot create an ArrayList of an object A."
+12594127,2,1,2,java.util.ArrayList,This gives the same compile-time error that you got: Type mismatch: cannot convert from ArrayList<String> to List<B>
+12652622,2,0,2,java.util.ArrayList,If you need specific methods on ArrayList that aren't in list then using ex1 is valid.
+12664627,2,0,1,java.util.ArrayList,"The problem is right there in the error  The method add(int, Entity_BikeShopRepair) in the type   ArrayList is not applicable for the arguments   (double, double, int, String)  The compiler is telling you that it is expecting you to give it an int and an Entity_BikeShopRepair and instead you're giving it four parameters so it doesn't know what to do."
+12685467,2,1,0,java.util.ArrayList,"If you try to add null, ArrayList does not complains."
+12760238,2,0,2,java.util.ArrayList,"ArrayList is not an array, it is a List implemented using a hidden array."
+12884051,2,0,3,java.util.ArrayList,"If you can't use ArrayList, then you'll have to write your own class that basically does the same thing as ArrayList."
+12998948,2,0,0,java.util.ArrayList,It seems that the compiler thinks that your customer object in the array list does not contain a getName method since the ArrayList does not declare a type parameter and the compiler therefore looks for the getName method in Object class.
+13001009,2,0,4,java.util.ArrayList,You can't create an ArrayList or call any of its methods in an interface.
+13001086,2,1,2,java.util.ArrayList,"An ArrayList is not a List of Arrays, it's a list backed by an array."
+13006881,2,1,1,java.util.ArrayList,you can still get the collection of records by calling map.values(); and iterate over them ArrayList is not very well suited for your use case.
+13021897,2,0,2,java.util.ArrayList,"You mentioned in a comment that you can't use an ArrayList, but you don't need to."
+13026296,2,1,1,java.util.ArrayList,"An instance of ArrayList doesn't know that it's an ArrayList<String> (or rather, that it was assigned to a variable with that generic type)."
+13116231,2,0,1,java.util.ArrayList,Side note: Coding against some concrete type (e.g ArrayList) is not a good practice.
+13169253,2,0,6,java.util.ArrayList,ArrayList doesn't have any size limitation -- it'll expand as large as it has to to fit the elements you add to it.
+13230219,2,0,4,java.util.ArrayList,If the built-in implementations (like LinkedList and ArrayList) are not good enough for you then you can always extend the AbstractList which is provided in the Java Collections Framework.
+13288689,2,0,0,java.util.ArrayList,"It doesn't add flexibility, it just let you keep generics with your ArrayList whithout having to retype the type of the ArrayList, and so the ArrayList will not use raw type."
+13370697,2,0,0,java.util.ArrayList,The key here is that ArrayList is not an actual array.
+13381203,2,0,1,java.util.ArrayList,So the new ArrayList() will not compile.
+13405153,2,1,0,java.util.ArrayList,"The problem is, ArrayList doesn't know how to calculate min, max, and average."
+13435989,2,0,1,java.util.ArrayList,"Since you are manipulating the values in the same array over and over and the ArrayList doesn't make copies of the elements added to it but rather just references them, each entry in the ArrayList refers to the same array, which has the last state, it's given."
+13484527,2,0,0,java.util.ArrayList,"Come back when its 8 million :P.  As long as you have enough memory to handle it, the size of the ArrayList shouldn't be an issue."
+13520308,2,0,1,java.util.ArrayList,"If not, you can't beat ArrayList and if your mission is to succeed without reimplementing it, then it is an impossible mission."
+13546300,2,1,1,java.util.ArrayList,Note that the ArrayList should not be reinstantiated for each instance that you wish to add; you should only instantiate the ArrayList once.
+13552164,2,0,1,java.util.ArrayList,Since ArrayList is not a primitive you must alloacte memory for it by using new.
+13598372,2,0,0,java.util.ArrayList,"Apparently, even ArrayList is not supported."
+13631549,2,0,1,java.util.ArrayList,"The only difference is that in the first case, you're referencing a MyClass instance as a Runnable, whereas in the second case, you're referencing it as a MyClass (through an ArrayList, which doesn't serve any purpose)."
+13695278,2,0,0,java.util.ArrayList,An ArrayList isn't an array in the traditional sense; it is an object.
+13741938,2,0,0,java.util.ArrayList,"Third, the toString() method on an ArrayList isn't going to write the file like you are expecting."
+13766952,2,1,13,java.util.ArrayList,"There can be in theory, but at present such large arrays (arrays with indexes outside the range of an integer) aren't supported by the JVM, and thus ArrayList doesn't support this either."
+13770997,2,1,1,java.util.ArrayList,"Bottom-line: if you're doing a lot of ""indexOf()"" requests, then the ArrayList may not be the best container for your data."
+13785561,2,0,3,java.util.ArrayList,I can think of 3 options:  write your own map implementation that embeds an ArrayList and keeps it up to date update the ArrayList manually everytime you update the map don't use an ArrayList at all (keySet() is there when you need to access the keys so I'm not sure why you would need one)
+13812041,2,0,2,java.util.ArrayList,"get rid of the array and use an ArrayList, don't read the file once to see how many rows you're going to have ahead of time."
+13851692,2,1,3,java.util.ArrayList,No - ArrayList is not a linked list at all - it's an array list.
+13994537,2,1,0,java.util.ArrayList,ArrayList is not a transportable type.
+13954506,2,0,2,java.util.ArrayList,"If you start with an ArrayList<Object>, casting this to ArrayList is not an upcast: it just casts a parameterized type to its raw counterpart."
+14025544,2,0,5,java.util.ArrayList,Don't declare the ArrayList again inside the if blocks.
+14085150,2,0,1,java.util.ArrayList,Don't instantiate ArrayList twice.
+14107944,2,0,2,java.util.ArrayList,"However, beside that, there is anoter criteria that can make (or not) a bigger splash: Arrays are covariant where ArrayList are not; that is: if B is a subclass of A than a reference to an Array of A can also accept a reference to an array of B but a reference to an ArrayList of A cannot accept an ArrayList of B."
+14173197,2,1,4,java.util.ArrayList,"This method doesn't return an ArrayList but an Arrays.ArrayList which is a different class, meant to backen an Array and to be able to use it as a List."
+14178611,2,0,1,java.util.ArrayList,"Since ArrayList is not synchronized, the performance is generally not going to be substantially worse than Object[], particularly if you specify the size before adding elements."
+14232752,2,1,7,java.util.ArrayList,If you want efficiency I wouldn't use ArrayList or Float here.
+14291110,2,0,1,java.util.ArrayList,add method of ArrayList is not static method so you can not call outside an instance of ArrayList.
+14380586,2,1,5,java.util.ArrayList,"Yes, but use a ThreadLocal>  My main doubt because of ArrayList inside Hashtable because ArrayList is not thread safe."
+14392812,2,0,3,java.util.ArrayList,ArrayList can't handle that.Maximum limit of arraylist size is Integer.MAX_VALUE.You can use LinkedList which can contain any number of elements(depends on your memory actually):-)
+14475192,2,1,1,java.util.ArrayList,"Ok, there are a few problems here:  positionList = new ArrayList<>(); will not compile."
+14483291,2,0,5,java.util.ArrayList,You can't have an ArrayList<int> in Java due to the way generics works.
+14492331,2,0,2,java.util.ArrayList,And If you use the above assignment you cannot call ArrayList methods like trimToSize() etc.
+14593761,2,1,0,java.util.ArrayList,"Updated As pointed out by the commentators, ArrayList is not thread safe, it's not a good idea to have multiple threads trying to access it simultaneously."
+14656814,2,0,0,java.util.ArrayList,"That won't happen with ArrayList or any other ""normal"" List implementation."
+14734178,2,0,1,java.util.ArrayList,You cannot iterate over ArrayList and add elements to it at the same time with foreach.
+14875648,2,1,3,java.util.ArrayList,"But, if your WidgetGroup just contains an ArrayList, don't introduce this new class (keep it simpler)."
+14921345,2,0,1,java.util.ArrayList,"however, if you want a dynamic array, use a List implementing class like ArrayList which doesn't require you to provide size while creating the array."
+14984171,2,0,0,java.util.ArrayList,"The problem is that an ArrayList is not the same thing as an ArrayList, even if b extends A."
+14984176,2,0,0,java.util.ArrayList,ArrayList is not a subclass of ArrayList because the former can have a's added to it while the latter cannot.
+15036923,2,0,5,java.util.ArrayList,"If you don't want the users of the iterator from removing items from the array (since it isn't an ArrayList), then throw an UnsupportedOperationException if this method is called."
+15054560,2,1,3,java.util.ArrayList,But your method doesn't take an ArrayList as argument.
+15056180,2,0,0,java.util.ArrayList,for (Square s: r.getDoor()) uses an iterator internally and you can't change an ArrayList while iterating over it.
+15148889,2,1,3,java.util.ArrayList,ArrayList is not multi-thread safe.
+15152083,2,0,0,java.util.ArrayList,"The commonly used Collection classes, such as java.util.ArrayList, are not synchronized."
+15162660,2,0,2,java.util.ArrayList,"Moreover, an ArrayList doesn't get full."
+15192811,2,0,0,java.util.ArrayList,This is technically thread safe as long as the underlying ArrayList doesn't change after initial construction.
+15213280,2,1,2,java.util.ArrayList,"If a Library isn't an ArrayList, then you can use composition, which is easier to use anyway."
+15293498,2,0,5,java.util.ArrayList,"Here Restrictions.eq(""t.id"",taxIds), taxIds is ArrayList and t.id is Long, so comes java.util.ArrayList cannot be cast to java.lang.Long exception"
+15395888,2,0,0,java.util.ArrayList,You can't change the ArrayList that is used for iteration inside a loop; that is what ConcurrentModificationException says (http://docs.oracle.com/javase/1.4.2/docs/api/java/util/ConcurrentModificationException.html) and newList = allRestaurants; plus newList.add(restaurant);does potentially change the list allRestaurants.
+15458942,2,1,6,java.util.ArrayList,"Note also that ArrayList is not synchronized, then the concurrent execution of several tasks may corrupt your list."
+15774507,2,1,0,java.util.ArrayList,"Also, since the contents of the file where you persist your ArrayList are not textual, I'd suggest you change the name of the file to something else, for example hello.dat instead of hello.txt."
+15890921,2,0,0,java.util.ArrayList,"You could write your own version of an ArrayList that doesn't allow for duplicates, by overriding add() and addAll()."
+15893343,2,0,0,java.util.ArrayList,"So using ArrayList for retrieval is best but for insertion in a random position ArrayList is not suitable, as it needs resize of ArrayList and several shift operations."
+15907084,2,1,1,java.util.ArrayList,The default ComboBoxModel doesn't support ArrayList.
+15964622,2,0,2,java.util.ArrayList,"First, a little terminology: Your ArrayList doesn't contain classes, it contains references to instances of the Card object."
+16109536,2,1,8,java.util.ArrayList,"An ArrayList doesn't know anything about its ordering, and you have to know a list is sorted before you can use binary search."
+16161048,2,1,9,java.util.ArrayList,"When the program executes, the ArrayList does not know about its generic type."
+16227791,2,1,5,java.util.ArrayList,"If a collection is thread-safe then this means that two threads can add/remove objects from the collection without corrupting it (for example, an ArrayList is not thread-safe, so if two threads each try to add an object to the collection then one or both objects may be lost), however the objects in the collection will still need to be synchronized to make them thread-safe."
+16234060,2,0,0,java.util.ArrayList,"As you have found out, ArrayList does not keep the order and has random get/set methods."
+16367334,2,0,6,java.util.ArrayList,That's because ArrayList is not a generic one in your case.
+16393753,2,0,0,java.util.ArrayList,"ArrayList doesn't have an indexOf(Object target, Comparator compare)` or similar."
+16393802,2,0,4,java.util.ArrayList,"Two approaches to this problem: 1- Don't use ArrayList, Use HashMap<String,AutionItem> where String would be name 2- Use getName to generate index and use index based addition into array list list.add(int index, E element)."
+16415810,2,0,2,java.util.ArrayList,"it will give me a compiler error stating ""cannot convert from ArrayList<String> to ArrayList<Integer>"" Thus it ensures compile time safety."
+16466493,2,1,8,java.util.ArrayList,ArrayList is not the only implementation of List.
+16489004,2,0,2,java.util.ArrayList,"An ArrayList is not an array, so you can't use the array element [] syntax here."
+16519037,2,1,4,java.util.ArrayList,Your assumption that you can cast it to ArrayList is not valid.
+16644885,2,0,1,java.util.ArrayList,"Array.subList doesn't return an ArrayList, but a List."
+16697348,2,0,0,java.util.ArrayList,"You are converting this array to ArrayList wordList when you say wordList.contains(""put""), it checks whether the ArrayList has the word ""put"" (and this condition fails, because ArrayList doesn't have put, it has input rather)."
+16748184,2,1,18,java.util.ArrayList,Note that the list wrapper doesn't extend ArrayList - it's a different kind of object.
+16833061,2,1,2,java.util.ArrayList,"Don't use Raw ArrayList, instead use Generics"
+16839035,2,1,5,java.util.ArrayList,"If this is the case, it sounds like you're not synchronising on ArrayList calls properly - ArrayList is not a thread safe collection."
+16839084,2,0,5,java.util.ArrayList,"ArrayList is not synchronized, or otherwise prepared for use in two threads at once."
+16870670,2,0,0,java.util.ArrayList,"You create the ArrayList for returnList1, then you overwrite it with the data from the database, but you don't create the ArrayList for returnList."
+16880147,2,0,0,java.util.ArrayList,If your ArrayList doesn't have any members you can add only to index 0.
+16888051,2,0,3,java.util.ArrayList,"Java classes (i.e. ArrayList) don't natively support the [] operation (though you do get extensions, and arrays are technically classes as well, and they do support it)."
+16891216,2,0,5,java.util.ArrayList,"As the error message says, ArrayList does not implement the Comparable interface that is required by TreeMap to do the ordering of the elements in the map."
+17079173,2,1,2,java.util.ArrayList,"will not work, it will raise a compile error; an ArrayList is not a CopyOnWriteArrayList."
+17105228,2,1,11,java.util.ArrayList,"For ArrayList, there's no such concept really - type erasure means that an ArrayList doesn't really know its component type, so you can create any ArrayList."
+17127079,2,0,1,java.util.ArrayList,"You mention ""How do I make this line an ArrayList when creating an ArrayList is not as simple as that"", I say creating an ArrayList is as simple as that."
+17143325,2,0,0,java.util.ArrayList,"because the compiler recognizes a type mismatch ""cannot convert from ArrayList<String> to List<Object>"""
+17206151,2,1,3,java.util.ArrayList,"Additionally, ArrayList isn't thread-safe, so modifying it in one thread and reading it in another could well cause problems."
+17226500,2,0,2,java.util.ArrayList,You can't pass an ArrayList to a method that wants an array.
+17351165,2,0,2,java.util.ArrayList,The nested class ArrayList is not overriding the add(E e) method of AbstractList.
+17384119,2,0,2,java.util.ArrayList,ArrayList does NOT extend ArrayList as the implication does not hold.
+17413798,2,0,0,java.util.ArrayList,You don't want your ArrayList to have to expand itself because that will take time when you're trying to grab the data before the list changes.
+17414786,2,1,1,java.util.ArrayList,Your ArrayList obviously doesn't need to hold Strings.
+17436821,2,1,5,java.util.ArrayList,With a Queue instance you don't have to worry about indexes and this makes things easier to think about if you don't need everything ArrayList has to offer.
+17450520,2,1,11,java.util.ArrayList,ArrayList can't hold more than Integer.MAX_VALUE elements.
+17459914,2,1,1,java.util.ArrayList,Not completely sure what you are trying to do but maybe I can head it off... 1) You can't put an ArrayList into a ContentValues.
+17481288,2,0,1,java.util.ArrayList,You are encountering a problem because you cannot construct the ArrayList and populate it at the same time.
+17642806,2,1,2,java.util.ArrayList,"For instance, if the compiler tells you that an ArrayList does not have a length property or method -- then look in the ArrayList API for an appropriate method that gets the information that you want."
+17642806,2,1,2,java.util.ArrayList,"Also, your ArrayList should not hold Object, in other words it shouldn't be ArrayList<Object> but should be much more specific."
+17725697,2,0,0,java.util.ArrayList,ArrayList is not thread safe see ArrayList documentation for Android.
+17711131,2,0,2,java.util.ArrayList,"Because, you cannot instantiate an ArrayList of unknown type."
+17858206,2,1,3,java.util.ArrayList,List<String> exampleList = new ArrayList<>(); will not compile in pre java 7 versions.
+17911555,2,1,2,java.util.ArrayList,"You can skip that parameter, if your ArrayList is not going to be very large."
+17973530,2,0,1,java.util.ArrayList,"Please note that ArrayList is not synchronized, but Vector is."
+18005995,2,0,2,java.util.ArrayList,But let's think that one day you realize that an ArrayList is not the best solution for your problem.
+18021401,2,1,4,java.util.ArrayList,The problem is that the add method of ArrayList does not return the instance (the opposite would be StringBuilder's append which does return the instance).
+18072085,2,0,1,java.util.ArrayList,"For example, let's say you have an ArrayList v. If you do String s=(String)v, it will throw an exception because you can't convert an ArrayList to a String."
+18085404,2,0,2,java.util.ArrayList,"If so, please try to get something out of working with Arrays, because they will be used in courses like Data Structures and especially if you start using a language that doesn't have an ArrayList equivalent."
+18085345,2,1,6,java.util.ArrayList,Note also that an ArrayList is not covariant.
+18104337,2,0,2,java.util.ArrayList,"Arrays.asList() doesn't return an ArrayList, so you can't cast it (it returns an unmodifiable List)."
+18139980,2,0,10,java.util.ArrayList,"ArrayLists are nothing but a collection of references, so the size of ArrayList does not depends on the type of the object it points to."
+18139980,2,0,10,java.util.ArrayList,Hence the memory of the ArrayList does not depend on the reference object types.
+18149937,2,1,3,java.util.ArrayList,"if an object is an ArrayList<String>, its class cannot be Class<ArrayList<String>> - there is no such class, there is only a Class<ArrayList>."
+18241619,2,0,1,java.util.ArrayList,"When this occurs, the main method inside ArrayList is not called - instead, its constructor is."
+18319938,2,0,1,java.util.ArrayList,"That is, the fastest Map in the Java Standard Library is faster that the fastest Map in the C++ one (at least prior to C++11, which added the std:unordered_map) On the other side, a std:Vector<int> is far more efficient that an java.util.ArrayList<Integer> (due to type erasure, you can't use a java.util.ArrayList<int>, and therefore end up with about 4 times the memory consumption, and possibly poorer cache locality, and correspondingly slower iteration)."
+18388536,2,1,0,java.util.ArrayList,The ArrayList wasn't changed until the activity was restarted.
+18329416,2,0,5,java.util.ArrayList,To sort things out: For more flexibility you initiate interface List: So if you don't need all ArrayList use List only.
+18348854,2,0,2,java.util.ArrayList,"Therefore, it cannot be an ArrayList or any other type derived from Collection."
+18370847,2,1,6,java.util.ArrayList,"This may speed up future inserts, because the array inside ArrayList does not need to grow."
+18411075,2,1,0,java.util.ArrayList,"Don't use ArrayList, use the interface List."
+18555106,2,1,6,java.util.ArrayList,But the size() method of the ArrayList doesn't return the initial capacity of its backing array... it returns the number of actual elements in the list.
+18558562,2,0,3,java.util.ArrayList,So casting it to ArrayList is not safe as you do not  know what type of List is being returned (depends on the array type it's creating the list from).
+18583688,2,1,1,java.util.ArrayList,"ArrayList doesn't copy storing value, it stores just reference to added object."
+18626519,2,1,5,java.util.ArrayList,The Method add(Book) in the type ArrayList is not applicable for the arguments (String).
+18776684,2,0,8,java.util.ArrayList,A generic container (such as ArrayList) should not be dealing with taxes.
+18786825,2,0,1,java.util.ArrayList,"This implies that their construction, unlike let’s say for an ArrayList, cannot optimized away, and multi-threaded construction slows down due to what happens inside that method (i.e. synchronization)."
+18807939,2,0,0,java.util.ArrayList,"The ArrayList won't be GC'd if there's a valid reference to it, and if it contains nulls, then there's nothing in it to be held in memory or to GC."
+18814293,2,0,0,java.util.ArrayList,You can't get ArrayList objects by using [] operator like arrays.Use get() method on ArrayList to get the objects.
+18933976,2,0,1,java.util.ArrayList,The difference is that Vector is automatically synchronized and ArrayList is not.
+18935442,2,0,1,java.util.ArrayList,Moreover ArrayList Phones = new ArrayList(); isn't nice because you're using a raw type and a bad name (uppercase is for class).
+18985504,2,0,1,java.util.ArrayList,The DefaultTableModel doesn't support an ArrayList with custom Objects so you could try using the Row Table Model.
+19065858,2,1,3,java.util.ArrayList,First of all you can't use ArrayList<T> items; because Gson tries to converts it to LinkedList.
+19147206,2,0,0,java.util.ArrayList,"Also ArrayList is generic, this is the reason why list = ArrayList[] isn't working."
+19269417,2,1,3,java.util.ArrayList,"As that runtime cast won't check your ArrayList contains Document objects, the compiler raises a warning."
+19273562,2,0,0,java.util.ArrayList,ArrayList is not always the fastest to add things to.
+19328953,2,0,2,java.util.ArrayList,"Using an ArrayList is not a good idea in your case, because it has a fixed size and your data probably is not of a fixed size, therefore the internal storage would have to be re-created a few times during reading."
+19340198,2,0,2,java.util.ArrayList,"If you can't use ArrayList, then you will need to truncate your array before returning it (your counter variable will be of use in determining the correct length)."
+19341598,2,0,1,java.util.ArrayList,"ArrayList don't has method equivalent to poll(), however we can write our own utility method to serve this purpose."
+19383556,2,0,3,java.util.ArrayList,"I'm wondereing what would happen if more than 1 thread will try to   access this list at same time  Firstly ArrayList is not thread-safe, so you should not use it directly."
+19385243,2,0,0,java.util.ArrayList,"You can't persist whole orders2, because ArrayList is not JPA aware class."
+19469388,2,0,1,java.util.ArrayList,"error: non-static method printrecordnumber(ArrayList) cannot be referenced from a static context case 3: System.out.println(""Number of records: "" + printrecordnumber(vehiclearray)); ""A static method belongs to the class itself and a non-static (or instance) method belongs to each object that is generated from that class."
+19469290,2,1,0,java.util.ArrayList,"error: non-static method printrecordnumber(ArrayList) cannot be   referenced from a static context case 3: System.out.println(""Number of   records: "" + printrecordnumber(vehiclearray));  You cannot call a non-static method from a static method."
+19474836,2,0,0,java.util.ArrayList,"You cannot compare ArrayList to String, instead use contains method to find if element exists in the ArrayList."
+19560090,2,0,0,java.util.ArrayList,"A few tips:  Don't use ArrayList as a method parameter, always use the more abstract List (none of your code depends on ArrayList, so you can change the implementation later, if you like)."
+19573032,2,0,1,java.util.ArrayList,"Since ArrayList is not immutable, any change to the object is reflected in both the object references."
+19575418,2,1,2,java.util.ArrayList,"Check if the token you want to enter into the ArrayList is not """"  If not, add the word to the ArrayList   You specify that you need to split based on \t values so white spaces won't be an issue."
+19601540,2,0,3,java.util.ArrayList,"Because Map<T, ArrayList<...>> is not a subtype of Map<T, List<...>>."
+19677313,2,0,1,java.util.ArrayList,Don't recreate the ArrayList on each keyTyped.
+19709029,2,0,7,java.util.ArrayList,You cannot return ArrayList<Object>.
+19729823,2,0,5,java.util.ArrayList,If filenames1 is an array you cannot use ArrayList method get(int i).
+19774480,2,0,1,java.util.ArrayList,ArrayList does not sort the elements contained.
+19790908,2,1,22,java.util.ArrayList,"So, it can't be an ArrayList because ArrayList can grow or shrink."
+19791491,2,0,0,java.util.ArrayList,But ArrayList is not faster in the time of deleting record because rearranging the index is  more complex Where we want more deleting record we can use LinkedList it's not index based  ArrayList Declaration java.util.List ArrayList arrayList = new ArrayList();
+19843243,2,0,2,java.util.ArrayList,"ArrayList is not a dynamic array, it's not an array type dynamic or not, it's just one of the implementations of the List interface."
+19859085,2,0,1,java.util.ArrayList,"As we cannot go modify ArrayList, you can use external comparator to make ArrayList work as a key to the TreeMap."
+19866116,2,0,3,java.util.ArrayList,"An ArrayList doesn't exist until you have instantiated it, just like any object."
+19866193,2,1,1,java.util.ArrayList,You haven't initialized  the ArrayList<Player> Round.
+19906313,2,1,5,java.util.ArrayList,Arrays.asList() doesn't return an ArrayList.
+19938502,2,0,13,java.util.ArrayList,It didn't work in Java7 - the inference on new ArrayList<>() could not depend on context.
+20000145,2,0,0,java.util.ArrayList,"For the fact that ArrayList does not implement Comparable you will have to use the sort()-method that takes a Comparator-object as parameter, and implement a compare-method yourself: http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#sort(java.util.List,%20java.util.Comparator)"
+20015150,2,0,5,java.util.ArrayList,so this doesn't affect ArrayList.
+20015296,2,0,1,java.util.ArrayList,k now points to abc1 but the reference inside the ArrayList didn't change.
+20027439,2,0,0,java.util.ArrayList,One possibility is that ArrayList is not the standard java.util.ArrayList but some custom class that you have written yourself ... and declared in the default package.
+20042341,2,1,3,java.util.ArrayList,"Indeed it is - you can't assign an ArrayList<PrintWriter> to a variable of type ArrayList<Writer>, because an ArrayList<PrintWriter> just isn't an ArrayList<Writer>."
+20090534,2,1,0,java.util.ArrayList,"There are two issues here  Employee is not recognized as an entity type, since it is not annotated ArrayList is not a supported List type in Querydsl, only Collection interfaces are supported  Consider annotating Employee and use List instead of ArrayList"
+20093102,2,0,3,java.util.ArrayList,Giving the message Type mismatch: cannot convert from ArrayList<SubClass> to ArrayList<SuperClass>.
+20141828,2,0,0,java.util.ArrayList,"The problem isn't your ArrayList, it's the Scanner usage."
+20148055,2,0,0,java.util.ArrayList,Because you didn't override ArrayList toString() method.
+20207387,2,0,0,java.util.ArrayList,Well first of all an ArrayList is not a List of arrays.
+20244482,2,0,2,java.util.ArrayList,It doesn't return an ArrayList.
+20295703,2,0,0,java.util.ArrayList,"All of the objects retain their own class identity, but the code that uses the ArrayList isn't directly aware of it."
+20390720,2,0,0,java.util.ArrayList,"The ArrayList does not hold the object, only a reference to the object (just like your reference to the object)."
+20394637,2,0,0,java.util.ArrayList,"First, ArrayList doesn't have a field called length, you want to use size() instead."
+20414179,2,0,1,java.util.ArrayList,"Moreover, as part of the Java Collections API, ArrayLists are more flexible because they extend the List interface which enables you to change implementations from ArrayList to any other List provided that your own class that implements the List is well encapsulated (i.e. the ArrayList is not part of your class's exported API)."
+20414822,2,1,1,java.util.ArrayList,"However, if this is an index that should be able to be accessed, then the problem is you didn't make your ArrayList large enough."
+20414822,2,1,1,java.util.ArrayList,So now you need to go to the part of the code in which you've set up your ArrayList and figure out what logic error you've made here and why your ArrayList isn't as large as you intended it.
+20436590,2,0,1,java.util.ArrayList,I don't believe ArrayList is an intrinsic type that will work without instantiating it.
+20482512,2,0,4,java.util.ArrayList,"The important thing with ArrayList, is not so much how much faster or slower it is compared with straight arrays, but that it's access time always constant (like arrays)."
+20505599,2,0,4,java.util.ArrayList,"In both cases, the ArrayList will not be referenced once you exit the Move() method."
+20558321,2,1,3,java.util.ArrayList,The Summoned_Bin isn't an ArrayList as it does not extend the ArrayList class.
+20657158,2,0,5,java.util.ArrayList,You don't need the ArrayList in your Pair class.
+20657130,2,0,4,java.util.ArrayList,You can use a Map as well like the others pointed out but you don't need an ArrayList.
+20668154,2,0,2,java.util.ArrayList,This public static ArrayList<Book> Books = new ArrayList<>(); can't be in the Book class.
+20670350,2,1,0,java.util.ArrayList,If the fact that it is an ArrayList doesn't matter.
+20703024,2,0,2,java.util.ArrayList,"The overhead of a single array used inside ArrayList should not be an issue, and in any case it is the smallest issue you can have."
+20738390,2,1,2,java.util.ArrayList,"If you just want to print out the results, since you remove any element you added after the recursive call, tmp should look exactly the same at both the start and the end of the function, so it shouldn't make any difference (your way would be preferred as it doesn't copy the ArrayList at each step)."
+20765866,2,1,3,java.util.ArrayList,The implementation of ArrayList does not change when you change its generic type parameter: it's always java.lang.Object behind the scene.
+20942659,2,0,1,java.util.ArrayList,If your assignment mentions array and your course specifically uses Java then List and its implementation ArrayList might not be exactly what you want.
+21122314,2,0,3,java.util.ArrayList,Adding to an ArrayList might not be the best idea unless you know how many elements you are adding from the beginning and create it with that size.
+21170643,2,1,0,java.util.ArrayList,The index is based on the order Objects are added (assuming you haven't sorted the ArrayList or otherwise changed the order).
+21245483,2,0,1,java.util.ArrayList,The ArrayList should not be static nor public but rather should be a private instance field.
+21341761,2,0,1,java.util.ArrayList,"You could use Arrays.copy to create the result array, but if you can't use ArrayList you probably can't use Arrays.copy either."
+21355846,2,1,2,java.util.ArrayList,"Your ArrayList isn't typed, so everything coming from it is an Object."
+21388533,2,0,2,java.util.ArrayList,"You aren't keeping the ArrayList you're creating in the second example, but it's not even necessary."
+21435574,2,0,2,java.util.ArrayList,"extends Number>>, doesn't capture ArrayList<List<Integer>>."
+21445121,2,0,1,java.util.ArrayList,"As an ArrayList doesn't initially contain any elements, it can't default the value of those elements to null or any other value."
+21445511,2,0,2,java.util.ArrayList,See  The Java Tutorial  ArrayList is not physically  empty after creating.
+21454067,2,0,0,java.util.ArrayList,You can't directly cast ArrayList.
+21515449,2,0,1,java.util.ArrayList,"infile.next() returns a String value, so it cannot populate an ArrayList<Student>."
+21660314,2,1,1,java.util.ArrayList,"Except for performance issues, the internal mechanisms and the capacity of the ArrayList shouldn't concern you."
+21670402,2,0,1,java.util.ArrayList,You can't split ArrayList.
+21831050,2,0,1,java.util.ArrayList,"There is no other option, since an ArrayList is not sorted and there is no other access path to a specific element, given its value."
+21919325,2,0,2,java.util.ArrayList,You should to check if your ArrayList is not empty.
+21983268,2,1,3,java.util.ArrayList,SubList requires a parent field because sub-lists of a SubList use the SubList as the parent -- the enclosing ArrayList is not the parent in that case.
+21971937,2,1,6,java.util.ArrayList,"You can't create an ArrayList<int>, similarly you can't pass an int[] or any other primitive type array where a T[] array is expected."
+21996647,2,0,0,java.util.ArrayList,The declaration ArrayList does not equal to ArrayList.
+21996654,2,1,0,java.util.ArrayList,"""The constructor Flight(String) is undefined Syntax error on token ""["", Expression expected after this token"" Try switching the brackets to the type, not the variable: String[] singleRowArray ""The method add(String) in the type ArrayList is not applicable for the arguments (Flight)"" You have a List<String> where you want to input an object of type Flight, so you should change the list type to List<Flight>."
+22097449,2,1,1,java.util.ArrayList,"An ArrayList is not a good choice, because removing the element at start of the list is an O(N) operation."
+22119619,2,0,2,java.util.ArrayList,"Now if you can't even use ArrayList, then you have two choices: 1."
+22150977,2,1,1,java.util.ArrayList,"And as Woot4Moo pointed out in the comments, ArrayList may not be the ideal choice if you're doing a lot of removes."
+22209851,2,0,0,java.util.ArrayList,Your ArrayList doesn't specify what type it contains.
+22233859,2,1,1,java.util.ArrayList,"Also, ArrayList doesn't have a length attribute."
+22419475,2,0,2,java.util.ArrayList,"Java arrays can't grow, Use ArrayList, if the content intend to be grow"
+22419510,2,0,3,java.util.ArrayList,Java ArrayList don't have addLast() method.
+22500198,2,0,1,java.util.ArrayList,Note I've not used synchronization you need to implement those as ArrayList is not synced.
+22515151,2,0,0,java.util.ArrayList,will not work because the internal ArrayList doesn't match up with the type of List.
+22515183,2,0,0,java.util.ArrayList,"Although ArrayList<Integer> is a subtype of List<Integer>, that doesn't make ArrayList<ArrayList<Integer>> a subtype of List<List<Integer>>."
+22528086,2,0,1,java.util.ArrayList,"Change either the JSP or Servlet to use the same name, either result or results EDIT: each row is actually a ArrayList<String> so expressions like ${row.address} will not work, because ArrayList does not have a getAddress method."
+22538258,2,1,2,java.util.ArrayList,"Create the list out of this method; what is more, an ArrayList is not thread safe, you probably want to use a CopyOnWriteArrayList."
+22557339,2,0,2,java.util.ArrayList,"Assuming you need an Instances object, you cannot cast an ArrayList to that."
+22608240,2,0,0,java.util.ArrayList,"On the other hand, a LinkedList is efficient if you need to insert elements in random places in the list, while and ArrayList is not."
+22658258,2,1,3,java.util.ArrayList,"No, ArrayList of ArrayLists cannot contain other elements except ArrayList."
+22701835,2,0,0,java.util.ArrayList,The problem is that your ArrayList isn't completely populated by the time the array element is to be accessed.
+22716840,2,0,0,java.util.ArrayList,"Again, this cannot compile since ArrayList does not have any of these methods that you are calling, not unless you have a second local variable of the same name, salesForce that is in fact a SalesAgent object, and that shadows the class field, and one that you never show us that you've declared."
+22779982,2,0,0,java.util.ArrayList,Thus generic sorting of LinkedList and array (or ArrayList) doesn't make much sense.
+22776722,2,1,5,java.util.ArrayList,and states  In the example above an error message is issued because the new   -expression new ArrayList <> () does not have constructor arguments and it neither appears on the right-hand side of an assignment nor as   the argument of a method invocation.
+22844023,2,1,2,java.util.ArrayList,ArrayList is not at all built for your use case.
+22844023,2,1,2,java.util.ArrayList,I am making an assumption here that reallocating the memory of ArrayList is NOT thread safe for the reader of the array's start...  No it is not.
+22850987,2,1,0,java.util.ArrayList,Don't mock ArrayList - use a real ArrayList instead.
+22902972,2,1,1,java.util.ArrayList,"An ArrayList is not an array, so your program obviously won't run into the generic array problem."
+22939300,2,0,2,java.util.ArrayList,An ArrayList is not sparse.
+22950680,2,0,0,java.util.ArrayList,"However, the datastructure ArrayList is not thread safe."
+22952635,2,0,0,java.util.ArrayList,"The fact that it's an ArrayList of Strings doesn't matter to the runtime, because erasure means that the ArrayList doesn't know or care about what it's a list of, at runtime."
+23005006,2,1,5,java.util.ArrayList,You haven't initialized myContents ArrayList.
+23006029,2,1,2,java.util.ArrayList,"First of all ArrayList is not thread-safe, it should not be directly used in multi-threaded way without any synchronization as it may fail unexpectedly."
+23031468,2,1,2,java.util.ArrayList,"File != ArrayList, ArrayList don't know anything about File and File don't know anything about ArrayList."
+23031972,2,0,0,java.util.ArrayList,ArrayList does not have element(int) method.
+23032490,2,1,1,java.util.ArrayList,"Unlike arrays, the length of an ArrayList is not a directly accessible field."
+23067946,2,0,2,java.util.ArrayList,An ArrayList does not require a initial size and does grow dynamically.
+23208562,2,1,0,java.util.ArrayList,"An ArrayList is not the best data structure for purpose of your outer list, and at least part of your difficulty stems from incorrect use of a list of lists."
+23222188,2,0,2,java.util.ArrayList,"Arrays#asList doesn't return an ArrayList<T>, it returns a List<T>."
+23273101,2,0,1,java.util.ArrayList,"The Switch class in  ""ArrayList"" can't be used for switch statistics."
+23263367,2,0,0,java.util.ArrayList,"You cannot compare reference objects with == , ArrayList is not a primitive data type."
+23279943,2,1,0,java.util.ArrayList,capacity doesn't force an ArrayList to have a certain size.
+23288503,2,0,0,java.util.ArrayList,ArrayList is not self-expandable.
+23343129,2,0,0,java.util.ArrayList,ArrayList is not an array type.
+23378516,2,0,0,java.util.ArrayList,Results: i 0 i 1 i 2 breaking out of loop Reading... Reading... r 13 r 44 Reading... r 78 Print metrics I changed the ArrayList to a Vector since ArrayList is not thread safe which would eventually cause a ConcurrentModificationException.
+23384940,2,1,2,java.util.ArrayList,If you retrieve the arrayList and set your variable to a completely different ArrayList then this won't affect the arrayList within Dog (because its a different ArrayList).
+23434754,2,1,1,java.util.ArrayList,"The primary difference is that Vector is thread-safe, whilst ArrayList is not, but seeing as you aren't working with multiple threads, there is no reason to prefer Vector over ArrayList in your code"
+23451393,2,1,0,java.util.ArrayList,"If you can't use ArrayList, then you'll have to combine the arrays into a single array yourself before sorting."
+23452669,2,1,2,java.util.ArrayList,"Unlike, say, a HashMap, an ArrayList does not need to use the hashCode() method since the order of the elements in an ArrayList is determined by the order in which they were inserted, and not by hashing."
+23536508,2,1,8,java.util.ArrayList,"An ArrayList doesn't take raw data types (ie, double)."
+23662013,2,0,0,java.util.ArrayList,NullPointerException itself enough to tell you that you haven't initialized the ArrayList properly.
+23729519,2,0,6,java.util.ArrayList,"Second, ArrayList doesn't have a length method, but size."
+23729519,2,0,6,java.util.ArrayList,"Note that an ArrayList is not an array, it is a class that uses an array as container to hold the elements it will store and will add, remove, search and create a new array if it needs to hold more elements that it can."
+23730014,2,0,0,java.util.ArrayList,"Hint: If you have a 2-dimensional ArrayList, don't forget to initialise each ArrayList in the containing ArrayList."
+23774922,2,1,1,java.util.ArrayList,"You could synchronize on list_2, but all that would do is effectively make all your threads run in parallel, as the lock on the ArrayList wouldn't be released until one of your threads was done."
+23774922,2,1,1,java.util.ArrayList,"You'll need to store this into some collection -- an array, ArrayList, doesn't matter."
+23872661,2,1,1,java.util.ArrayList,"From my experience, using an ArrayList or a concurrent support variation of ArrayList is not the best option for these cases."
+24013585,2,0,1,java.util.ArrayList,But Vector and ArrayList doesn't share any parent-child relationship.
+24053107,2,0,1,java.util.ArrayList,"In my app I know that my ArrayList will not contain more than 10 elements so I went ahead with Serializable knowing it would not make a difference in speed, and will reduce complexity."
+24148469,2,0,0,java.util.ArrayList,I'm also pretty sure that you can't have your ArrayList outside of your class.
+24156117,2,0,0,java.util.ArrayList,"First, realise what the function returns (ArrayList) is not JSON at all."
+24157346,2,0,1,java.util.ArrayList,"I had to roll out my own (and not rely on ArrayList.subList()) because the (sub)list returned from an ArrayList does not allow the array list to change its size, once it has been created."
+24223858,2,1,4,java.util.ArrayList,"However, it is incorrect to assume the second example is thread-safe because it does not use proper thread-safe access of the shared state/data; in fact, it is broken because ArrayList is not guaranteed to be thread-safe:  Note that [ArrayList] is not synchronized."
+24314898,2,1,1,java.util.ArrayList,"By first copying the selected elements to an ArrayList, you eliminate the problem: the created ArrayList does not depend on the listview, and as such does not change during the removeAll operation."
+24349720,2,0,4,java.util.ArrayList,An ArrayList does not protect itself against so-called data races.
+24424183,2,1,2,java.util.ArrayList,Your ArrayList is not filled with object thus the getView is not called because it is empty.
+24488917,2,0,0,java.util.ArrayList,"What you have so far wont even comile, elements of an ArrayList cannot be accessed using the index oberator []."
+24524693,2,0,2,java.util.ArrayList,Your result ArrayList is not initialized.
+24544178,2,0,0,java.util.ArrayList,If ArrayList is not in the list it might be a problem introduced by Groovy Eclipse if it's installed...
+24679745,2,1,38,java.util.ArrayList,"Even if you know that the user will iterate it multiple times or otherwise keep it around, you still may want to return a Stream instead, for the simple fact that whatever Collection you choose to put it in (e.g., ArrayList) may not be the form they want, and then the caller has to copy it anyway."
+24697907,2,0,0,java.util.ArrayList,The problem occured here because you are iterating over the list and at the same time trying to manipulate it which ArrayList does not support means  Detecting modification in the collection and parsing the collection is not done synchronously.
+24770031,2,1,3,java.util.ArrayList,This is important because ArrayList does not guarantee the order of the items in the list is maintained.
+24895973,2,1,2,java.util.ArrayList,There are multiple options to resolve this issue:  change one of the relationships to lazy loading use a Set instead of a List (you shouldn't use ArrayList as type for variables anyway especially when using Hibernate) use @Fetch(FetchMode.SELECT) for tasks
+24918153,2,0,2,java.util.ArrayList,"Yes there would be problems because ArrayList is not thread-safe, the internal state of the ArrayList object would be corrupted and eventually you would have some incorrect output or runtime exceptions appearing."
+24936914,2,1,0,java.util.ArrayList,"The important thing is that you can't adapt a Collection (an interface) to something JAXB can handle, since it doesn't marshal an ArrayList or some other collection class."
+24943160,2,1,5,java.util.ArrayList,ArrayList is not multithread safe.
+24966161,2,1,3,java.util.ArrayList,"An ArrayList is not an array, and integerArgs[] is only applicable for arrays."
+25044025,2,0,1,java.util.ArrayList,"You wouldn't get ArrayList, HashSet, etc."
+25112228,2,0,4,java.util.ArrayList,"The new ArrayList is not the one in the java.util package, it is actually a static inner class in Arrays class."
+25174460,2,0,6,java.util.ArrayList,"Before I answer you question, note that a void method can't return an ArrayList."
+25254006,2,1,6,java.util.ArrayList,"This also means that ArrayList doesn't support primitive types such as int or char, but instead their wrapper classes Integer and Character, respectively."
+25255759,2,1,2,java.util.ArrayList,"As the error says, an ArrayList is not a a type of Integer and cannot be cast to one."
+25289626,2,0,0,java.util.ArrayList,"An ArrayList doesn't override the standard toString() method inherited from Object, so the result is Type name + @ + hashcode."
+25296113,2,0,3,java.util.ArrayList,"This ArrayList should not be ""read into a JFrame"" but rather the data belongs in a non-GUI class, one of your ""model"" classes to be exact."
+25344059,2,1,0,java.util.ArrayList,"Since ArrayList is not thread safe, and you mutate it, you cannot rely on that ArrayList to exhibit expected behavior, such as returning the first or last element in its array, in the presence of multiple threads."
+25344059,2,1,0,java.util.ArrayList,"Since your ArrayList is not thread safe (no happens-before relationship) writes can occur in any order -- you may see the initial values when the internal array was initialized to nulls, some previous write, or the latest write."
+25358541,2,0,1,java.util.ArrayList,"The data will be filled from three ArrayList of productid, qty and   listprice  You shouldn't take different ArrayLists because you have to manage each lists as many as you have, instead of that create a single ArrayList of type user defined class."
+25852492,2,1,0,java.util.ArrayList,since my getCount() was returning the number of images.. by the time i called notifydatasetchanged() the ArrayList was not populated (i.e background thread not completed).
+25455867,2,1,1,java.util.ArrayList,This will check if the new ArrayList does not already contain the item.
+25458358,2,0,3,java.util.ArrayList,"The implementation of hashcode for a Java ArrayList is not at all ""random""."
+25623249,2,0,0,java.util.ArrayList,"So if JsonHistoryList extends ArrayList, then a JsonHistoryList is an ArrayList but an ArrayList is not necessarily a JsonHistoryList."
+25645514,2,0,1,java.util.ArrayList,Your CashCard shouldn't contain an ArrayList of CashCard objects.
+25694292,2,0,0,java.util.ArrayList,"As stated in my comment, I assume that you didn't mean ArrayList<this>, but actually ArrayList<getClass()>."
+25697732,2,0,3,java.util.ArrayList,An ArrayList is not really a suitable class for what you need to do.
+25737507,2,0,1,java.util.ArrayList,"The main pain point here probably isn't the ArrayList, but the use of the + operator with Strings."
+25805831,2,0,0,java.util.ArrayList,ArrayList doesn't have an equals() method.
+25955114,2,0,0,java.util.ArrayList,giving an object type of TextFile to your ArrayList does not make any sense.
+26013128,2,0,1,java.util.ArrayList,"Note that, internally, the returned ArrayList is not java.util.ArrayList, it is an inner class ArrayList in Arrays class."
+26066244,2,0,1,java.util.ArrayList,"Your ArrayList doesn't necessarily contain a numeric type, so you can't add 1 to the value of list.get(k)."
+26201295,2,1,0,java.util.ArrayList,The problem was my result ArrayList was not of type String.
+26136704,2,0,0,java.util.ArrayList,"Use the Java Framework  (Array.copy(), ArrayList, ...) Don't do if (true) return true else return false Write tests  In readInitialFromFile you're creating the contact outside of the loop."
+26277980,2,0,0,java.util.ArrayList,You don't need  ArrayList<Object> instead use  ArrayList<Verb> So use of #get method on ArrayList arrayListOfVerb.get(0) will give you Verb Object stored at 0th index.
+26303562,2,0,2,java.util.ArrayList,ArrayList<ArrayList> is not compatible with Iterable<Iterable> because generics are strict.
+26337741,2,0,0,java.util.ArrayList,"ArrayList is not a thread-safe class, but you use it from multiple threads with no synchronization."
+26474305,2,0,0,java.util.ArrayList,ArrayList does not except primitive types as an argument.
+26483680,2,0,1,java.util.ArrayList,You don't 'convert' your ArrayList into a ListView.
+26514450,2,0,1,java.util.ArrayList,I'm assuming that this is homework and an ArrayList is not possible.
+26593729,2,0,1,java.util.ArrayList,"To convert a String to an array of chars: In your case, maybe an ArrayList is not the best option."
+26623740,2,1,5,java.util.ArrayList,ArrayList doesn't have code to check for duplicates.
+26657851,2,0,0,java.util.ArrayList,"(It's incredibly annoying: it means, for example, that you can't treat an ArrayList<ArrayList<T>> as a List<List<T>>.)"
+26699081,2,0,0,java.util.ArrayList,in case the ArrayList[] is not recognized as Serializable.
+26786057,2,1,3,java.util.ArrayList,"Yes, ArrayList is not thread-safe, and all the accesses to the list must thus be synchronized if it's accessed by multiple threads (explicitely, and/or by wrapping it using a Collections.synchronizedList())."
+26946153,2,1,1,java.util.ArrayList,"When you update the database, however, your ArrayList won't get updated, unless you reload the whole fragment."
+26965940,2,0,1,java.util.ArrayList,"You should use a java.util.concurrent.BlockingQueue instead, as ArrayList is not thread safe."
+27015084,2,0,0,java.util.ArrayList,"Although Student is a subtype of Person, that doesn't mean that ArrayList<Student> is a subtype of ArrayList<Person>."
+27021126,2,1,3,java.util.ArrayList,"Everything said about Vector above also applies to ArrayList, except for the setSize method, which ArrayList does not have, but the behavior of which you can mimic easily enough if needed."
+27083306,2,1,0,java.util.ArrayList,"because ArrayList doesn't have fixed size, and your problem statement shows you want the container to be of fixed size."
+27144347,2,0,0,java.util.ArrayList,Please not that an ArrayList actually doesn't mean that it contains Arrays.
+27200879,2,1,3,java.util.ArrayList,"For arrays, the alternative is often to use an ArrayList<E> - but of course you can't have an ArrayList<char> in Java as Java generics don't allow primitive type arguments :("
+27262043,2,1,0,java.util.ArrayList,ArrayList does not have indexes as an array has.
+27263569,2,1,2,java.util.ArrayList,Implement your own List class (based on ArrayList) that doesn't throw CME's in this safe scenario.
+27294431,2,0,0,java.util.ArrayList,The constructor new ArrayList(50) doesn't create an ArrayList with 50 elements.
+27335443,2,0,0,java.util.ArrayList,"See https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html  An ArrayList doesn't have a fixed size, an Array does after its initial declaration."
+27483422,2,0,3,java.util.ArrayList,Store whole ArrayList of Custom Objects as it is to SharedPreferences We cannot store ArrayList or any other Objects directly to SharedPrefrences.
+27766033,2,0,2,java.util.ArrayList,extends E. I hope this clarifies why the code in the question doesn't compile: only ArrayList or a subtype of ArrayList can be added to the map.
+27754556,2,0,2,java.util.ArrayList,"super ArrayList does not mean ""any value that is higher than ArrayList""."
+27756315,2,0,2,java.util.ArrayList,"If you are only using the ArrayList to read data into and then display it in a JList, then don't use an ArrayList."
+27829888,2,0,1,java.util.ArrayList,The error states that the class you created ArrayList does not take parameters because you did not specify a parameter to it as you are using on your code List<String> list = new ArrayList<String>(); The <String> part of your code right after the Arraylist is your problem.
+27847014,2,0,0,java.util.ArrayList,Since ArrayList is not thread safe and you have defined any initial size of the arraylist.
+27899515,2,0,2,java.util.ArrayList,When the ArrayList wasn't pre-sized the average call took 1690ns.
+27926700,2,1,1,java.util.ArrayList,This method from List implemented in ArrayList does not create a new List.
+27948328,2,0,0,java.util.ArrayList,"If you manage to add more than ten elements to this list, the ArrayList will not break."
+27960263,2,0,0,java.util.ArrayList,"Since ArrayList does not have any (public) nested classes, the statement actually does nothing."
+27975436,2,0,0,java.util.ArrayList,"You can't do new Point[3] (which is the same as new Foo<T>.Point[3]), for the same reason you can't do new ArrayList<T>[3]."
+28001226,2,1,1,java.util.ArrayList,Suggestion 1: don't use ArrayList as it is legacy you can use Generic List<T>.
+28006328,2,1,2,java.util.ArrayList,Your last line doesn't throw an exception simply because the toString() implementation of ArrayList doesn't care about the element type at all.
+28032066,2,1,1,java.util.ArrayList,"This ensures that other server threads, which all reference the same ArrayList, don't try to broadcast to the socket of a client that has disconnected."
+28063285,2,0,2,java.util.ArrayList,"Now, an ArrayList does not have a fixed size so you can add/remove/modify items in the ArrayList when you fetch new data from your API and notify the adapter."
+28074015,2,0,0,java.util.ArrayList,"This is read+write and still a List<String> so you can treat it as such without problems, (warning: there are subtle consequences to this, as the type returned by getClass() on that list won't be java.util.ArrayList now, it will instead be an anonymous class type)."
+28097081,2,0,0,java.util.ArrayList,"For instance ArrayList isn't thread-safe, so assigning to mePageInfoList will be thread-safe but any later mutation of the collection will be at risk."
+28096724,2,0,1,java.util.ArrayList,Your @Singleton bean cannot use ArrayList<> as there will be concurrent access.
+28203095,2,1,1,java.util.ArrayList,You can't do new ArrayList<byte>[].
+28233683,2,0,2,java.util.ArrayList,Beware that ArrayList is not protected against concurrent access.
+28254783,2,0,1,java.util.ArrayList,"There are two possible reasons for the println statement being skipped:  The ArrayList is empty The ArrayList is not empty, but doesn't contain the searched word."
+28268732,2,0,1,java.util.ArrayList,"ArrayList is not thread safe and without the synchronized blocks, both threads are adding elements in list1 and later in list2."
+28289154,2,1,0,java.util.ArrayList,"And further, you're passing someAge into the constructor of an ArrayList, which doesn't make sense -- it's an age, not the number of ducks."
+28298459,2,0,3,java.util.ArrayList,"ArrayList wouldn't take much more memory, though, as it is backed by an array (and the default initial capacity of an ArrayList is 10, so in your case the sizes of the arrays being used in both cases would be the same)."
+28544815,2,1,1,java.util.ArrayList,ArrayList doesn't exactly expand - a new array is created that is double the size and all items are copied over.
+28606234,2,0,1,java.util.ArrayList,ArrayList is not synchronized (1) and there is a point where a NoSuchElementException is thrown by an iterator.next() before any concurrent modification check (2).
+28605290,2,0,1,java.util.ArrayList,"The short answer is what I think you're trying to achieve  do can't be done, because ArrayList and ArrayList aren't really separate classes like they are in C++, where templates are more like clever macros than Java generics."
+28644948,2,1,0,java.util.ArrayList,"(Also abstain from Vector, an ArrayList will not give comments.)"
+28693423,2,0,1,java.util.ArrayList,An ArrayList is not appropriate for byte buffering.
+28733592,2,1,3,java.util.ArrayList,"ArrayList does not implements Parcelable, but it implements Serializable, so you can't use getParcelableExtra to receive the data, you must use getSerializableExtra instead."
+28859768,2,0,1,java.util.ArrayList,There's actually a very easy implementation of single server queueing systems where you don't need an ArrayList or Queue to stash customers who are in line.
+28908814,2,0,2,java.util.ArrayList,"This works even though multiple threads are doing the processing, yet ArrayList isn't thread-safe."
+28910591,2,0,1,java.util.ArrayList,"You cannot do new ArrayList<String>[M]; for the same reason, you cannot do new Node[M] (which is equivalent to new ModdedSeperateChainingAlternate<Key, Value>.Node[M])."
+28936114,2,0,0,java.util.ArrayList,You can't expect ArrayList to exclude duplicates unless the entire collection is filtered through a set.
+28953734,2,0,2,java.util.ArrayList,"Also, a normal ArrayList doesn't guarantee that you return a SPRITE."
+29000931,2,0,0,java.util.ArrayList,"When adding to the ArrayList, you would check to make sure the adjacent elements of the ArrayList do not have the same color."
+29076426,2,1,1,java.util.ArrayList,"ArrayList doesn't have a validIndex method, so if (files.validIndex(index)) wouldn't work."
+29106708,2,0,1,java.util.ArrayList,The ArrayList will not split your third entry.
+29106674,2,0,2,java.util.ArrayList,Your problem is that the ArrayList won't automatically split on the comma.
+29114205,2,0,0,java.util.ArrayList,"It is possibly that you don't get the ArrayList succeed, or, you didn't put the ArrayList into Intent correctly."
+29184549,2,0,0,java.util.ArrayList,"ArrayList  doesn't have a length property, it's the property of an Array."
+29192059,2,0,2,java.util.ArrayList,You can use ensureCapacity to make sure that the ArrayList doesn't have to resize too often (resizing and copying the content is an expensive operation).
+29230840,2,0,0,java.util.ArrayList,"But you can't have an ArrayList because int is not an object type: it's just a simple int variable, without methods, instance variables, etc."
+29413292,2,0,0,java.util.ArrayList,simply because the class ArrayList is not defined in your class ClassA .
+29436964,2,1,4,java.util.ArrayList,Keep in mind that the constructor argument for ArrayList is not a maximum size; its an initial size.
+29450072,2,0,1,java.util.ArrayList,But insertion sort with ArrayList is not so bad.
+29515546,2,1,0,java.util.ArrayList,"The contains() method of class ArrayList does not take a regular expression, as you seem to think it does."
+29515584,2,0,0,java.util.ArrayList,The contains method of an ArrayList does not support regular expression queries or wildcards.
+29530618,2,0,1,java.util.ArrayList,ArrayList is not a threadSafe collection -- it does not guarantee visibility on other threads.
+29544979,2,0,1,java.util.ArrayList,"Unlike arrays, ArrayList won't be initialized with objects."
+29569386,2,0,3,java.util.ArrayList,"Arrays.asList doesn't return a java.util.ArrayList, which is why new MyArrayList<Integer>(Arrays.asList(testIntArray)) doesn't compile."
+29577340,2,0,1,java.util.ArrayList,"Also, various frameworks returns a collection and by returning your custom ArrayList doesn't guarantee that others might subclass it to your custom ArrayList to use your specific method."
+29603691,2,1,1,java.util.ArrayList,You can't cast an ArrayList to a DoubleBuffer.
+29687489,2,0,4,java.util.ArrayList,"If you can't or won't convert the ArrayList, you can still use static utility on Iterate."
+29691304,2,0,1,java.util.ArrayList,Vector is thread safe where as ArrayList isn't.
+29702403,2,0,0,java.util.ArrayList,A Character(objects) ArrayList is not ideal for holding single characters.
+29703086,2,0,2,java.util.ArrayList,Don't create an ArrayList of Contacts.
+29703140,2,0,2,java.util.ArrayList,"Note aside, Your extension ArrayList doesn't makes sense."
+29707885,2,0,1,java.util.ArrayList,The random numbers aren't coming up like you're expecting and your ArrayList is not getting items added to it.
+29738097,2,0,0,java.util.ArrayList,"Well, if you're only ever having one shape at a time, you don't need an ArrayList to begin with; just have a variable of type Shapes (or whatever your superclass is called) that you assign a new Circle or new Square or whatever to inside that switch of yours."
+29750110,2,0,0,java.util.ArrayList,"The method add(String) in the type ArrayList is not applicable for the arguments (String[])  This means that you have an ArrayList<String>, and you are trying to call the add method with an array of strings (String[]) instead of with a single String."
+29782317,2,0,1,java.util.ArrayList,ArrayList does not have a method loadDeck().
+29789760,2,0,6,java.util.ArrayList,The ArrayList can't have gaps.
+29840808,2,0,1,java.util.ArrayList,The generic type of an ArrayList is not accessible at runtime because of Type Erasure.
+29993612,2,0,3,java.util.ArrayList,Don't use an ArrayList to hold your data.
+30039244,2,1,1,java.util.ArrayList,An ArrayList is not necessary for reading a single save file into the working memory.
+30063661,2,1,3,java.util.ArrayList,"ArrayList is NOT an array, it is a Collection, while array in java is a different object."
+30218213,2,0,3,java.util.ArrayList,"We couldn't express ArrayList<String>, but we could do String[]."
+30285795,2,0,0,java.util.ArrayList,I think it could be caused that you modify the list with messages in other thread and as the ArrayList is not thread-safe you should consider another List implementation that would be.
+30293808,2,0,0,java.util.ArrayList,That won't work because ArrayList has it's own parameter and when you don't specify it it will be treated as ArrayList.
+30419474,2,0,3,java.util.ArrayList,"1 - It won't work because ArrayList has an Object[] inside, and is therefore subject to the same limitation you have with byte arrays."
+30439474,2,0,1,java.util.ArrayList,"Your ArrayList contains a number of int[]s. Because an ArrayList is not an array (the one with the square brackets, like int[]), you can't call an element on it as if it were an array."
+30556984,2,0,0,java.util.ArrayList,As @Bohemian stated that ArrayList are not thread-safe.
+30556819,2,0,1,java.util.ArrayList,ArrayList is not a threadsafe implementation of List.
+30583698,2,1,1,java.util.ArrayList,A Java ArrayList cannot be represented as a JSON primitive.
+30633360,2,0,4,java.util.ArrayList,"Because ArrayList would not (and should not) re-size the array every time an element is removed, it takes up more space than needed."
+30695605,2,0,1,java.util.ArrayList,"You won't need an ArrayList containing Bitmap data anymore, because downloaded images go straight into device storage."
+30744098,2,0,4,java.util.ArrayList,An ArrayList can't be converted implicitly to a String.
+30792798,2,0,0,java.util.ArrayList,You can't add an ArrayList<RootCreator> to an ArrayList<RootCreator>; you must add a RootCreator.
+30820296,2,0,1,java.util.ArrayList,"constructor MyColoringAdapter in class MainActivity.MyColoringAdapter   cannot be applied to given types; required: Context,String[] found:   MainActivity,ArrayList reason: actual argument ArrayList cannot be   converted to String[] by method invocation conversion  the problem is the Constructor of your ArrayAdpater."
+30824674,2,1,0,java.util.ArrayList,"Since an ArrayList is not a parcelable, I would suggest encapsulating the ArrayList of strings in an class that implements parcelable."
+30829829,2,1,3,java.util.ArrayList,You didn't initialize this ArrayList in your Parent class.
+30905761,2,0,0,java.util.ArrayList,"You can't change ArrayList while you are iterating through it, so it is done in the second step."
+30959957,2,0,3,java.util.ArrayList,Because it is actually important ... because it means that the normal trade-off between LinkedList and ArrayList does not apply.
+31040615,2,1,2,java.util.ArrayList,"One annoying aspect regarding this topic is that although Flower is a subtype of Plant, that doesn't mean that ArrayList<Flower> is a subtype of ArrayList<Plant>."
+31170260,2,1,1,java.util.ArrayList,"First things first: an ArrayList<...> is not an array, the ArrayList is quite more sophisticated, but uses an array as backing datastructure."
+31336038,2,1,4,java.util.ArrayList,But that would break backwards compatibility whereas using Generics doesn't since an ArrayList<String> has the same class as an ArrayList.
+31364916,2,0,2,java.util.ArrayList,ArrayList is not the logical choice if you don't want duplicates.
+31439901,2,0,0,java.util.ArrayList,"Alternatively, if for any reasons, you cannot use ArrayList."
+31562021,2,0,0,java.util.ArrayList,Throws:       NullPointerException - if the specified collection is null  So your ArrayList should not throw the IllegalArgumentException.
+31676499,2,0,0,java.util.ArrayList,new ArrayList<>; is not a valid syntax.
+31865406,2,0,0,java.util.ArrayList,"Using ArrayList doesn't really matter in Big O; you just have to ""care about the main process"" of your algorithms."
+31704747,2,0,1,java.util.ArrayList,In addition to @OldCurmudgeon answer I can say that ArrayList is not thread safe class.
+31712664,2,0,1,java.util.ArrayList,Changing the order of the questions in the ArrayList shouldn't affect the QuestionText objects.
+31718245,2,0,2,java.util.ArrayList,This ArrayList can not contain a character like '['.
+31769449,2,0,1,java.util.ArrayList,"List (and its concrete implementations, such as ArrayList) do not extend/implement the Comarable interface, meaning that they implement no ordering themselves."
+31805939,2,1,2,java.util.ArrayList,"Don't use an ArrayList, instead use a suitable class such as CopyOnWriteArrayList."
+31837380,2,0,0,java.util.ArrayList,"It works well enough in the ideal case due to the break statement you use, but if the desired employee is NOT in the ArrayList, you'll get an IndexOutOfBoundsException because on the last iteration, you'll be trying to get the index of the size of the ArrayList, which doesn't exist."
+31850380,2,0,0,java.util.ArrayList,"This means that the ArrayList is not accurately sized and therefore has a default capacity, which happens to be 10 entries."
+31870732,2,1,4,java.util.ArrayList,Extending ArrayList does not make any sense in your case.
+31882730,2,1,2,java.util.ArrayList,You run action throws ConcurrentModificationException Because ArrayList isn't proper container.

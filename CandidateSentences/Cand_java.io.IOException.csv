@@ -1,0 +1,98 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+734866,2,1,6,java.io.IOException,"Close, but catching an IOException won't work because that exception type is not thrown by the parseInt() method."
+1292340,2,1,3,java.io.IOException,"Something can go wrong but there is little you can do (example: some server on the Internet died) Something can go wrong and the existing exception doesn't carry enough information to find out what happened (think IOException(""Can't read file"") vs. IOException(""Can't read file ""+file) vs. IOException(""Can't read file ""+file.getAbsolutePath()))."
+2042360,2,0,3,java.io.IOException,The second catch (IOException) should not log and should throw the exception.
+2067598,2,1,5,java.io.IOException,You'll need to write the zip into a temporary folder of the server's local disk file system first and then stream from it and finally delete the file only when the download is successfully completed (i.e. the out.close() didn't throw IOException).
+2493599,2,0,0,java.io.IOException,"FInally, data reception is not acknowledged by the other side, but if you don't get any IOException after sending data, you can pretty sure it has been received by the other application."
+3520619,2,0,1,java.io.IOException,So class2.m1 can throw anything which inherits from the original exception but it can't widen the exception (like throwing Throwable) or throw a completely different exception (IOException doesn't inherit from RemoteException).
+4377327,2,1,1,java.io.IOException,"java.io.IOException: Cannot run program  ""d:\program files\postgres\bin""  This error indicates that the spaces in the path confuse the exec() call (and the directory bin is indeed nothing that Windows can run) Make sure you enclose the full path to the .exe with double quotes because of the spaces."
+4464659,2,1,2,java.io.IOException,"The method calling actionPerformed isn't expecting an IOException, so it can't possibly handle it."
+4520358,2,0,1,java.io.IOException,"That means, that if there's no configuration file, don't throw IOException and exit."
+4677429,2,1,14,java.io.IOException,"(In C# there's a nicer option: a method to return an IEnumerable<string> which you can iterate over with foreach; that isn't as nice in Java because there's no auto-dispose at the end of an enhanced for loop... and also because you can't throw IOException from the iterator, which means you can't just make one a drop-in replacement for the other.)"
+5101985,2,1,0,java.io.IOException,"Cause: java.io.IOException: Could not find resource file:comfile.separatorplatysgroupfile.separatorlmexserverfile.separatormobilefile.separatordaofile.separatoribatis{file.separator}lmexusermobileinfo.xml indicates that the requested sqlMapConfig.xml is not placed properly,Place it in the src folder."
+5162754,2,1,3,java.io.IOException,"But as writing from the socket send buffer is asynchronous, that condition doesn't necessarily hold: it depends on the size of the write, the latency, the bandwidth, the prior state of all the buffers ... so the IOException isn't always thrown."
+5631186,2,0,2,java.io.IOException,"the IOException is not a Runtime exception, and should be declared in the signature of the method."
+5951643,2,0,1,java.io.IOException,"'Failed to execute command ([\'sh\',   \'-c\', \'env\']):   java.io.IOException: Cannot run   program ""sh"":  Implies that jython is configured to think it's running on a UNIX system of some sort."
+5967368,2,0,0,java.io.IOException,I thought you didn't see the real error because IOException didn't wrap it.
+6924482,2,0,2,java.io.IOException,IOException is not something that you can avoid because it might happen because of circumstances outside your control.
+7047649,2,0,1,java.io.IOException,"The javadoc does not specify what those I/O errors might be, but possibilities might include such things as:  the address to which you have bound is no longer valid a transport protocol error has occurred some error (resource issue, bug ...) occurred in the OS protocol stack  (The fact that the javadoc doesn't say which IOException subclasses might be thrown is a hint that you shouldn't try to do clever things to try to recover."
+7252792,2,0,0,java.io.IOException,"}catch(IOException e)       {         kickPlayer();     }catch(Exception e)     {         kickPlayer();     }  I think you don't need the IOException Catch (the Exception catch, catches every kind of exception)"
+7750162,2,1,3,java.io.IOException,"For instance, if I've an interface PDFDocument with a method save(), it shouldn't throw an IOException, because you could have an implementation saving to database, another to filesystem and a third saving to a remote site."
+7764522,2,0,0,java.io.IOException,You can keep it open for as long as you dont' read EOS from it and don't get IOException: connection reset when writing to it.
+8009755,2,0,0,java.io.IOException,"Also, closing the socket normally shouldn't throw IOException - but the accept() will do so if the socket is closed concurrently."
+8189964,2,0,5,java.io.IOException,the catch block for the IOException is not required and can never execute (i.e. it is unreachable).
+8921685,2,0,0,java.io.IOException,Unless ZZException is a subclass of IOException the method as documented cannot throw an IOException.
+8921696,2,0,1,java.io.IOException,"Unless ZZException is the superclass of IOException, IOException can't be thrown out in place of ZZException."
+9232699,2,0,3,java.io.IOException,"java.io.IOException: Cannot run program ""C:\Program"": CreateProcess error=193, %1 isn't a Win32 valid application  That says that you have a problem with your application path."
+9281721,2,1,6,java.io.IOException,"It throws IOException:  java.io.IOException: Cannot run program ""C:\Windows\System32\osk.exe"": CreateProcess error=740, The requested operation requires elevation The trick is to run the command via command shell (cmd): Runtime.getRuntime().exec(""cmd /c C:\\Windows\\System32\\osk.exe""); This line works fine on my machine."
+9441410,2,0,9,java.io.IOException,"So you might be thinking, well, runtime exceptions are for unanticipated runtime problems, then why the heck isn't an IOException a runtime exception!"
+29610192,2,0,1,java.io.IOException,Compiler says : Exception IOException is not compatible with throws clause in Plants.eat()
+9917030,2,1,4,java.io.IOException,An IOException doesn't necessarily mean 'the remote forcibly closed the connection'.
+10002394,2,0,1,java.io.IOException,"In contrast, the forms public abstract AudioFileFormat getAudioFileFormat(URL url) throws UnsupportedAudioFileException, IOException;  and public abstract AudioFileFormat getAudioFileFormat(File file) throws UnsupportedAudioFileException, IOException;  do NOT make this requirement."
+10593660,2,0,0,java.io.IOException,"Because IOException is not RuntimeException, so it should be catched only if the block of code inside the try ... catch have any the method which declared throws IOException."
+10596802,2,1,2,java.io.IOException,"If you can't throws IOException, at least throw a runtime exception wrapping the original IOException."
+11092061,2,0,2,java.io.IOException,It doesn't throw an IOException unless there's some other sort of error.
+24891007,2,0,4,java.io.IOException,"Attempting to read the first byte from the client may throw an IOException, but we may have to attempt that in a place where an IOException isn't expected, in which case we keep the exception around and throw it later."
+21339295,2,0,0,java.io.IOException,"javax.faces.el.EvaluationException: java.io.IOException: Cannot run program ""pwd;ls"": error=2, No such file or directory Having said that though there is a situation when this can be a problem."
+11279408,2,1,1,java.io.IOException,But the downside is that you also force callers of the other subclasses to handle the IOException ... which won't occur.
+11784367,2,0,1,java.io.IOException,This may be useful in cases where you want to display application specific exceptions instead of java provided exceptions  (IOException may not be perfect case to understand this).
+11939528,2,1,2,java.io.IOException,"Basically, you don't need throws IOException."
+12190785,2,0,1,java.io.IOException,Obviously IOException is not a NullPointerException thats why id doesn't go in the catch block.
+12203555,2,1,3,java.io.IOException,"Oh, and the IOException isn't likely to happen because the stream is coming from another process."
+12244232,2,1,4,java.io.IOException,"As InputStream only has read() methods, it only returns -1: it doesn't throw an IOException at EOS."
+12431792,2,1,5,java.io.IOException,;) The fact PrintWriter doesn't report IOException makes it a poor choice for writing text to a Socket where you often need to know the connection has failed.
+12918840,2,0,3,java.io.IOException,"Really though, you shouldn't be catching IOException."
+13099444,2,0,1,java.io.IOException,you'd get acompiler error: Exception IOException is not compatible with throws clause in SuperClass.overridenMethodFromSuper()
+13105280,2,0,0,java.io.IOException,An exception that isn't an IOException might be causing you problems.
+13693740,2,1,2,java.io.IOException,"The correct thing to do is probably to try ImageIO.createImageInputStream(file) - if it doesn't throw an IOException, but returns null, the image is not readable."
+13711509,2,1,1,java.io.IOException,"Note what is said there, toward the top:  ""Unless I make the two invocations of Adder.add() with the same argument, the mocked IOException won't be thrown."""
+13931958,2,0,1,java.io.IOException,"BTW PrintWriter doesn't throw  IOException which is not ideal, you have to checkError() to see if it failed or not."
+14664951,2,0,4,java.io.IOException,writeToLogFile() doesn't throw an IOException.
+14721087,2,1,2,java.io.IOException,"Subclasses of IOException won't be caught, because they're not thrown."
+14753369,2,1,1,java.io.IOException,"(You won't get an IOException if the socket is closed normally, but you could get one if the connection times out ... for example.)"
+15421894,2,1,9,java.io.IOException,You cannot put throws IOException in the run method because the Runnable interface does not say that the run method throws any checked exceptions.
+15731405,2,0,2,java.io.IOException,Side notes:  Don't silently catch IOException without showing the exception content JFrames are typically used directly rather than extending
+15925111,2,0,1,java.io.IOException,If not then you probably didn't handle IOException while creating writer which should also be done in try block.
+16369513,2,1,11,java.io.IOException,"Note that in many implementations, close() generally doesn't throw an IOException if the stream is already closed; it simply fails silently to close the stream again."
+16552263,2,1,2,java.io.IOException,"IOException is not a RuntimeException, so you must catch it."
+30348962,2,0,0,java.io.IOException,"Some additonal information: Since Android 4.4 (API 19) the IOException isn't thrown anymore, if the statuscode is 401 and the http header ""WWW-Authenticate"" is missing."
+17782936,2,0,0,java.io.IOException,"Got it sorted - turns out for a custom exception you shouldn't extend from IOException, but JsonProcessingException!"
+18198325,2,0,5,java.io.IOException,"Function<String, Integer> doesn't throw IOException, so you can't put any code in it that throws IOException."
+18198325,2,0,5,java.io.IOException,"If you're calling a method that expects a Function<String, Integer>, then the lambda that you pass to that method can't throw IOException, period."
+18552736,2,1,2,java.io.IOException,"If the catch block doesn't throw IOException, the throws IOException part in the method signature is not necessary."
+18621526,2,1,1,java.io.IOException,P.S You no longer need the try-catch around the output.println() as PrintWriter's print and println methods don't throw IOException.
+18941646,2,0,2,java.io.IOException,"2) In the second case, it can conclude at compile-time that IOException will not be thrown in the try { ... } block, because IOException (nor any other checked exception besides Exception itself) is not the superclass for any run-time exceptions."
+28383103,2,0,0,java.io.IOException,"Now imagine, if you wouldn't provide throws IOException and something bad happens inside finally{} statement - it would cause an error."
+19311637,2,0,1,java.io.IOException,"public static void main(String[] args)  throws IOException { doesn't return anything, so the return file statement is not required File.createTempFile either takes String, String, File or String, String so File file = File.createTempFile(""c:\\"", key, "".txt""); won't compile."
+19624149,2,1,1,java.io.IOException,java.io.IOException: Couldn't get lock for %h/java%u.log  It looks like Tomcat does not have filesystem permissions to write to the log file.
+20787173,2,0,1,java.io.IOException,"You could throw a subclass of IOException (as you're dealing with input), the (arguably) potential downside is that IOException is not a RuntimeException so anyone calling your code would be forced to either handle the exception or rethrow it."
+21488440,2,0,1,java.io.IOException,"Unfortunately, to make the compiler happy you must catch the potential IOExceptions from the close statements (assuming you don't add IOException to your method's throws clause)."
+21666353,2,0,4,java.io.IOException,Don't use IOException -- the file has been opened and read successfully; the problem is its content.
+22057272,2,1,0,java.io.IOException,1) throws IOException is not necesary at all!.
+22454396,2,0,0,java.io.IOException,"That's, what the line java.io.IOException: Can't read .\resources\Fonts\tight_pixel.ttf tells you."
+22614748,2,0,0,java.io.IOException,"As it was in static block, IOException was not cought and Error was generated insteed of exception."
+22969980,2,0,2,java.io.IOException,which fails because IOException isn't handled.
+23127717,2,0,1,java.io.IOException,The reason why StringBuilder throws IOException is not that it implement the interface Readable.
+23618094,2,1,1,java.io.IOException,"forgot to post the answer to the question, It was indeed the specific image , apparently there is some reason that libgdx can't load an 8-bit pixmap as indicated by this line here in the stack trace  at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:114) Caused by: java.io.IOException: couldn't load pixmap 8bit only ."
+24098346,2,1,1,java.io.IOException,"throw new IOException(""Could not locate executable "" + fullExeName + "" in the Hadoop binaries."
+24534566,2,0,10,java.io.IOException,It's because you have a return statement in your finally block - so the IOException is not actually going to be thrown out of your getCount() method.
+25376867,2,1,1,java.io.IOException,"You don't - as you know, IOException doesn't have information about the File that generated the exception."
+25670020,2,0,1,java.io.IOException,"Of course, turning what some Googling suggests is a URISyntaxException into an IOException isn't a terribly good design in the first place (an invalid URI is certainly not an IO issue) so I wouldn't be surprised if the library is simply calling something like throw new IOException(e.getMessage()) and discarding the original, meaning unfortunately all you have to go on is the exception's message."
+26753012,2,1,1,java.io.IOException,"The error messages  java.io.IOException: Couldn't get lock for   /opt/glassfish4/glassfish/domains/domain1/logs/server.log  and  Exception in thread ""main"" java.lang.RuntimeException: the domain   directory is not writable."
+26923759,2,0,1,java.io.IOException,"If getResponseCode() doesn't throw an IOException and returns 200, read the input stream."
+26996696,2,0,0,java.io.IOException,Use the first if the Exception is 'not supposed to be possible - such as an abstract I/O method that you know is backed by (say) a string in memory and can't really throw IOException despite the interface declaration.
+27205442,2,1,0,java.io.IOException,"That is because scanner.nextInt() doesn't throw IOException when the int is not valid, it throws InputMismatchException, so you need to catch InputMismatchException to detect invalid int input."
+27280523,2,0,0,java.io.IOException,Also path.getName() is not valid String doesn't have a function getName() maybe you meant basedir.getName()...also remove try catch block IOException can't occur there.
+28276493,2,0,11,java.io.IOException,"Both OutputStreamWriter and BufferedWriter don't throw IOException in their constructors, so it not clear what problem they would cause."
+28900028,2,1,3,java.io.IOException,"Throwing IOException would not be terrible, but it's better to be specific."
+28973252,2,0,0,java.io.IOException,"The low-level exceptions SQLException and IOException don't directly relate to the task this method performs, and therefore will likely prove less useful to the caller."
+29268120,2,1,2,java.io.IOException,That explains why your first code doesn't throw IOException.
+29499878,2,0,2,java.io.IOException,An IOException is not a FileNotFoundException.
+29500501,2,1,2,java.io.IOException,"Invalid packets don't cause IOException: that's an application-layer problem that throws application-layer exceptions, or subclasses of IOException: e.g., java.io.StreamCorruptedException."
+29530833,2,0,0,java.io.IOException,"2) FileNotFoundException is not catched.use try catch block 3) IOException is not catched.use try catch block 4) pritn() method should be chaged to print(); instead of print() you can use println() Your core logic is also fine, you just need to debug it."
+29536938,2,0,0,java.io.IOException,The IOException is not being ignore its being wrapped in a MarshalException and re thrown.
+29861990,2,0,2,java.io.IOException,PrintStream and PrintWriter the notable feature that their printing operations don't throw IOException.
+29886251,2,1,5,java.io.IOException,"You're catching an IOException, but Class.getResourceAsStream doesn't throw an IOException if the resource is not found; it just returns null."
+29886251,2,1,5,java.io.IOException,And ImageIO.read doesn't throw an IOException if the argument is null; it throws an IllegalArgumentException.
+30038871,2,0,0,java.io.IOException,"With the code you currently have, however, this will throw an exception in the Hero constructor that your try statement doesn't catch, as it won't be an IOException."
+30598409,2,0,0,java.io.IOException,"It is simple from the exception itself,  java.io.IOException: Cannot run program ""C:\Program Files (x86)\Nmap\nmap.exe -T4 -A -v --max-scan-delay 0ms --min-rate 1000000 --max-retries 0  -oX -  192.168.1.1 "": CreateProcess error=2, The system   Process builder taking the whole line thinking it is as an executable and trying to run that."

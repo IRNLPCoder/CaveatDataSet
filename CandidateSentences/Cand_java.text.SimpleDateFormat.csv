@@ -1,0 +1,137 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+131024,2,0,2,java.text.SimpleDateFormat,One gotcha to be aware of is that SimpleDateFormat is NOT thread-safe.
+170169,2,0,21,java.text.SimpleDateFormat,SimpleDateFormat is not thread safe.
+2083215,2,0,1,java.text.SimpleDateFormat,Be warned that SimpleDateFormat is not thread safe.
+619453,2,1,5,java.text.SimpleDateFormat,"We chose to represent it in human-readable format ""yyyyMMddHHmmssSSS"", so it is easy to read request start time from it (beware: SimpleDateFormat is not thread-safe, so you need to either synchronize it or create a new one on each request)."
+658104,2,0,7,java.text.SimpleDateFormat,"If you do, beware that SimpleDateFormat is not thread-safe and you may be exposing yourself to some potentially hard-to-debug issues!"
+781346,2,0,1,java.text.SimpleDateFormat,And note that SimpleDateFormat is NOT thread-safe.
+911101,2,0,6,java.text.SimpleDateFormat,"If you leave lax parsing on, you are prone to get a match when you didn't really want one, and the lexical space of XSD:DateTime leaves some flexibility in format that SimpleDateFormat can't handle in a single expression."
+940613,2,0,10,java.text.SimpleDateFormat,I'm guessing you're jumping through these hoops since SimpleDateFormat is not thread-safe.
+1470593,2,0,1,java.text.SimpleDateFormat,"A little off-topic, but I always feel the need to remind people that DateFormat and SimpleDateFormat are not thread safe!"
+1554885,2,0,5,java.text.SimpleDateFormat,"If I remember correctly, SimpleDateFormat isn't flexible enough to accept other timezone formats (mine was +530)."
+1653269,2,0,0,java.text.SimpleDateFormat,"You might want to consider using FastDateFormat from Apache commons, instead of SimpleDateFormat, because SimpleDateFormat is not thread safe."
+1927839,2,0,0,java.text.SimpleDateFormat,"However, to (possibly) complicate the issue, note that SimpleDateFormat is not thread safe."
+2089604,2,0,8,java.text.SimpleDateFormat,"Given that SimpleDateFormat isn't thread-safe, I'd say that the tidiest way is to use Joda Time instead."
+2111906,2,1,4,java.text.SimpleDateFormat,"SimpleDateFormat is not thread-safe, yet you're sharing a static instance."
+2168431,2,1,7,java.text.SimpleDateFormat,java.text.SimpleDateFormat is not thread-safe (not a lot of people know this!)
+2318755,2,1,22,java.text.SimpleDateFormat,"In particular, the formatters/parsers in Joda Time are thread-safe, so you can reuse them freely and statically; java.text.SimpleDateFormat isn't thread-safe, so you either need to create one per thread or serialize access to it with a synchronized block."
+2458581,2,1,15,java.text.SimpleDateFormat,I've not dealt with exceptions and concurrency here (as SimpleDateFormat is not synchronized when parsing date).
+3139752,2,1,3,java.text.SimpleDateFormat,"While a Date object is indeed in UTC, your SimpleDateFormat may not be."
+3207602,2,1,6,java.text.SimpleDateFormat,"reference is used to compensate for different timezones and there is no problem with daylight saving time because SimpleDateFormat does NOT use the actual date, it return the Epoc date (January 1st, 1970 = no DST)."
+3365030,2,0,3,java.text.SimpleDateFormat,ParseException is caused since you didn't provide a date format structure so the SimpleDateFormat didn't know how your date was structured.
+4014052,2,0,0,java.text.SimpleDateFormat,"Use SimpleDateFormat, with the pattern as yyy-MM-dd'T'HH:mm:ss.SSSZ  Update SimpleDateFormat won't work with ISO 8601 date format."
+4120355,2,0,5,java.text.SimpleDateFormat,"Don't use SimpleDateFormat, use joda-time's DateTimeFormatter instead."
+4216767,2,1,700,java.text.SimpleDateFormat,Important note is that SimpleDateFormat is not thread safe.
+13804776,2,0,3,java.text.SimpleDateFormat,Also SimpleDateFormat is not available with some of the client side technologies like gwt.
+4541745,2,0,1,java.text.SimpleDateFormat,"The 'problem' with SimpleDateFormat is not performance, its thread safety."
+4879591,2,1,3,java.text.SimpleDateFormat,"If you use the SimpleDateFormat to format a time from new Date(milliseconds), don't forget that SimpleDateFormat is time zone sensitive."
+5174712,2,0,2,java.text.SimpleDateFormat,SimpleDateFormat does not deal with the localization of text other than the pattern letters; that's up to the client of the class.
+5301262,2,0,7,java.text.SimpleDateFormat,"For example, you need to be aware that SimpleDateFormat is not thread-safe, so you either need thread-locals, synchronization, or a new instance each time you use it."
+5397500,2,0,8,java.text.SimpleDateFormat,Casting ain't going to work since SimpleDateFormat doesn't return an instance of java.sql.Date.
+5699481,2,1,2,java.text.SimpleDateFormat,It appears that SimpleDateFormat doesn't support ISO8601 time zone formats.
+5897306,2,0,1,java.text.SimpleDateFormat,And then: Javadoc for SimpleDateFormat says:  Synchronization SimpleDateFormat is not thread-safe.
+6280206,2,1,4,java.text.SimpleDateFormat,"Unfortunately, Java's SimpleDateFormat doesn't support that format properly, because it can't deal with the colon in the timezone."
+6280248,2,0,3,java.text.SimpleDateFormat,Java SimpleDateFormat doesn't support colon in the timezone information.
+6456776,2,0,0,java.text.SimpleDateFormat,"As mentioned in the previous answers, classes like Calendar and SimpleDateFormat are not thread-safe, so you cannot access them concurrently from multiple threads."
+6841237,2,0,0,java.text.SimpleDateFormat,SimpleDateFormat do not accept all ISO8601 date-time formats .
+6999592,2,1,2,java.text.SimpleDateFormat,"SimpleDateFormat may not be able to handle the xsd input format, so you can use the jaxb utils to handle that for you, see: http://download.oracle.com/javase/6/docs/api/javax/xml/bind/DatatypeConverter.html#parseDateTime(java.lang.String)"
+7626055,2,0,0,java.text.SimpleDateFormat,For example: SimpleDateFormat is not thread safe - no Format is.
+7681809,2,0,9,java.text.SimpleDateFormat,I believe that SimpleDateFormat will not parse timezones with a colon in them (-08:00).
+22060655,2,0,0,java.text.SimpleDateFormat,I am sure most of you got frustrated from the fact that SimpleDateFormat can not handle ISO8601 format.
+8037029,2,0,1,java.text.SimpleDateFormat,"SimpleDateFormat is not thread safe, so make sure to instantiate one SimpleDateFormat object for each threads (eg."
+8256897,2,0,1,java.text.SimpleDateFormat,"your parse string expects an input containing "":"" among other things - your input doesn't contain a "":"" so of course SimpleDateFormat won't be able to interpret your input."
+8345138,2,0,5,java.text.SimpleDateFormat,The fact that SimpleDateFormat is not thread-safe does not mean you cannot use it.
+8345074,2,1,45,java.text.SimpleDateFormat,The threadunsafety of SimpleDateFormat should not be an issue if you just create it inside the very same method block as you use it.
+8932098,2,1,4,java.text.SimpleDateFormat,"Personally I prefer to use Joda Time for all date and time operations in Java - including for parsing/formatting, as SimpleDateFormat isn't thread-safe, unlike Joda Time's parsers."
+8956602,2,1,6,java.text.SimpleDateFormat,But SimpleDateFormat is not thread-safe:  Date formats are not synchronized.
+8976811,2,0,0,java.text.SimpleDateFormat,"As Tudor mentions, SimpleDateFormat does not throw an exception when it fails to parse."
+9024161,2,0,0,java.text.SimpleDateFormat,SimpleDateFormat does not provide this feature.
+9157922,2,0,0,java.text.SimpleDateFormat,"But remember that, SimpleDateFormat is not thread-safe."
+9323046,2,1,3,java.text.SimpleDateFormat,"SimpleDateFormat is not thread-safe, so make sure that you don't use the same instance from different threads, otherwise data parsing may become invalid."
+9326362,2,0,1,java.text.SimpleDateFormat,"Note: As Alberto said, you should validate your input first using regular expressions, because SimpleDateFormat doesn't have a very tight matching with this usage and because it's always a good idea to validate input."
+9515556,2,0,0,java.text.SimpleDateFormat,"Unfortunately, the time zone formats available to SimpleDateFormat are not ISO8601 compliant."
+9515556,2,0,0,java.text.SimpleDateFormat,Therefore using SimpleDateFormat does not seem as an option in your case (since you use UTC−05:00 as timezone).
+9531712,2,1,2,java.text.SimpleDateFormat,To accomplish this in J2ME use the String parsing tools as the normal Java utility SimpleDateFormat does not exist in the API.
+9705374,2,0,0,java.text.SimpleDateFormat,"Also, although you're not likely to be using multiple threads on an android device, please be aware DateFormat and SimpleDateFormat are NOT threadsafe - the standard practice is to contruct a copy for each use."
+10106487,2,1,1,java.text.SimpleDateFormat,"SimpleDateFormat doesn't ignore the timezone, as it has adjusted the time, parsing 15:34:35 +0500 into 17:34:35 NOVST (where NOVST is +0700, the local timezone), it's just that java.util.Date is only a timestamp from Epoch and has no notion of a timezone (see the javadoc: everything is relative to the local timezone)."
+10412048,2,1,11,java.text.SimpleDateFormat,Yes SimpleDateFormat is not thread safe and it is also recommended when you are parsing date it should access in synchronized manner.
+10757218,2,1,3,java.text.SimpleDateFormat,"(Java) The conclusion is: SimpleDateFormat does not support microseconds, hence a custom parser has to be written."
+11207381,2,0,3,java.text.SimpleDateFormat,The documentation for SimpleDateFormat doesn't seem to do days of the week as single letters.
+11371919,2,0,3,java.text.SimpleDateFormat,SimpleDateFormat is not thread-safe: see the Javadoc.
+11574060,2,0,0,java.text.SimpleDateFormat,"Don't forget, that SimpleDateFormat will default to your system TimeZone and Locale if you don't specifically set it."
+11802318,2,0,4,java.text.SimpleDateFormat,"SimpleDateFormat is not thread-safe in any JDK version, nor will it be as Sun have closed the bug/RFE."
+11994910,2,1,29,java.text.SimpleDateFormat,"Look at the documentation in the link for details on this Once you create a Date object out of your String (via SimpleDateFormat), don't be tempted to use Date.getHour(), Date.getMinute() etc."
+12587007,2,0,0,java.text.SimpleDateFormat,seems that SimpleDateFormat don't care about timezone even if 'z' pattern is specified.
+13090746,2,0,0,java.text.SimpleDateFormat,"This is a Bug as mentioned in 6609397 : [Fmt-Da] RFE: SimpleDateFormat does not accept UT as a timezone which says: -  SimpleDateFormat says it will take any RFC822 format timezone for ""z"",   defined below."
+13124478,2,0,1,java.text.SimpleDateFormat,"If you are using Java 6 or earlier, SimpleDateFormat will not support ISO8601 time zone encoding, so you cannot use it to validate time stamps either."
+13256990,2,0,0,java.text.SimpleDateFormat,"Other than Marko i think this will end in a practical solution, but don't forget: SimpleDateFormat isn't thread-safe (thanks Alan)"
+13414187,2,1,8,java.text.SimpleDateFormat,SimpleDateFormat isn't thread-safe that's true but each method call will create an own instance so this is ok.
+13467904,2,0,0,java.text.SimpleDateFormat,The problem with your current approach is that SimpleDateFormat is not designed to cope with null Dates.
+13659523,2,1,10,java.text.SimpleDateFormat,"(sidenote, but important: SimpleDateFormat is not thread safe very much not thread safe, so don't try to optimize by using them as static instances in a multithreaded environment!"
+14645513,2,0,2,java.text.SimpleDateFormat,We shoud ask JDK developers why they decided that SimpleDateFormat should not support timezone Id.
+15420321,2,0,0,java.text.SimpleDateFormat,"You cannot use SimpleDateFormat because it accepts SSS as number of milliseconds, not as fractional part of a second."
+15544280,2,0,0,java.text.SimpleDateFormat,"Note also that SimpleDateFormat is not thread-safe, and if the above code shares an instance of a SimpleDateFormat  that would definitely account for peculiar behaviour."
+15708442,2,0,0,java.text.SimpleDateFormat,"As @Sarath mentioned, SimpleDateFormat is not thread safe."
+15740610,2,0,4,java.text.SimpleDateFormat,"If you don't use new SimpleDateFormat(""yyyy-mm-dd"").format(date);  you getting standard date format which include all info."
+16670102,2,0,1,java.text.SimpleDateFormat,SimpleDateFormat does not support A/P for AM/PM.
+16924271,2,0,2,java.text.SimpleDateFormat,A SimpleDateFormat isn't a date - it's just a text/date converter.
+17009230,2,0,4,java.text.SimpleDateFormat,This is going to fail if multiple threads call formatDate(...) at the same time (you might get strange output or exceptions) because SimpleDateFormat is not Thread-Safe.
+17281077,2,0,1,java.text.SimpleDateFormat,Just to be clear about it: SimpleDateFormat does not change the date object in any way.
+17445219,2,0,2,java.text.SimpleDateFormat,"SimpleDateFormat is not thread safe, as stated in the javadoc :  Date formats are not synchronized."
+17660392,2,0,0,java.text.SimpleDateFormat,"Since in the comments you say that you're simply measuring running time for an application, don't involve Date, SimpleDateFormat, or Calendar at all."
+17770072,2,0,4,java.text.SimpleDateFormat,"Whenever you have a SimpleDateFormat which isn't behaving as you expect it to, you should check your pattern against the documentation."
+18139506,2,1,16,java.text.SimpleDateFormat,SimpleDateFormat is not available in GWT.
+18350560,2,0,3,java.text.SimpleDateFormat,"The main (problems) are that SimpleDateFormat doesn't recognize the text GMT, it's looking for a different format for the time zone."
+18383395,2,1,7,java.text.SimpleDateFormat,It is a little known fact that SimpleDateFormat is not threadsafe!
+18436845,2,0,0,java.text.SimpleDateFormat,The format of your SimpleDateFormat does not match that of the String that you are using.
+18590570,2,1,4,java.text.SimpleDateFormat,"Since SimpleDateFormat is not thread safe, you can use a ThreadLocal to make it thread safe."
+18590155,2,0,4,java.text.SimpleDateFormat,The idea behind this is that SimpleDateFormat is not thread-safe so in a mutil-threaded app you cannot share an instance of SimpleDateFormat between multiple threads.
+18642023,2,0,4,java.text.SimpleDateFormat,"Personally I wouldn't use SimpleDateFormat at all here - I'd probably use Joda Time, and format this as a Duration or a Period, as that's what you're really trying to represent."
+18733368,2,0,2,java.text.SimpleDateFormat,"See the this link and show on declaration for date and get the code whatever requirements, Android: I can't figure out SimpleDateFormat"
+18781332,2,0,6,java.text.SimpleDateFormat,Also note that SimpleDateFormat is not threadsafe.
+19275884,2,0,1,java.text.SimpleDateFormat,SimpleDateFormat is not thread-safe so therefore was not considered in for use in converter utility where I cannot make any assumptions about the callers.
+18918158,2,0,1,java.text.SimpleDateFormat,It is rather counter-intuitive that SimpleDateFormat is not thread-safe and it's a good idea to remind new developers of that.
+20414379,2,0,1,java.text.SimpleDateFormat,"If changing the Date object itself isn't required, use SimpleDateFormat."
+20658398,2,0,1,java.text.SimpleDateFormat,Giving the local explicitly in the constructor of SimpleDateFormat is not sufficient.
+20752817,2,0,0,java.text.SimpleDateFormat,"SimpleDateFormat, does not change the date format, it gives you a formatted date for display purpose only, not for anything else."
+20988107,2,0,2,java.text.SimpleDateFormat,"You'll have to write a utility method, there isn't anything in SimpleDateFormat that will interpret a non-existant year as the current year."
+21021768,2,1,8,java.text.SimpleDateFormat,"The likely cause is the fact that SimpleDateFormat isn't threadsafe, and you're referencing it from multiple threads."
+21162392,2,0,1,java.text.SimpleDateFormat,"This should be the solution: Date object SimpleDateFormat not parsing timestamp string correctly in Java (Android) environment SimpleDateFormat cannot take microseconds, only milliseconds."
+22051094,2,0,0,java.text.SimpleDateFormat,Also SimpleDateFormat is not thread safe You can set the sql date into your prepared statement.
+22250487,2,0,4,java.text.SimpleDateFormat,To be fair that's probably the only bit of this question that isn't just a SimpleDateFormat#format() call.
+22842349,2,1,4,java.text.SimpleDateFormat,"Unfortunately, it looks like SimpleDateFormat doesn't have a way of understanding that you're giving it ""fractions of a second"" instead of ""a number of milliseconds""."
+22867315,2,1,0,java.text.SimpleDateFormat,In order to process XML-date-time-strings which are allowed to be of variable precision (sometimes leaving out second- or fraction-part or timezone-offset) the use of SimpleDateFormat is not a good option because then you would only have one pattern.
+24009731,2,0,1,java.text.SimpleDateFormat,"Your SimpleDateFormat doesn't specify a time zone, so it's using your local time zone."
+24095447,2,0,3,java.text.SimpleDateFormat,"SimpleDateFormat is not trread-safe: it keeps an internal state, and used at the same time havoc arises."
+29237446,2,0,0,java.text.SimpleDateFormat,"A simple regex plus a SimpleDateFormat doesn't filter a String date like ""2014\26\26"", then it would not suffice."
+24533698,2,1,2,java.text.SimpleDateFormat,Another notice: SimpleDateFormat does not even strictly follow CLDR.
+24741794,2,1,3,java.text.SimpleDateFormat,"A SimpleDateFormat can't format a GregorianCalendar; it can format a Date, so convert it to a Date first."
+24753172,2,0,0,java.text.SimpleDateFormat,"You can define almost any date pattern you want, just take a look on the pattern definition listed on javadocs http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html Beware SimpleDateFormat is not thread safe."
+24804510,2,0,0,java.text.SimpleDateFormat,note: SimpleDateFormat is not thread safe and use it in singleton will cause bugs in multithread environment.
+25681099,2,0,3,java.text.SimpleDateFormat,"If JsonDateTimeSerializer.serialize might be called from multiple threads, then this use of SimpleDateFormat is not safe."
+25682204,2,0,3,java.text.SimpleDateFormat,SimpleDateFormat does not have a symbol (letter) for inserting the milliseconds since the beginning of the epoch starting at 1 January 1970 00:00:00 UTC.
+25869054,2,0,0,java.text.SimpleDateFormat,Keep in mind that SimpleDateFormat is NOT THREAD SAFE.
+25885520,2,0,2,java.text.SimpleDateFormat,Class SimpleDateFormat is not synchronized.
+25885535,2,1,2,java.text.SimpleDateFormat,"Because instances of SimpleDateFormat are not threadsafe, if an instance is used concurrently by multiple threads, you must synchronize access to it (as you did)."
+27195718,2,0,1,java.text.SimpleDateFormat,Don't forget that SimpleDateFormat is not thread-safe.
+26337939,2,0,1,java.text.SimpleDateFormat,"This isn't something that SimpleDateFormat supports, as far as I'm aware."
+26572080,2,0,3,java.text.SimpleDateFormat,"The problem is that SimpleDateFormat does not recognize the literal 'Z'as an alias for UTC's '-0000' offset (For whatever reason, since it claims to be ISO-8601 compliant)."
+26585523,2,0,1,java.text.SimpleDateFormat,Because you haven't told SimpleDateFormat what the format of the string will be.
+26924434,2,0,1,java.text.SimpleDateFormat,"Edit Also, as Bohemian noted here; if you're using multiple threads you should use the String format to recreate the DateFormat because SimpleDateFormat isn't thread safe."
+26924466,2,0,0,java.text.SimpleDateFormat,"I can't say for sure this is your problem, but I can say fit sure your code is not threadsafe, because SimpleDateFormat is not threadsafe."
+27674998,2,1,3,java.text.SimpleDateFormat,"I suspect it is caused by race condition, SimpleDateFormat is not thread-safe and if multiple threads tries to parse Date from String to Date using same isntance it could mess up internal state of that instance I would suggest either using local variable (warn: it is expensive to create this instance), so if you think it is too frequent, you can use FastDateFormat (thread-safe implementation of SimpleDateFormat) or as @Ray suggested switch to Java8"
+27708210,2,0,1,java.text.SimpleDateFormat,SimpleDateFormat does not provide any patterns for generating a timestamp.
+28169040,2,1,3,java.text.SimpleDateFormat,You didn't use the SimpleDateFormat dateFormat object that you've got when printing out the date.
+28178034,2,0,2,java.text.SimpleDateFormat,SimpleDateFormat will not work if he is starting with LocalDate which is new in Java 8.
+28612031,2,1,1,java.text.SimpleDateFormat,Your SimpleDateFormat doesn't match the format which you are entering.
+28736095,2,0,3,java.text.SimpleDateFormat,"More information about date/time formatting in java.time API: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html Also, note that the key difference between old SimpleDateFormat and a new java 8 DateTimeFormatter is that SimpleDateFormat is not thread-safe."
+29726336,2,1,2,java.text.SimpleDateFormat,Since each calling thread will get its own instance of SimpleDateFormat this will be threadsafe (assuming the SimpleDateFormat doesn't live long and get passed to other threads when it is passed on to the xslt transformer).
+29791034,2,1,1,java.text.SimpleDateFormat,keep in mind that instances of SimpleDateFormat are not thread-safe so it is better to create new ones.
+30103348,2,0,0,java.text.SimpleDateFormat,SimpleDateFormat is not thread safe since it uses inner mutable state on processing.
+30135772,2,1,2,java.text.SimpleDateFormat,"Nope No, you cannot use SimpleDateFormat to handle nanoseconds."
+30507807,2,0,1,java.text.SimpleDateFormat,"Keep in mind that SimpleDateFormat is not thread safe, so do not reuse the instance from several Threads."
+30535272,2,1,0,java.text.SimpleDateFormat,SimpleDateFormat is not supported either - DateTimeFormat has to be used instead.
+30663571,2,1,2,java.text.SimpleDateFormat,SimpleDateFormat is not thread safe and Tomcat probably calls this single instance from several threads.
+31002413,2,0,1,java.text.SimpleDateFormat,"It might or might not be causing your problem here, but in general you shouldn't make SimpleDateFormat a static field."
+31245336,2,1,1,java.text.SimpleDateFormat,"Your pattern in SimpleDateFormat is not correct... Also note you are not printing the String with the date formatted, instead of this you are printing the Date object, so you will see always this format because you call Date.toString() method implicit when you call System.out.println(finalTime1);."
+31759577,2,1,3,java.text.SimpleDateFormat,SimpleDateFormat doesn't have a format specifier for microseconds.

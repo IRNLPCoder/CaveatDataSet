@@ -1,0 +1,83 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+5839908,2,0,4,java.awt.event.ActionListener,"Note: An ActionListener can't be added to a JPanel, as a JPanel itself does not lend itself to create what is considered to be ""actions""."
+7087174,2,0,3,java.awt.event.ActionListener,You can't add an ActionListener to an entire applet.
+8559093,2,0,2,java.awt.event.ActionListener,"but little bit complicated to set/getValue  for set is there myFormattedTextField.setValue() for get is there ((((Number) myFormattedTextField.getValue()).doubleValue()))  don't use depreciated Java Desktop Aplications and its GroupLayout, sometime is so hard to place JComponenets correctly inside Container, use another and proper LayoutManager don't add ActionListener to the JTextField, use DocumentListener"
+8847676,2,0,4,java.awt.event.ActionListener,You cannot add ActionListener directly to an Image.
+9827690,2,0,4,java.awt.event.ActionListener,"Basically, if one ActionListener can't handle the event, it sends it to the next one, and so on."
+10067312,2,1,3,java.awt.event.ActionListener,Looks like you haven't added an ActionListener to your JMenuItem.
+10134220,2,0,3,java.awt.event.ActionListener,year/month/date don't need the ActionListener.
+10286059,2,1,4,java.awt.event.ActionListener,You can adjust your UI completely and decide to replace the button by another component to which you cannot attach an ActionListener without having to rewrite your controller and your view.
+10562794,2,1,3,java.awt.event.ActionListener,Don't add an ActionListener inside of a ListSelectionListener -- makes no sense.
+12659640,2,0,1,java.awt.event.ActionListener,"Further remarks (which weren't said by the others, not gonna repeat their very useful advise):  Never override the paintComponent method without calling the super method You shouldn't expose the ActionListener interface."
+13031237,2,1,6,java.awt.event.ActionListener,Dont use JFrame#setContentPane(...) just use add(..)  on JFrame instance Create Event Dispatch Thread to initialize and change UI components Don't implement single ActionListener for multiple components.
+13506651,2,1,3,java.awt.event.ActionListener,You then don't need implements ActionListener for your main class.
+13575586,2,0,3,java.awt.event.ActionListener,An ActionListener won't work if your desire is to listen for change in selected tab since this is activated only by the children of the AbstractButton class.
+14263365,2,0,0,java.awt.event.ActionListener,you haven't implemented ActionListener!
+14548009,2,0,11,java.awt.event.ActionListener,"Don't name a class the same as a core class, in particular don't name it ActionListener as this will make it nearly impossible for you to use an actual ActionListener when needed."
+14698525,2,0,2,java.awt.event.ActionListener,"In your ActionListener, DO NOT redeclare it again, simply assign the new value you need to it."
+15588110,2,0,1,java.awt.event.ActionListener,"Because your ActionListener doesn't have methods such as setUndecorated, this will give you a compile error."
+15718911,2,1,4,java.awt.event.ActionListener,"And in case the ActionListener is not registered with the JButton , MouseEvent comes into play and the required action is performed."
+16159278,2,0,2,java.awt.event.ActionListener,"Or even better, get rid of your ""switch-board"" ActionListener, don't have your GUI class implement listener interfaces (generally a bad idea), and instead give your JButtons anonymous inner class listeners."
+16351932,2,0,1,java.awt.event.ActionListener,"ActionListener is not a Component, you can't pass this to the file chooser."
+16431518,2,1,4,java.awt.event.ActionListener,JPanel doesn't have ActionListener capabilities.
+17437757,2,0,1,java.awt.event.ActionListener,3- Don't    implement ActionListener in top classes i prefer using annonymus    classes or private inner classes.
+17476480,2,0,3,java.awt.event.ActionListener,"i will give you some advice 1) Don't implement ActionListener in top classes, use anonymous classes or private classes instead."
+18148306,2,1,4,java.awt.event.ActionListener,You can't extend ActionListener because it is an interface.
+18165837,2,1,2,java.awt.event.ActionListener,"You can't add an ActionListener to a JFrame, it does not function like a button and so has no action listeners."
+18245564,2,1,4,java.awt.event.ActionListener,"Also, as MadProgrammer notes, your controller class (re-name it Controller) doesn't implement ActionListener and so cannot be used as an ActionListener."
+18283766,2,0,0,java.awt.event.ActionListener,No you can't add an ActionListener to a JLabel.
+18409960,2,0,1,java.awt.event.ActionListener,"Remember, variables of an Object type are always references in Java so, even if you instantiate a label1 before making that call, your ActionListener won't replace the label in the frame; it will just change the reference you have to something else, while leaving the old label in the container."
+18686994,2,0,1,java.awt.event.ActionListener,"You aren't adding the ActionListener to your buttons, and so pushing a button will have no effect."
+18843502,2,0,3,java.awt.event.ActionListener,The interface you are implementing (ActionListener) does not declare an exception to the method actionPerformed.
+18860621,2,0,2,java.awt.event.ActionListener,"Simply setting toggleGrid to true from within an ActionListener will not magically call the loadTileContainer() method again, so it should come as no surprise that your ActionListener has no effect."
+19038896,2,1,2,java.awt.event.ActionListener,"My concern with your third point, is that I don't want my ActionListener firing with the same timing for all of the tricks."
+19122611,2,1,1,java.awt.event.ActionListener,You can't reuse one ActionListener and expect it to call a different method depending on the button you attach it to.
+19360179,2,1,2,java.awt.event.ActionListener,"Well, you didn't even added ActionListener for your button and make actionPerformed method as non-static (just remove static)."
+19532759,2,1,2,java.awt.event.ActionListener,Don't use an ActionListener to check when the button is selected.
+19745266,2,0,1,java.awt.event.ActionListener,A JLabel doesn't support an ActionListener.
+19865448,2,0,3,java.awt.event.ActionListener,"When you are passing this to addActionListener function, which is currently referencing the instance of PipesUI wasn't implemented with ActionListener."
+20129572,2,1,2,java.awt.event.ActionListener,So you can't attach an ActionListener to a JPanel.
+20257321,2,0,1,java.awt.event.ActionListener,"But, you didn't implement ActionListener with JFrame."
+20308682,2,0,2,java.awt.event.ActionListener,A JMenu doesn't support an ActionListener (even though the addActionListener() method is valid).
+20310362,2,0,3,java.awt.event.ActionListener,"1) Your ActionListener doesn't attached to JPanel and components on it, because of that it doesn't work."
+20484956,2,1,1,java.awt.event.ActionListener,"ActionListener is not an instance of (subclass of) JButton, it is contained in a JButton."
+20932144,2,1,4,java.awt.event.ActionListener,"g2 has no context within the ActionListener, but there are other issues that need to be solved first... Don't create the ActionListener or Timer within a paint method, in fact you should avoid overriding paint at all."
+21216025,2,0,1,java.awt.event.ActionListener,What's happening is that this is referencing the ActionListener which isn't static.
+21447052,2,0,2,java.awt.event.ActionListener,"The reason that your ActionListener isn't working is because the GUI object that you create in there is a new GUI object, one that is completely unrelated to the GUI object that is displayed, and so calling the clearScreen() method on the non-displayed GUI instance will have no effect on the displayed GUI instance."
+21739637,2,0,3,java.awt.event.ActionListener,And later you try to add it like center.add(easyButton()); but the one you added a ActionListener isn't the same button as this one.
+22160153,2,0,0,java.awt.event.ActionListener,"That is, JFrame doesn't support ActionListener and you don't have a reference to the buttons you want to add actions to."
+22333196,2,0,1,java.awt.event.ActionListener,What you will pass to it is a new ImageIcon Also you haven't registered the ActionListener to your button.
+22683922,2,1,3,java.awt.event.ActionListener,AFAIK you can't because the ActionListener will be created first and at that time must have access to the final variable login which isn't initialized yet.
+22743712,2,1,2,java.awt.event.ActionListener,"Guessing: possibly this is a case where extracting the ActionListener is not a great idea, since it uses a private method of your object."
+22927819,2,0,0,java.awt.event.ActionListener,Your ActionListener does not work becase JMenu ignores ActionEvent.
+22971711,2,0,0,java.awt.event.ActionListener,The code in Browse isn't adding an ActionListener to every JButton created.
+23506880,2,0,3,java.awt.event.ActionListener,"Don't use MouseListeners with buttons, instead you should be using an ActionListener Don't use null layouts."
+23833065,2,0,0,java.awt.event.ActionListener,Don't use an ActionListener on the combo box.
+24048469,2,0,2,java.awt.event.ActionListener,This is because  testInterfaces2 doesn't implement ActionListener directly or indirectly (via inheritance).
+24497363,2,0,2,java.awt.event.ActionListener,"Don't add an ActionListener to your JTextArea as this is not allowed and has no real meaning, since JTextAreas allow returns to be entered, and use this to start a new line in the JTextArea."
+24854365,2,0,4,java.awt.event.ActionListener,"I should probably also point out that the ActionListener is not listening for actions made by other widgets on the object you place it on, it's listening for actions on that widget."
+25394562,2,0,3,java.awt.event.ActionListener,You can use adding MouseListener or KeyListener instead of ActionListener which doesn't give you much information about what has happened.
+25950000,2,1,3,java.awt.event.ActionListener,It doesn't implement the ActionListener for the button press.
+26303543,2,0,0,java.awt.event.ActionListener,I didn't register the ActionListener with the buttons.
+26572978,2,0,1,java.awt.event.ActionListener,"If this answer, which shows how to use an outside class as an Action (which functions as an ActionListener), doesn't answer your question, then again, please provide more context."
+27093598,2,0,1,java.awt.event.ActionListener,Suggestions:  Don't use one ActionListener for everything.
+27157863,2,0,1,java.awt.event.ActionListener,"If the ActionListener hasn't previously been removed, you will be adding ANOTHER ActionListener, so the next time you click that button, your ActionListener will be called multiple times..."
+27911878,2,0,0,java.awt.event.ActionListener,"ActionListener doesn't take any parameters as it is an interface; instead, you override its actionPerformed method."
+28102801,2,1,2,java.awt.event.ActionListener,"You didn't add an ActionListener, you add a ItemListener, a ItemListener will be notified twice when the value changes, once for the ItemEvent.DESELECTED event and once for the ItemEvent.SELECTED."
+28204334,2,1,3,java.awt.event.ActionListener,"Again, you've got two JButtons, one you've added the ActionListener to but do nothing with, and the other, the one you're trying to use, you don't add an ActionListener to."
+28928624,2,1,2,java.awt.event.ActionListener,"Like the compiler message says, in the first example you didn't implement the ActionListener interface in your MainFrameAli2 class."
+29308380,2,0,2,java.awt.event.ActionListener,"The reason starting the animation from an ActionListener does not work, is that the loop blocks the event dispatch thread."
+29827817,2,1,3,java.awt.event.ActionListener,"Also, your question states that the ActionListener doesn't work, but your comment looks to be inside of a defunct KeyListener."
+29936238,2,0,1,java.awt.event.ActionListener,"A ActionListener can not distinguish states on it's own, it simply responds to a user input See How to Use Buttons, Check Boxes, and Radio Buttons and How to Write an Action Listeners for more details."
+30256074,2,1,0,java.awt.event.ActionListener,you cannot add ActionListener to JMenu.
+30354217,2,1,0,java.awt.event.ActionListener,The button in your code doesn't work because you didn't add and ActionListener to the button.
+30414727,2,1,3,java.awt.event.ActionListener,You didn't add an ActionListener to the button.
+30424230,2,0,2,java.awt.event.ActionListener,* doesn't include java.awt.event.ActionListener.
+30689818,2,1,19,java.awt.event.ActionListener,"Inner classes, such as your ActionListener, cannot access non-final variables from the scope that contains it."
+30971959,2,0,3,java.awt.event.ActionListener,"Question (JPanel) doesn't implement ActionListener so next.addActionListener(this); isn't going to work You forgot to wrap aPanel.add(responses[i]); in a loop and create the JRadioButtons, which all should be added to the same ButtonGroup Choices in is Question never assigned a value and will generate a NullPointerException."
+31237225,2,0,2,java.awt.event.ActionListener,Pressing a JComboBox arrow doesn't trigger the ActionListener.
+31239833,2,1,2,java.awt.event.ActionListener,"I'm trying to add an actionListener to a JList,   You can't, it doesn't have ActionListener support  so whenever a user click a value in the JList , it will just println the value."
+31576899,2,1,5,java.awt.event.ActionListener,"This is also the reason I don't use a ActionListener in the view contract, because I have no idea how a textWasChanged event might actually be generated by an implementation of the view"
+31666660,2,1,4,java.awt.event.ActionListener,"I'm assuming that you don't understand that ActionListener will only be notified when the user presses the Enter key... That would be the easiest solution, if, however, you want to monitor changes to a text component, you should use a DocumentListener See How to Use Text Fields, How to Write an Action Listeners and Listening for Changes on a Document for more details This, however, raises some issues."
+31706975,2,0,0,java.awt.event.ActionListener,"As it stands, the jobid variable you create in the MouseAdapter goes out of scope the moment the mouseClicked() method exits, hence why your ActionListener can't see it."
+31998530,2,1,2,java.awt.event.ActionListener,"In other words, call your builder methods just once, perhaps in the constructor, and in your button's ActionListener, don't call the builder methods but rather only the .setVisible(true) and .setVisible(false)  The bug that is causing your error is that you're adding components to an already filled JFrame and are not packing it, and so the old buttons are shown and are pressed, but their references don't match that of the new buttons."

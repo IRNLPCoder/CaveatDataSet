@@ -1,0 +1,134 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+219891,2,0,29,java.lang.NullPointerException,"In the latter case, if obj is null you won't get a NullPointerException but a false."
+888105,2,1,40,java.lang.NullPointerException,"Note that parse() will never return null, so this cannot cause a NullPointerException."
+1222446,2,0,10,java.lang.NullPointerException,A NullPointerException is not only thrown when trying to call a method on a null; trying to access an index in an array through a null will have the same effect.
+1336398,2,0,3,java.lang.NullPointerException,"For example, if you pass a null reference to a method that doesn't allow nulls (NullPointerException) or if you do an Integer.parseInt, a given String the result will be the same every time."
+2146288,2,0,0,java.lang.NullPointerException,"It doesn't prevent you from passing null arguments to your constructor though... You can still check every argument as suggested by @cletus, but I'll suggest you to throw IllegalArgumentException instead of NullPointerException that doesn't give no new hint about what you've done."
+2291248,2,0,2,java.lang.NullPointerException,NullPointerException can not be thrown in a line without a statement.
+2683114,2,0,3,java.lang.NullPointerException,This piece of code cannot produce NullPointerException.
+2830189,2,1,19,java.lang.NullPointerException,"No, that line won't throw a NullPointerException under any circumstances."
+2926905,2,1,24,java.lang.NullPointerException,See also  Bug 314830 - Switching on a null expression doesn't always throw NullPointerException
+2997863,2,0,24,java.lang.NullPointerException,A NullPointerException isn't reserved for just when you access members of a null reference; it's pretty standard to throw them when an argument is null when that's an illegal value.
+3073448,2,0,0,java.lang.NullPointerException,Remove the call to create a new MaskableBox array and you won't get the NullPointerException.
+3141265,2,0,1,java.lang.NullPointerException,"That's why the interface has to mention the checked exception; because, if it didn't, then you couldn't throw a NullPointerException from the subclass should you have wanted to make sure that nobody every touched the list with a null."
+3228944,2,0,1,java.lang.NullPointerException,"Given the code you're showing, there can't be a NullPointerException."
+3241111,2,1,14,java.lang.NullPointerException,If you forgot to test for null and someone does come with a null argument that you weren't expecting it then a NullPointerException is not necessarily the worst possible outcome.
+3458534,2,0,3,java.lang.NullPointerException,For example - return or throw an IllegalStateException And what you shouldn't do - don't catch NullPointerException.
+3504086,2,0,2,java.lang.NullPointerException,"Note that this doesn't throw a NullPointerException, even though l is assigned to null."
+12125971,2,0,4,java.lang.NullPointerException,Also the code doesn't check NullPointerException and friends.
+4369583,2,1,7,java.lang.NullPointerException,But a delay of 3 seconds gives my GUI thread enough time to be in ready state and hence it doesn't through NullPointerException.....
+4776934,2,0,5,java.lang.NullPointerException,"While it may seem obvious to you that you want a HashMap, so it should just implicitly initialize it, Java doesn't know if you want in fact a HashMap, or maybe a HashMap subclass, like LinkedHashMap Class-level primitives, like int can be left just like private static int someNumber; and won't throw a NullPointerException by accessing it--but that's because primitives can't be null."
+4778535,2,0,5,java.lang.NullPointerException,"No, catching NullPointerException is not an appropriate thing to do."
+5710237,2,0,1,java.lang.NullPointerException,"which while it isn't the NullPointerException you got, it does demonstrate that there's a serialization issue that Sean alludes to is his answers."
+5857144,2,1,0,java.lang.NullPointerException,A NullPointerException shouldn't happen during compilation: either you get a clear compilation error during parsing (which includes line number) or it works.
+5897852,2,0,1,java.lang.NullPointerException,If you don't handle NullPointerException at any place this will go all the back in the stack to main and terminate your program.
+6150747,2,0,1,java.lang.NullPointerException,"For example, certain code might   implement a circular data structure   that, by construction, can never   involve null references; the   programmer can then be certain that a   NullPointerException cannot occur, but   it would be difficult for a compiler   to prove it."
+6339262,2,0,0,java.lang.NullPointerException,"No, it won't cause a NullPointerException, because of how the if statement is written."
+6554161,2,1,1,java.lang.NullPointerException,I didn't get any NullPointerException or any other type of exception.
+6954020,2,1,3,java.lang.NullPointerException,I couldn't reconstruct the NullPointerException you told us about.
+9798487,2,0,0,java.lang.NullPointerException,"Of course, the problem might be that the branch or statement is infeasible and that the NullPointerException cannot ever be thrown."
+7031978,2,1,15,java.lang.NullPointerException,"It doesn't risk a NullPointerException (if object is null, it will just evaluate to false) It's shorter."
+7041950,2,0,2,java.lang.NullPointerException,"If you cannot stop the NullPointerException with null checks, then the only alternative is to catch it."
+7041950,2,0,2,java.lang.NullPointerException,"However, I cannot think of an instance where null checks cannot prevent a NullPointerException."
+7627839,2,0,2,java.lang.NullPointerException,(except you wouldn't have the NullPointerException)
+7767396,2,0,0,java.lang.NullPointerException,"As gabe suggested, Intellij idea community edition compiles the code fine and doesn't cause the NullPointerException."
+7946510,2,0,9,java.lang.NullPointerException,"Due to the fact, that getClass() can't return null (EDIT: Even if getClass() would return null, that wouldn't cause a NullPointerException), oldFact must be the one which is null."
+8082576,2,1,6,java.lang.NullPointerException,"Likewise, you may document @throws NullPointerException to state when this may occur, even if you don't declare throws NullPointerException, since it's an unchecked exception and does not need to be (and generally is not) written in the method signature."
+8231091,2,0,2,java.lang.NullPointerException,"add() doesn't have to be synchronized because it just delegates the operation, but I would prefer using getInstance().execute(runnable), so you won't get a NullPointerException."
+8754971,2,0,2,java.lang.NullPointerException,"Second, if you write this in Java or any C#-like language, rest assured that eventually you will run into a situation where something in this chain is null, and worst of all, the ensuing NullPointerException will not pinpoint exactly what it is."
+8811108,2,0,1,java.lang.NullPointerException,"I think even when the stacktrace is posted, the NullPointerException does not occur in the piece of code posted in the question."
+9236823,2,0,1,java.lang.NullPointerException,Simply catching NullPointerException is not a nice way tell the user about it!
+9251382,2,0,2,java.lang.NullPointerException,The cause of the NullPointerException is not directly visible but I believe that you haven't initialized the temp array.
+9372241,2,0,4,java.lang.NullPointerException,Using a NullPointerException doesn't prevent you from giving a good error message describing the exception.
+9462498,2,0,1,java.lang.NullPointerException,"Therefore I think, your NullPointerException does not happen when you try to access the playload but one step before when you try to access IPPacket or ARPPacket."
+9736878,2,0,4,java.lang.NullPointerException,Throwing or catching NullPointerException is not a really good idea.
+9773665,2,0,0,java.lang.NullPointerException,Mostly NullPointerException cannot be identify at compile time.
+10140070,2,0,1,java.lang.NullPointerException,"If the map does contain elements, then map.entrySet() won't throw NullPointerException (because the map is not null), so the exception must be coming from accessing one of the elements (or its subobjects) in the loop."
+10164986,2,0,9,java.lang.NullPointerException,doesn't throw a NullPointerException.
+10180526,2,0,3,java.lang.NullPointerException,"If it is running successfully, it is running a different version of the code (probably an older version of the class that doesn't throw a NullPointerException)."
+10247199,2,1,0,java.lang.NullPointerException,"Overall, the exact code you posted cannot raise a NullPointerException since there is no codepath that would invoke checkEnemyHealth with null -- and that's the only way to get an NPE after 'beforreee', but not after 'afterrrr'."
+10646410,2,0,0,java.lang.NullPointerException,"Also, your title is very misleading: If you have your float declared and initialized as above, then there cannot be any NullPointerException."
+10911113,2,0,2,java.lang.NullPointerException,One advantage of Constant.equals(variable) is that you can't have a NullPointerException on the .equals
+11185558,2,0,0,java.lang.NullPointerException,"But, equals() won't throw NullPointerException."
+11614151,2,0,0,java.lang.NullPointerException,"This means that the first line of code may mean a NullPointerException, if retValue is null, but the second won't have a NullPointerException, for the same input."
+12141579,2,0,1,java.lang.NullPointerException,"works well because if a is null, the second part is not evaluated and you don't risk a NullPointerException."
+12591911,2,0,1,java.lang.NullPointerException,NullPointerException does not always have to be caused by a variable/identifier being null.
+12617849,2,0,1,java.lang.NullPointerException,"Second, as I understand list() will return a String[] and if the folder is empty it will return null (will NOT go to Exception as you don't catch NullPointerException from [null].length)."
+13084551,2,0,1,java.lang.NullPointerException,The second variant can't throw a NullPointerException since its obviously not null.
+13084072,2,1,11,java.lang.NullPointerException,Many  programmers use the 2nd way just to make sure that they don't get a NullPointerException.
+13540165,2,0,0,java.lang.NullPointerException,You can't throw a NullPointerException by calling a static method.
+13748213,2,0,1,java.lang.NullPointerException,"That being said, returning null from a method won't produce a NullPointerException."
+13781147,2,0,4,java.lang.NullPointerException,"You are only catching SQLException objects, and NullPointerException is not a subclass of SQLException."
+14489718,2,1,16,java.lang.NullPointerException,"Also check out the JLS:  The NullPointerException (which is a kind of RuntimeException) that is   thrown by method blowUp is not caught by the try statement in main,   because a NullPointerException is not assignable to a variable of type   BlewIt."
+14973144,2,0,0,java.lang.NullPointerException,Yes it sounds weird that getAddress().getBlock() doesn't throw NullPointerException.
+15146466,2,0,2,java.lang.NullPointerException,"If you fix Check_Circular, your code won't throw NullPointerException in the first place, and work as intended."
+15219140,2,0,0,java.lang.NullPointerException,"It doesn't produce any NullPointerException, unless the array variable itself is null."
+15269464,2,0,1,java.lang.NullPointerException,printAll isn't double buffered and doesn't suffer from NullPointerException (which can occur under Windows from experience)
+15441070,2,0,1,java.lang.NullPointerException,"EDIT: I'd also like to mention that exceptions, as far as I know (or at least NullPointerException), are not IDE-dependent (i.e. you get NullPointer in NetBeans, you'll get so in eclipse as well)."
+15803858,2,0,2,java.lang.NullPointerException,NullPointerException is not an instanceof NumberFormatException.
+15853647,2,0,1,java.lang.NullPointerException,if you have got NullPointerException doesn't mean that JQuery or plugin has bugs.
+15926774,2,1,2,java.lang.NullPointerException,Then you'll only have one global variable in your class and you won't get a NullPointerException.
+16231474,2,1,4,java.lang.NullPointerException,Catching NullPointerException isn't considered good practice.
+16429671,2,0,9,java.lang.NullPointerException,You certainly don't get a NullPointerException with as descriptive an error message as possible.
+16430701,2,0,1,java.lang.NullPointerException,The advantage of using StringUtils again for the length is that you won't get a NullPointerException if pass is null.
+16593649,2,0,2,java.lang.NullPointerException,"Don't throw a NullPointerException, because you haven't attempted to call a method on something null yet."
+16684401,2,0,0,java.lang.NullPointerException,"Comparing SUCCESS with f.getStatus(), instead of inverse, gives us certainty that there won't be NullPointerException if somehow f would be null"
+17155789,2,1,6,java.lang.NullPointerException,"No, the second part of the condition is not evaluated as the first is false, when chair is null, so a NullPointerException is not thrown."
+17208465,2,0,0,java.lang.NullPointerException,"Though login == ""1"" is wrong, that wouldn't throw a NullPointerException."
+17249321,2,1,3,java.lang.NullPointerException,Because if playAgain is null it won't throw a NullPointerException
+17447436,2,0,2,java.lang.NullPointerException,"Also, put the string literal first, in case that make is null, so you don't get a NullPointerException."
+17472912,2,0,0,java.lang.NullPointerException,"Try String.equalsIgnoreCase() method, but it won't solve your NullPointerException."
+17923899,2,0,1,java.lang.NullPointerException,"so if myList is null, it won't throw a NullPointerException evaluating myList.isEmpty() (because it won't evaluate it)"
+18552922,2,1,1,java.lang.NullPointerException,"This is intended to replace nulls in a type-safe way, guaranteeing that if the option value is present, you won't get a NullPointerException when you try to use it."
+19518309,2,1,1,java.lang.NullPointerException,"String.split("""") doesn't throw NullPointerException"
+19632320,2,0,7,java.lang.NullPointerException,"It means that instead of returning plain null you can return some sort of default value, which won't trigger NullPointerException."
+19801169,2,0,1,java.lang.NullPointerException,"The && operator will only evaluate the right side if the left side is true, i.e. correct[0] isn't null and won't throw a NullPointerException."
+20038360,2,0,1,java.lang.NullPointerException,"Also, note that the NullPointerException isn't happening when you compile; it's happening when you run the program."
+20266058,2,0,3,java.lang.NullPointerException,"Even though the result of favorite() is null, a NullPointerException   is not thrown."
+20307861,2,0,1,java.lang.NullPointerException,It still crashes because you're trying to catch an IndexOutOfBoundsException meanwhile the NullPointerException is not a subclass of it.
+20521058,2,0,4,java.lang.NullPointerException,"You won't get NullPointerException and you'll think that you performed the operation on all the objects in the array.. And you'll never know that you miscalculated it because you ""hided"" the exception."
+20524312,2,0,3,java.lang.NullPointerException,"No matter how you declare your method, you cannot force a NullPointerException to be caught."
+20741798,2,0,0,java.lang.NullPointerException,"I think in your TestVO class ,there is overridden toString() method returns null,that's why on debugging mode you are getting null.But in reality there is object of your class because you doesn't get NullPointerException."
+20837720,2,0,0,java.lang.NullPointerException,This error (NullPointerException) is not a bad error because it tells you exactly where it hit the error and what is equal to null.
+21246468,2,0,0,java.lang.NullPointerException,A variable being null when it shouldn't causes a NullPointerException.
+21499519,2,0,1,java.lang.NullPointerException,"You have never initialized datasource until you call createNotes(), so the NullPointerException does not come unexpected."
+21873039,2,1,0,java.lang.NullPointerException,which will check whether opp is null before it calls the equalsIgnoreCase method - and you won't get the NullPointerException.
+22260329,2,0,0,java.lang.NullPointerException,"Nome is okay because it's just being joined to another string with +, and that kind of string joining doesn't throw NullPointerException."
+22309359,2,1,1,java.lang.NullPointerException,"Since you're squashing the exception, you don't see the NullPointerException that's generated when you call label1.setText(...)"
+22329618,2,0,0,java.lang.NullPointerException,"The NullPointerException is not caused by the potentially different lengths of the arrays, but by the fact that keyValue is null."
+22392965,2,1,1,java.lang.NullPointerException,"By the way, NullPointerException isn't really appropriate for an empty string there; an IllegalArgumentException might be more descriptive."
+22756282,2,1,2,java.lang.NullPointerException,If you don't get a NullPointerException then that's probably the correct thing to do.
+23116235,2,1,6,java.lang.NullPointerException,An alternative to compareTo() is equals() which won't throw a NullPointerException in the case where the object is null.
+23117873,2,0,0,java.lang.NullPointerException,EDIT - Regarding the error mentioned in comments: The NullPointerException does not have anything to do with whether you use this instead of a parameter.
+23526858,2,1,3,java.lang.NullPointerException,"A RuntimeException, such as: IllegalArgumentException or NullPointerException, does not have to be included in a method signature, so you will alleviate your compiler error."
+23658831,2,0,1,java.lang.NullPointerException,The NullPointerException will not have anything to do with the way you have set up your lists.
+23749312,2,1,0,java.lang.NullPointerException,"In the second example the NullPointerException is not caught, instead, you are catching an EJBException which is other runtime exception class."
+24078180,2,0,3,java.lang.NullPointerException,Because if var is null you won't raise a NullPointerException.
+24247788,2,0,1,java.lang.NullPointerException,"if charConts doesn't contain i (as in charCounts.get(i)), then it won't throw a NullPointerException, it will return null."
+24344581,2,0,0,java.lang.NullPointerException,"You wouldn't get a NullPointerException if the state of an object wasn't null when you dereferenced it, of course."
+24474798,2,1,2,java.lang.NullPointerException,Also check if the player you get is not null so you can't get a NullPointerException.
+24800374,2,0,6,java.lang.NullPointerException,"And the analysis of why it is happening   Even though the result of favorite() is null, a NullPointerException is not thrown."
+24845291,2,0,0,java.lang.NullPointerException,I also don't get a NullPointerException but i get a score = 0 consider refactoring the code and put the variable counter = o; in a different level because you always set it to zero.
+24985488,2,0,0,java.lang.NullPointerException,"BTW, adding the null into the list doesn't cause the NullPointerException by itself."
+25439540,2,0,1,java.lang.NullPointerException,A benefit to this is that you can guarantee a List is instantiated such that these loops you are defining won't hit a NullPointerException in the case that no children were added to a particular Father instance.
+25650164,2,0,0,java.lang.NullPointerException,"The NullPointerException is not a problem with instantiating your adapter, but rather with the way you are getting the Spinner."
+25850892,2,0,0,java.lang.NullPointerException,"The exception wasn't a real NullPointerException, but rather a different exception that had the toString() and fillInStackTrace() methods overridden (the former to print the NPE and the latter to skip filling in the stack trace)."
+26287003,2,0,0,java.lang.NullPointerException,"Since the first line doesn't give NullPointerException, we know that array is not null and array[row] is not null."
+26460065,2,1,5,java.lang.NullPointerException,"Even if you don't get NullPointerException, you wouldn't get the behavior you want, since the second put (.put(info, new ArrayList<HashMap<String, String>>())) would be performed on the old value."
+26694396,2,1,3,java.lang.NullPointerException,"The provided null reference for the image observer (forth argument of the method drawImage) won't cause a NullPointerException, so there is no need to change something there."
+26911054,2,0,1,java.lang.NullPointerException,"But this if block would simply just execute the code, and the NullPointerException won't be raised."
+27312599,2,0,0,java.lang.NullPointerException,"For example, ArrayIndexOutOfBoundsException or NullPointerException shouldn't occur in a program, and if they occur, they usually indicate a bug."
+28099817,2,1,5,java.lang.NullPointerException,"A NullPointerException is not a subclass of ReportException, so it's not caught."
+28795473,2,0,1,java.lang.NullPointerException,Running out of connections shouldn't throw a NullPointerException; this seems to be a bug in sqlite.
+28810922,2,0,0,java.lang.NullPointerException,You aren't getting the NullPointerException because dataService is null.
+29210321,2,0,4,java.lang.NullPointerException,"There are several things you can do:  Return null  Not the best practice, though, because the method's client will be forced to handle the possibly returned null (and if he doesn't, a NullPointerException can be thrown)."
+29707472,2,0,0,java.lang.NullPointerException,"As you can see from the picture, NullPointerException is not directly under this category: these are the exception that directly extends the Exception class."
+30034693,2,0,4,java.lang.NullPointerException,"Basically RuntimeExceptions are those which java considers as occurring at the execution time and anything occurring at the execution time like NullPointerException cannot be handled, hence we cannot do much at the compile time."
+30217165,2,0,0,java.lang.NullPointerException,"Adding to @Henry's answer, before comparing lengths of the two given arrays you should make sure that neither of them are null so that you don't get a NullPointerException."
+30227543,2,1,4,java.lang.NullPointerException,significantly easier and less error prone (and it won't cause a NullPointerException like your example code will.
+30618813,2,1,2,java.lang.NullPointerException,Long.valueOf doesn't throw NullPointerException.
+30752960,2,1,1,java.lang.NullPointerException,By now you know that NullPointerException is not a checked exceptions.
+30767404,2,0,0,java.lang.NullPointerException,"Throwing a NullPointerException is not nice, a more sensible exception would be nicer."
+31351162,2,0,1,java.lang.NullPointerException,The NullPointerException wasn't the byte[] it was the client variable.
+31657573,2,0,1,java.lang.NullPointerException,If you use str == null the NullPointerException shouldn't be thrown.
+31901226,2,0,1,java.lang.NullPointerException,The fact that you stated throws NullPointerException doesn't mean that no exception will occur you are just letting any calling objects know that this type of error can occur and should handle it.

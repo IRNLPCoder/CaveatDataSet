@@ -1,0 +1,490 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+24583680,2,0,2,java.util.HashMap,1) first difference is HashMap is not thread safe   While HashTable is ThreadSafe 2) HashMap  performance wise is better because it is not thread safe.
+10372667,2,0,14,java.util.HashMap,HashMap doesn't guarantee the order in which elements are returned.
+25348157,2,0,2,java.util.HashMap,"One of the major differences between HashMap and Hashtable is that HashMap is non-synchronized whereas Hashtable is synchronized, which   means Hashtable is thread-safe and can be shared between multiple   threads but HashMap cannot be shared between multiple threads without   proper synchronization."
+25348157,2,0,2,java.util.HashMap,HashMap does not guarantee that the order of the map will remain constant over time.
+40512,2,0,13,java.util.HashMap,"Hashtable is synchronized, whereas HashMap isn't."
+26291777,2,0,0,java.util.HashMap,"Check Here  Synchronization or Thread Safe : One of the major differences between   HashMap and Hashtable is that HashMap is non-synchronized whereas   Hashtable is synchronized, which means Hashtable is thread-safe and   can be shared between multiple threads but HashMap cannot be shared   between multiple threads without proper synchronization."
+26291777,2,0,0,java.util.HashMap,Default Capacity:  Hashmap: static final int DEFAULT_INITIAL_CAPACITY   =16  static final float DEFAULT_LOAD_FACTOR = 0.75f;  Hashtable:  static final int DEFAULT_INITIAL_CAPACITY = 11;   static final float   DEFAULT_LOAD_FACTOR = 0.75f; HashMap does not guarantee that the order of the map will remain   constant over time.
+16018266,2,0,5,java.util.HashMap,"If you don't require thread safety, use HashMap which isn't threadsafe but faster and uses less memory."
+22491742,2,0,4,java.util.HashMap,"My small contribution :   First and most significant different between Hashtable and HashMap is that, HashMap is not thread-safe  while Hashtable is a thread-safe collection."
+22491742,2,0,4,java.util.HashMap,"Second important difference between Hashtable and HashMap is performance, since HashMap is not synchronized it perform better than Hashtable."
+40878,2,1,1795,java.util.HashMap,"There are several differences between HashMap and Hashtable in Java:  Hashtable is synchronized, whereas HashMap is not."
+104398,2,0,1,java.util.HashMap,"Be warned that even in single-threaded code, replacing a ConcurrentHashMap with a HashMap may not be safe."
+104398,2,0,1,java.util.HashMap,HashMap does not forbid them (don't ask).
+113581,2,0,1,java.util.HashMap,"As you specifically asked for collections, I'd like to add an aspect that the other answers haven't mentioned yet: A HashMap doesn't expect their keys to change their hashcode once they are added to the collection."
+20730236,2,0,0,java.util.HashMap,"It's a bit hacky, since HashMap doesn't let us access it's table directly, but it should work just fine."
+237498,2,0,1,java.util.HashMap,Random thought:  The hash buckets associated with HashMap are not particularly memory efficient.
+6540791,2,0,1,java.util.HashMap,"In general, if you want to use the ConcurrentHashMap make sure you are ready to miss 'updates' (i.e. printing contents of the HashMap does not ensure it will print the up-to-date Map) and use APIs like CyclicBarrier to ensure consistency across your program's lifecycle."
+537957,2,0,7,java.util.HashMap,A HashMap is not an efficient data structure for finding keys that lie within a certain range.
+678842,2,1,64,java.util.HashMap,"you can't supply a HashMap<String, String>."
+816806,2,0,3,java.util.HashMap,Database systems are designed for efficient access to on-disk data; a HashMap isn't.
+865446,2,0,0,java.util.HashMap,HashMap isn't deliberately big and slow...
+903474,2,0,1,java.util.HashMap,"As long as the two key objects return the same hashCode() value, and the equals() method say they are equal, your HashMap will not create another entry for it."
+1361810,2,0,2,java.util.HashMap,"HashMap is not synchronized, so it's faster, but you can have problem in a multi-thread environment."
+1474099,2,1,2,java.util.HashMap,"If you look at the source code, then you can notice that SessionFactory stores created serializers in a HashMap, and HashMap is not a thread-safe object."
+1573991,2,0,3,java.util.HashMap,"In other words, the HashMap isn't distributing the entries in seperate buckets for each seperate hashcode, it is grouping them by a proximity, so the more buckets it has, the more spread out the distribution, the less likely that there are collisions."
+1791792,2,0,4,java.util.HashMap,"The classes you mentioned -- HashTable, HashSet, and HashMap don't use open addressing, but you could easily create new classes that implemented open addressing and provided the same APIs as those classes."
+1838319,2,0,4,java.util.HashMap,"That being said, the most commonly used Map implementations, specifically HashMap are not thread safe."
+1881558,2,0,0,java.util.HashMap,"HashMap is not married to any particular ordering, but LinkedHashMap implementation of Map should preserve the order."
+2069087,2,0,3,java.util.HashMap,"Second thing, HashMap doesn't use primitive type for keys."
+2119888,2,1,2,java.util.HashMap,Because LinkedHashMap will keep the data in insertion order while HashMap won't.
+2444259,2,0,0,java.util.HashMap,1) Don't use HashMap to store Facebook parameters.
+31455838,2,0,0,java.util.HashMap,"If the HashMap does not find the hash code, it's obvious the key is not contained in the HashMap yet."
+2268824,2,0,0,java.util.HashMap,The main differences are:  access to the Hashtable is synchronized on the table while access to the HashMap isn't.
+2294556,2,0,5,java.util.HashMap,"(Though it's extremely unlikely that future versions of HashMap would not extend AbstractMap, since there probably some code out there that expects HashMap to be assignable to AbstractMap.)"
+2368661,2,0,2,java.util.HashMap,And the contents of a HashMap DO NOT change randomly or spontaneously.
+2412160,2,0,8,java.util.HashMap,Each individual HashMap contained in your outer HashMap is not guaranteed to be thread safe unless you use ConcurrentHashMap as suggested in your question.
+2414294,2,0,2,java.util.HashMap,"If you have many collisions on the lower bits, the HashMap will not perform well."
+2567407,2,0,2,java.util.HashMap,"You can't use a HashMap, because you won't be able to compute a hashcode based on just one element of the tuple."
+2688654,2,0,3,java.util.HashMap,This means that HashMap shouldn't change and all changes (initial constructions) should be completed before any reader start to accessing HashMap.
+2688654,2,0,3,java.util.HashMap,"Objects which are pointed by HashMap should not change also, so aggressive using final keyword can help you."
+2747911,2,0,16,java.util.HashMap,"The serialization form of java.util.HashMap doesn't serialize the buckets themselves, and the hash code is not part of the persisted state."
+2817716,2,0,3,java.util.HashMap,HashMap does not sort at all.
+2817719,2,0,1,java.util.HashMap,"Some Map implementations such as LinkedHashMap and TreeMap do guarantee a certain order, but HashMap does not."
+28228281,2,0,11,java.util.HashMap,TeeMap implements SortedMap and NavigableMap while HashMap doesn't.
+2912431,2,0,0,java.util.HashMap,EDIT First I'd read all lines from the file/message and store them as key/value paris in a Hashtable (HashMap is not available on android..).
+3020638,2,0,10,java.util.HashMap,"HashMap doesn't have these extra costs (runtime,space) and should prefered over LinkedHashMap when you don't care about insertion order."
+30026979,2,0,1,java.util.HashMap,"HashMap does not maintains insertion order, hence does not maintains any doubly linked list."
+3515905,2,0,3,java.util.HashMap,"The problem is, a HashMap is not sorted like a list."
+3515952,2,1,2,java.util.HashMap,"HashMap doesn't have a particular order, ArrayList (as any other List) does."
+3538092,2,0,13,java.util.HashMap,"HashMap doesn't have 'Last position', as it is not sorted."
+3542234,2,1,22,java.util.HashMap,"Unfortunately the standard collection implementations such as HashMap do not have static factory methods as of release 1.6, but you can put these methods in your own utility class."
+3560851,2,1,2,java.util.HashMap,"Similarly, HashMap isn't synchronized and Hashtable is, so using the former might be faster too."
+3570441,2,0,0,java.util.HashMap,This is the property of HashMap where elements are not iterated in the same order in which they were inserted as HashMap does not insert elements in order.
+3626788,2,0,4,java.util.HashMap,"By the way, HashMap doesn't throw exceptions for missing keys, it returns null instead."
+3665456,2,0,0,java.util.HashMap,HashMap doesn't check compareTo(); HashMap checks hashCode() and equals().
+3771413,2,0,5,java.util.HashMap,"Don't use a HashMap with enums, this is what an EnumMap was designed for."
+3926685,2,0,3,java.util.HashMap,"Remember that putting an object into a HashMap doesn't make a copy of the Object, it just stores a reference to it, so the cost in time and memory is quite small."
+3942495,2,0,0,java.util.HashMap,You need to store  a copy of each word encountered the count for each  A HashMap really won't store much more than that!
+4034211,2,1,7,java.util.HashMap,"java.util.HashMap is not threadsafe, and if accessed concurrently by multiple threads, one particular mode of failure is an infinite loop within a particular bucket."
+4085125,2,0,4,java.util.HashMap,"Java has structures for collections of key/value pairs (Map), but the implementation TreeMap and HashMap do not keep the insertion order of the keys."
+4237253,2,0,1,java.util.HashMap,HashMap doesn't guarantee any ordering.
+4237311,2,0,6,java.util.HashMap,Please note that HashMap doesn't guarantee any order for its elements.
+4326644,2,0,0,java.util.HashMap,"as an example, HashMap is not thread-safe."
+27347338,2,0,0,java.util.HashMap,"At this point, the HashMap did not allow dublicating the key and map1.size() will return 1."
+27347338,2,0,0,java.util.HashMap,The explanation is that with the first map I created the object arr once and tried to add the same object 3 times which HashMap does not allow by default so only the last usage will be considered.
+7981662,2,0,15,java.util.HashMap,"Open JSONObject.java file, it uses internally HashMap which doesn't maintain the order."
+4644264,2,1,3,java.util.HashMap,"and  wordsAndDates.get(""a"") return 1 If not you shouldn't use HashMap because it overrides previous value."
+4697062,2,0,4,java.util.HashMap,HashMap doesn't guarantee insertion order.
+4737447,2,0,1,java.util.HashMap,a HashMap may not be the easiest to work with.
+4761654,2,0,1,java.util.HashMap,"PS If you are building the map at a server and doing the filtering somewhere else (at a client) and need to transport the Dictionary, HashMap won't do - it cannot be serialized."
+5169137,2,0,0,java.util.HashMap,As long as the initialization is complete before reading starts there is no reason why all the contents of the HashMap would not be visible to every thread.
+5209696,2,0,5,java.util.HashMap,"The main difference is that TreeMap is a SortedMap, and HashMap is not."
+5219129,2,1,1,java.util.HashMap,"A HashMap is not ordered, and a TreeMap is ordered by key, not by value, so it won't help."
+5237160,2,0,2,java.util.HashMap,"These buckets are not ordered in a way that makes sense outside the HashMap interface and as such, the items you put into the HashMap are not in order in the sense that you would expect with the other data structures"
+5324599,2,0,0,java.util.HashMap,That is because HashMap doesn't keep the keys in the same order you add them.
+5418714,2,0,2,java.util.HashMap,Note that a HashMap does not maintain the order of its elements.
+5438955,2,0,2,java.util.HashMap,"A HashMap does not in any way try to save space by ""reusing"" the value elements (that would require it to compare each added value to all the existing ones, which would be very expensive - after all, it is only the keys that are hashed for quick lookup)."
+5448244,2,1,1,java.util.HashMap,"You are probably doing it wrong... First, a HashMap can't store ints, it needs proper objects - like Integer  – An array is an object, although it's hidden behind some syntactic sugar."
+5566842,2,0,1,java.util.HashMap,"here jsf will search for getters/setters of the field elements in java.util.HashMap which doesn't exist, and so the error"
+5620101,2,0,0,java.util.HashMap,"Yes, HashMap is not synchronized so inserting elements from concurrent threads yields undefined results."
+7514752,2,0,1,java.util.HashMap,If two objects are same then HashMap will not add that key instead it will replace the old value by new one.
+5656646,2,0,1,java.util.HashMap,I wouldn't use HashMap if you need to be concerned about threading issues.
+5730234,2,0,3,java.util.HashMap,"However, a HashMap will not require unique hashing, it will simply handle the collisions when they occur."
+5769150,2,0,2,java.util.HashMap,If you use java.util.Properties the key-value pairs are stored in a Hashmap which doesn't maintain any order no matter how you insert sorted values in a HashMap.
+5855975,2,0,4,java.util.HashMap,"The problem you have is that you cannot return a HashMap as it doesn't keep the order, adn you cannot return a TreeMap because it will sort the keys for you making anything else you redundant."
+5927924,2,0,0,java.util.HashMap,HashMap is not ordered.
+5960246,2,1,2,java.util.HashMap,"With XSSF, the iterator you get back is taken from a TreeMap (it's the values iterator), so I wouldn't expect a HashMap iterator but I would expect a java.util one That makes me think that you're possibly not using the same version of POI in both places See the POI FAQ for how to check which jar file you're using for POI"
+5993833,2,0,4,java.util.HashMap,Your check sum cannot depend on the order of entries as HashMap is not ordered.
+6078240,2,1,11,java.util.HashMap,(It compiles fine because these methods are both virtual and inherited in all objects as they are part of Object: HashMap can't enforce this at compile-time.)
+6105845,2,1,7,java.util.HashMap,"HashMap is not thread safe, but is faster."
+6141370,2,1,4,java.util.HashMap,"You need to override equals and hashCode - HashMap doesn't use compareTo, which is meant for sorting."
+16194915,2,0,0,java.util.HashMap,"I think that maybe the interviewer was interested in seeing if you were aware of the way HashMap works (the fact for example that the default constructor create and array of 16 buckets for Map entry, the fact that the sizes of the objects stored in the HashMap do not affect the HashMap size since it only store the references)."
+6160485,2,1,13,java.util.HashMap,In fact discarding one reference to the HashMap might not free any memory at all.
+6216752,2,0,4,java.util.HashMap,HashMap doesn't have a 0index and it doesn't have a String[] You cannot do what you ask because it doesn't make sense.
+6227463,2,0,1,java.util.HashMap,"By your argument, java.util.HashMap does not go in the manifest, and both java.util.HashMap and any implementation of Activity all derive from Object, so therefore you do not need to put your activities in the manifest."
+6324416,2,0,0,java.util.HashMap,When you use getProperty Properties class lookup in default property and return value from it if Properties HashMap doesn't contain value.
+6553115,2,0,2,java.util.HashMap,"If you are talking about the Hashtable and HashMap included with the Java SDK, there is definitely a performance difference, as HashMap doesn't have to use the synchronized blocks, which have an overhead."
+6604112,2,0,2,java.util.HashMap,"The HashMap does not know anything about your new method, it will simply call the original one for comparing your key object in the map with the query key (after finding one with matching hashCode)."
+6703877,2,1,3,java.util.HashMap,"The JSON structure doesn't match ArrayList<HashMap<String, Child>>."
+6835808,2,1,5,java.util.HashMap,The second is not possible because a HashMap is not a Fruit.
+6996241,2,0,1,java.util.HashMap,HashMap does not keep order in which we put data into it.So You may follow LinkedHashMap instead.It keeps the order in which we put data.LinkedHashMap can be used same as HashMap.
+7115485,2,0,2,java.util.HashMap,"First, I'm assuming that your HashMap will not grow beyond 100; if it does, you should leave the load-factor as it is."
+8074022,2,0,1,java.util.HashMap,"If you were to try to access an element directly, lets say ls.get(0)y you would receive a ClassCastException: java.util.HashMap cannot be cast to ProductInfo."
+7122536,2,1,2,java.util.HashMap,"Next: the actual implementation of HashMap is not prescribed by the Java standard, so it may (and will) vary depending on which JVM you use."
+12274787,2,0,2,java.util.HashMap,"As answered by ""Snicolas"", your problem is that the HashMap is not populated by the time its being used."
+7414975,2,0,0,java.util.HashMap,"You can get the values(), as a Collection, and you can sort that any way you like, but it doesn't sort the HashMap itself."
+7414975,2,0,0,java.util.HashMap,"It isn't defined to do anything differently, especially as you haven't sorted the HashMap at all."
+7565166,2,0,1,java.util.HashMap,"HashSet and HashMap aren't designed to be thread-safe - if you're going to access your set from multiple threads, you should use synchronization to prevent concurrent access."
+7786718,2,0,1,java.util.HashMap,"It's not quite clear to me what you mean with ""element at the first index of a Hashtable"", however, since the order of elements in a Hashtable  or HashMap is not guaranteed."
+7790999,2,0,1,java.util.HashMap,"Without synchronized your code would have 2 problems:  HashMap is not thread-safe, it should not be used from multiple threads without synchronization."
+7856407,2,1,11,java.util.HashMap,"Second problem is concurrency, HashMap is not thread safe."
+7861158,2,0,5,java.util.HashMap,HashMap does not preserve insertion order nor does it sort the map.
+7960042,2,0,1,java.util.HashMap,So a HashMap is not an option for random access.
+7975907,2,0,15,java.util.HashMap,The entries of a HashMap are not ordered.
+8003399,2,0,0,java.util.HashMap,"Even before generics were introduced, things like HashSet and HashMap couldn't store primitives."
+8033760,2,1,8,java.util.HashMap,"Also: HashMap doesn't produce a ""unique hash code"": it simply stores all elements with the same hash code in the same bucket (in a linked list) and checks every one of them using equals() if it has to retrieve one of those."
+8046485,2,1,2,java.util.HashMap,"If you don't want to frequently access the values based on the key, you shouldn't use HashMap."
+8203449,2,0,1,java.util.HashMap,"A HashMap won't keep the order of the words; if you do need to maintain the order, you can use a LinkedHashMap."
+8226683,2,0,3,java.util.HashMap,"However, you can't use HashMap to create one, because the map would have to be a SortedMap."
+8229494,2,0,3,java.util.HashMap,"A standard Java HashMap cannot store multiple values per key, any new entry you add will overwrite the previous one."
+8266944,2,1,5,java.util.HashMap,This is usually done (in some cases) when lets say for some reason you decide that HashMap isn't what you want and you want to use TreeMap instead but in all of your code there's HashMap parameters and changing those can be a pain.
+8342927,2,0,0,java.util.HashMap,"HashMap is not synchronized, so you have to add your logic or use a synchronized collection."
+8426175,2,0,1,java.util.HashMap,"HashMap is not synchronized, which I'm guessing you don't need here, since everything should be done on a single thread for your UI anyway."
+8455048,2,0,2,java.util.HashMap,java.util.HashMap is not ordered collection.
+8455073,2,0,1,java.util.HashMap,"HashMap is not neither sorted nor order, you can use TreeMap."
+8464783,2,0,0,java.util.HashMap,"A HashMap does not maintain an order, so it can't be sorted."
+8532421,2,0,0,java.util.HashMap,"HashMap is not thread-safe, but assuming you never publish instance a nor its two hash maps outside foo(), then all three are confined to one thread and need not be thread-safe."
+8543981,2,0,3,java.util.HashMap,(The registry has to be a class maintaining a HashMap - it cannot be a HashMap.).
+8605392,2,0,0,java.util.HashMap,"HashMap is not synchronized, so yes, you will probably get in trouble."
+8605653,2,0,1,java.util.HashMap,HashMap isn't thread-safe and doesn't do any locking.
+8605399,2,0,5,java.util.HashMap,"Note that the standard HashMap is not itself protected in any way, so only your locking code (which you haven't posted) can cause a deadlock."
+8634648,2,1,7,java.util.HashMap,HashMap cannot store multiple values for the same key.
+8634702,2,0,1,java.util.HashMap,"Java's HashMap does not do chaining, as the documentation for put(K, V) clearly states:  public V put(K key, V value) Associates the specified value with the specified key in this map."
+8770045,2,1,0,java.util.HashMap,Your problem is that HashMap does not preserve insertion/iteration order when it is converted into an ArrayList to return from your method.
+8870950,2,0,1,java.util.HashMap,HashMap should not appear in your UML model anyway.
+8877221,2,0,1,java.util.HashMap,"The main difference is that HashTable is synchronized internally, while HashMap is not."
+8947602,2,0,1,java.util.HashMap,You cannot modify a HashMap while iterating through it.
+9007448,2,1,8,java.util.HashMap,"HashMap) don't intrinsically support prefix lookups, so for those you'll have to iterate over all keys."
+9008209,2,0,1,java.util.HashMap,"The put method in HashMap returns the previous value associated with the key, it doesn't return the HashMap itself."
+9047157,2,0,2,java.util.HashMap,HashMap doesn't provide any ordering when you iterate over it (or even guarantee that the order will stay the same if you loop multiple times).
+9047167,2,0,0,java.util.HashMap,HashMap doesn't define the order of iteration over the elements.
+9087998,2,0,0,java.util.HashMap,If you read the openjdk source code (it's open source) you'd find that HashMap does not create threads.
+9153795,2,0,4,java.util.HashMap,The modern class – HashMap – is not synchronized.
+9293283,2,0,0,java.util.HashMap,Now suppose the exact type is in fact TreeMap: it makes sense that you cannot put an HashMap into this list.
+9450336,2,1,1,java.util.HashMap,"The answer (thanks, Dimitri) is that the HashMap doesn't guarantee its serialization ordering, so serialized-hash->deserialize->object-hash->serialize->serialized-hash may result in the second serialized hash being a different byte stream than the first."
+9353418,2,0,0,java.util.HashMap,"HashMap is not thread-safe, but ConcurrentHashMap is."
+9463311,2,0,2,java.util.HashMap,HashMap is not synchronized by default.
+9532565,2,0,1,java.util.HashMap,The keys of a HashMap don't have a predictable order.
+9544013,2,0,3,java.util.HashMap,java.util.HashMap does not allow you to map multiple values to a single key.
+9558872,2,1,4,java.util.HashMap,a) A HashMap doesn't preserve insertion order.
+9597641,2,0,0,java.util.HashMap,"Choosing between the two, goes down to this,  access to the Hashtable is synchronized on the table while  HashMap isn't."
+9626170,2,0,0,java.util.HashMap,"As HashMap doesn't guarantee any order so copying a HashMap can result in a different order, meaning the sum of values will be different."
+9773812,2,1,6,java.util.HashMap,"Btw, this only works since HashMap is not final."
+9823952,2,1,6,java.util.HashMap,HashMap doesn't guarantee that the insertion-order is preserved.
+9823954,2,0,1,java.util.HashMap,HashMap doesn't guarantee the order in which items are returned.
+10164659,2,0,2,java.util.HashMap,"Additionally, the method eclipse generates results in a more irregular hashcode, which in theory means there is a lower likelihood of hashtables degenerating and having poor performance, but in practice that probably won't matter since java.util.HashMap uses an auxiallary hash function to scramble the hashcode before using it."
+10178403,2,1,11,java.util.HashMap,I suspect your first subclass simply doesn't import java.util.HashMap.
+10206316,2,0,2,java.util.HashMap,HashMap is not guarenteed to be fail safe.
+10317047,2,0,1,java.util.HashMap,"When you put them into the HashMap they will not retain their order, as a HashMap is not an ordered map."
+10319308,2,0,0,java.util.HashMap,"HashMap doesn't guarantee any order, so you shouldn't rely on that, because the could change it with new releases without any notice."
+10371285,2,0,2,java.util.HashMap,"You can't use HashMap or HashTable or any other existing class that I'm aware of ... because they all deal the collisions, etc, for you."
+10596150,2,0,26,java.util.HashMap,best approach to acheive iteration of hashmap in reverse order  HashMap does not define any particular ordering of its element.
+10596173,2,0,6,java.util.HashMap,A HashMap doesn't maintain eny order between keys.
+28811708,2,0,2,java.util.HashMap,This happens because HashMap doesn't append the new element at the tail instead it appends the new element at the head.
+10659150,2,1,5,java.util.HashMap,A HashMap is not ordered or sorted.
+10710256,2,0,0,java.util.HashMap,However there are two problems with this approach:  HashMap doesn't allow you to specify a custom hash function.
+10919991,2,0,1,java.util.HashMap,You should also override hashCode otherwise it won't work as HashMap (as the name suggests) equates equality based on a collection of hashes.
+10973553,2,1,12,java.util.HashMap,The key difference between the two is that access to the Hashtable is synchronized on the table while access to the HashMap isn't.
+11088016,2,0,0,java.util.HashMap,"As you scan the array, if the value isn't in the HashMap, add it w/ a new collection of the index."
+11096581,2,0,2,java.util.HashMap,"See this blog post: http://weblogs.java.net/blog/jitu/archive/2010/02/19/jax-ws-cdi-java-ee-6-0 (but don't use @SessionScoped, use @Singleton) Some other points:  HashMap isn't thread-safe, you need ConcurrentHashMap."
+11185473,2,0,1,java.util.HashMap,"Also, notice that a HashMap will not use equals for comparison, but rather hashCode, and that a TreeSet, for instance, will use the Comparable interface methods."
+11230665,2,0,5,java.util.HashMap,HashMap is not thread safe so you need to introduce some form of synchronization if you need to share a HashMap accross threads.
+11246812,2,1,10,java.util.HashMap,"HashMap does not implement your interface IParams, so you cannot cast a HashMap to an IParams."
+11246812,2,1,10,java.util.HashMap,"Ofcourse, someMethod doesn't exist in HashMap."
+11378016,2,1,9,java.util.HashMap,"Just because two objects have the same hash code doesn't mean HashMap assumes they're the same -- indeed, if that was the case, that would be really, really bad."
+11498129,2,0,3,java.util.HashMap,If you don't want a HashMap as the super class then change it to whatever concrete class you want.
+11519118,2,1,1,java.util.HashMap,Note that HashMap is not immutable like NSDictionary.
+11526293,2,1,1,java.util.HashMap,You can't create a HashMap using generics wild cards.
+11536648,2,0,1,java.util.HashMap,"if the hashCode of an object used in a HashMap was not the same during a run of your application, the HashMap would not be able to retrieve the key consistently."
+11577247,2,0,0,java.util.HashMap,"The overhead of 1000 objects in a HashMap isn't even worth worrying about in any event: if they are 256mb each in total, even less so."
+12183191,2,0,2,java.util.HashMap,HashMap is not a sorted or sortable collection.
+12229625,2,0,3,java.util.HashMap,"If you want sorted map, HashMap isn't the best approach."
+16886136,2,1,1,java.util.HashMap,"You can't return HashMap, you need to create a wrapper for it."
+12395237,2,1,5,java.util.HashMap,Putting the list in the HashMap does not make a copy of the list.
+12444111,2,0,0,java.util.HashMap,HashMap is not thread safe.
+12563168,2,0,2,java.util.HashMap,Concurent version of HashMap doesn't magically solve all problems with thread-safety as it may seem.
+12595204,2,0,0,java.util.HashMap,HashMap is not Comparable.
+12595206,2,1,4,java.util.HashMap,This list contains list HashMap And HashMap does not implements Comparable.
+12595206,2,1,4,java.util.HashMap,that is why it populate java.lang.ClassCastException: java.util.HashMap cannot be cast to java.lang.Comparable
+12595256,2,0,1,java.util.HashMap,"Yes, Because  java.util.Collections.sort(arList); arList contains the HashMap hashList = new HashMap(); unfortunately hashMap did not implement the Comparable or Comparator interface."
+12595163,2,0,1,java.util.HashMap,HashMap doesn't implement Comparable interface.
+12595169,2,0,1,java.util.HashMap,"If you want to sort List<HashMap>, you need to have a Comparator to sort.. You cannot sort it using natural ordering.. Because your HashMap does not implement Comparable interface.. You can only compare two instances if they are comparable.. *EDIT: - Well, I think you will need two Comparators here.. One for your List and one for your HashMap inside the List.."
+12595177,2,0,1,java.util.HashMap,HashMap does not implement the Comparable interface (http://docs.oracle.com/javase/6/docs/api/).
+12595192,2,0,1,java.util.HashMap,"For something to be sorted, it must implement the Comparable interface, which is something which the HashMap does not."
+12599720,2,0,1,java.util.HashMap,java.util.HashMap does not implement java.util.List
+12612438,2,1,2,java.util.HashMap,Also note that a HashMap wouldn't be appropriate for a CardLayout as it needs to preserve the order of the cards so that you can use first/next/previous etc.
+12613820,2,1,0,java.util.HashMap,"But, in any case HashMap is not a proper choice for you."
+12660610,2,0,0,java.util.HashMap,Storing all users in one huge HashMap won't scale (sooner or later you'll have to cluster your application).
+12707838,2,0,0,java.util.HashMap,"You cannot sort a HashMap, it has no order."
+12770199,2,0,3,java.util.HashMap,"But you couldn't use HashMap, you'd need TreeMap or something, which might negate any memory performance benefits (and your keys would need to implement Comparable)."
+12779122,2,1,2,java.util.HashMap,Firstly HashMap isn't really an appropriate choice.
+12831628,2,0,1,java.util.HashMap,"(""address"",""<addr>""), (""name"",""<name>"") HashMap is not thread safe.."
+12854241,2,0,3,java.util.HashMap,"You can't, because HashMap is fundamentally unordered (or at least, the ordering is unstable and unhelpful)."
+12854250,2,0,4,java.util.HashMap,HashMap is not sorted you should use a SortedMap implementation instead for example TreeMap.
+12919770,2,1,6,java.util.HashMap,"You can't sort a Map by the values, especially not a HashMap, which can't be sorted at all."
+12940794,2,0,14,java.util.HashMap,"ie recent entry will be in HashMap Understanding Link between HashMap and HashSet: Remember, HashMap can not have duplicate keys."
+12940794,2,0,14,java.util.HashMap,"Now when you try to insert another duplicate object in the same HashSet, it will again be attempted to be inserted as key in the HashMap lying underneath,however, HashMap does not support /contain duplicate."
+13086503,2,1,13,java.util.HashMap,"HashMap is not a sorted or ordered Map implementation, so there isn't a ""position"" here."
+13130626,2,0,1,java.util.HashMap,"If simply storing keywords and phrases linked in a HashMap isn't enough, I'd suggest going over to using an inverted index of phrases."
+13163596,2,0,2,java.util.HashMap,"HashMap don't allow duplicate keys, so there is no way to have more than one SAME key-value pairs in your map."
+13177489,2,0,11,java.util.HashMap,The HashMap won't notice that the hashcode of a key has changed.
+13222814,2,0,0,java.util.HashMap,"As for your storage question, I wouldn't use a HashMap at all."
+13400280,2,0,1,java.util.HashMap,A HashMap will not work for mapping ranges to values unless you find a way to generate a hashcode for ranges and single values in there that matches.
+13495337,2,0,2,java.util.HashMap,"If this is an option, each thread can have its own HashMap which doesn't need to be thread safe provided it is only used by one thread."
+13513805,2,0,1,java.util.HashMap,"The HashMap does not guarantee order:  This class makes no guarantees as to the order of the map; in   particular, it does not guarantee that the order will remain constant   over time."
+13573188,2,1,1,java.util.HashMap,"In other words, even if a.hashCode() == b.hashCode(), if !a.equals(b), then a HashMap will not mix up the value associated with a and the value associated with b."
+13696097,2,1,18,java.util.HashMap,"To the contrary of what many people think, the main issue with multi-threading and HashMaps is not just a duplicate entry or a vanishing one... As you said, an infinite loop might occur when two or multiple Threads concurrently decide to resize the HashMap."
+13714757,2,0,3,java.util.HashMap,You will notice that java.util.HashMap does not actually throw it!
+13849753,2,0,0,java.util.HashMap,"I wouldn't use a HashMap here, I would use an EnumMap Then, in the code of your enum, you could put all the implementations as methods of the various enum subclasses."
+13870423,2,1,1,java.util.HashMap,Also note that HashMap is not thread safe - unless you add some form of synchronization when accessing the map from your threads it could yield surprising results.
+13871368,2,0,4,java.util.HashMap,"The map should be passed as a Map, not a HashMap unless HashMap is explicitly needed (which for the case of HashMap is not going to be the case)."
+13898977,2,0,2,java.util.HashMap,You are using a HashMap that doesn't gaurante the ordering of elements.
+13939983,2,0,1,java.util.HashMap,"At first I was thinking ""you need a HashMap"" then I thought that you probably don't need a HashMap."
+14053105,2,1,2,java.util.HashMap,"1), but then you can see the HashMap can't do anything but dump all entries in one bucket, and performance is consequently impacted."
+14154633,2,0,1,java.util.HashMap,"An HashMap does not have any name nor id fields, instead it have keys and values fields."
+14324142,2,0,5,java.util.HashMap,"), then you can just use int since a HashMap can't be any bigger than Integer.MAX_VALUE anyway."
+14376264,2,0,3,java.util.HashMap,"HashMap is not ordered or sorted, use LinkedHashMap if you care about insertion order, or use TreeMap if you care about natural order."
+14397379,2,0,0,java.util.HashMap,This means that the HashMap does not need to recalculate hashcodes when looking up objects with this key.
+14476835,2,1,1,java.util.HashMap,"You can't sort a HashMap, but you can get a sorted Array (or a List) of the keys."
+14519740,2,1,4,java.util.HashMap,HashMap does not sort its elements into any order.
+14899571,2,1,2,java.util.HashMap,"HashMap doesn't do the job for your case, rather TreeMap can help."
+14899964,2,0,0,java.util.HashMap,"While HashMap does not specify the order of elements, TreeMap does."
+15050173,2,0,0,java.util.HashMap,A HashMap is not the best way to represent edges since graph traversal is not optimal.
+15152090,2,0,3,java.util.HashMap,the standard java HashMap is not synchronized.
+15171852,2,0,2,java.util.HashMap,HashMap does not maintain order.
+15171878,2,0,0,java.util.HashMap,"Note, that because HashMap does not remember which order elements were added in, ""first element"" does not necessary mean ""first added""."
+15253653,2,0,0,java.util.HashMap,Now you'll see some red underlines where your class doesn't implement the (HashMap) method.
+15318484,2,0,2,java.util.HashMap,"You (the HashMap) don't know that it has changed, so you don't know to update its location, so the next time someone tries to look up that key, you won't find it."
+15351182,2,1,2,java.util.HashMap,Most normal initializations of HashMap shouldn't create memory issues.
+15388719,2,0,4,java.util.HashMap,You can't override the equals()/hashcode() methods for arrays - This is an issue because the HashMap won't be able to correctly determine whether it has looked up the right key or not.
+15389917,2,0,1,java.util.HashMap,"Don't use a HashMap if you are going to have multiple threads, use a ConcurrentHashMap instead (javadoc)."
+15542058,2,0,2,java.util.HashMap,"You can't sort a HashMap, but you can sort its entries obtained with entrySet()."
+15702942,2,1,2,java.util.HashMap,Entry (internal class of HashMap) is not a part of general-use linked list (as LinkedList is).
+15904147,2,0,0,java.util.HashMap,HashMap isn't a WeakHashMap so you cant cast one to the other.
+15977663,2,0,7,java.util.HashMap,"The answer for your first question is in the quoted text:  ""because java HashMap doesn't append the new element at tail instead it append new element at head to avoid tail traversing""  If HashMap would store them in insertion order it had to traverse the list at each insertion or store an extra pointer to the end of the list (and maintain it)."
+15992563,2,0,2,java.util.HashMap,"In the same vain as your Employee class, HashMap does not override it's toString method, so it simply prints out the objects reference in memory."
+16051880,2,0,1,java.util.HashMap,"I'm taking a punt, and guessing that you mean HashMap, and that the reason you don't have a HashMap API is that you are using Java ME."
+16084157,2,0,6,java.util.HashMap,"No, this is incorrect:  hashmap, which will sort by the value  HashMap does not order by keys."
+16084172,2,0,1,java.util.HashMap,"HashMap does not sort anything, It inserts elements into based on hascode and equals method of the elements."
+16104811,2,0,0,java.util.HashMap,"Since your HashMap is not typed, anything could be inserted as key and your clear() function will not remove it."
+16149160,2,0,2,java.util.HashMap,HashMap does not allow primitive data types as arguments.
+16162855,2,0,0,java.util.HashMap,"If you are iterating over a HashMap via the entrySet method, the type of the keys in your HashMap doesn't matter."
+16377317,2,0,2,java.util.HashMap,HashMap is not the datastructure for what you want to achieve.
+16569723,2,0,0,java.util.HashMap,HashMap is not exactly memory efficient.
+16515722,2,0,0,java.util.HashMap,"The most used map's implementation in java is hashmap or TreeMap (performance depends of what you make with the map (adding data, read, is the data needed to be sorted, ...)), if it was ok just make else you have to make to implément directly map (don't extends HashMap cause you extends all methods and just respecify the method defined in your implementation."
+16531102,2,0,0,java.util.HashMap,"Also, as greedybuddha pointed out, make sure that your HashMap are not reassigned in the same manner."
+16633913,2,0,1,java.util.HashMap,You can't sort a HashMap per se because it cannot hold an order.
+16633856,2,0,1,java.util.HashMap,"Also note that you will always get a different order when doing this, as HashMap isn't ordered."
+16848960,2,0,0,java.util.HashMap,"That's some other Map and not HashMap, or you have some weird degenerate HashMap which doesn't support null keys."
+16848960,2,0,0,java.util.HashMap,"Map.get() can NPE on null keys, but the implementation of HashMap doesn't."
+16868232,2,0,4,java.util.HashMap,"Although theoretically the implementation of HashMap doesn't need to use an if, it actually does."
+16970767,2,1,6,java.util.HashMap,"A HashMap is not ordered, so first you should use a TreeMap, for example."
+17082237,2,0,1,java.util.HashMap,"If you want to also access it as a list, you should prefer LinkedHashMap instead of HashMap (don't use unless you think you will require both, as it is slightly more expensive, but it maintains insertion order)."
+17095160,2,0,0,java.util.HashMap,"The values in the map are not actually sorted, because the HashMap is not sorted at all (it stores the values in the buckets based on the hashCode of the key)."
+17112561,2,1,3,java.util.HashMap,"No, putting an element to a volatile HashMap will not create a happens-before relationship, not even with a ConcurrentHashMap."
+17249580,2,0,0,java.util.HashMap,This tests if the HashMap does not contain the key st.
+17260313,2,1,9,java.util.HashMap,If your skills HashMap doesn't have the specified skills it returns null.
+17520760,2,0,0,java.util.HashMap,"Thread safety issues here:  multiple reads from the HashMap - is thread safe, because multiple reads are allowed as long as there are no modifications to the collection and writes to the HashMap will not happen, because the map is an unmodifiableMap() read/write on deliverers - is thread safe, because all java reference assignments are atomic  I can see no thread-unsafe operations here."
+17496723,2,0,0,java.util.HashMap,"A HashMap is not synchronized, a Hashtable is synchronized (details here)."
+17535720,2,0,1,java.util.HashMap,"The times it won't use a HashMap is if it can determine the type of the object from either an embedded class property (which works, but is unsafe over the network), a specified type by object path, or if you are deserializing into a typed object that it can interpret the type from."
+17662904,2,1,5,java.util.HashMap,"This would print out ""foo"" if the two objects returned equal hash codes, as they're meant to - but again, because they don't, the HashMap thinks there's no match."
+17684605,2,1,2,java.util.HashMap,"Since, the hash codes don't match the HashMap never looks for the key in the right bucket."
+17699200,2,1,2,java.util.HashMap,In Java are JSON nodes implemented as HashMap and HashMap is not ordered too.
+17850180,2,0,0,java.util.HashMap,This is exactly the reason why the HashMap cannot store more than one null values .
+17862820,2,0,1,java.util.HashMap,The fact that you're getting the values from a HashMap isn't actually important—you'd do the same thing for any Java Collection.
+17885162,2,0,0,java.util.HashMap,And   HashMap is not synchronized.it must be synchronized externally.
+17885178,2,0,0,java.util.HashMap,"The implementation of HashMap is based on one hash table, and HashMap is not synchronized."
+17902703,2,0,0,java.util.HashMap,"Hundreds of elements in an HashMap should not be a big deal on a fairly modern machine, it should be a matter of milliseconds (or less) if there are only a few hashcode collisions."
+17910419,2,0,3,java.util.HashMap,"The order in which you see the entries in the HashMap depends on the hash codes of the keys and order of the entries in the bucket I believe and it is implementation dependent, but don't rely on HashMap for ordering at all."
+17911069,2,0,1,java.util.HashMap,"The ConcurrentHashMap is thread-safe, while the basic HashMap is not."
+17985033,2,0,2,java.util.HashMap,"You really shouldn't use a HashMap (or any mutable object) as your key, since it will destabilize your Map."
+17993538,2,0,0,java.util.HashMap,HashMap do not support such behavior.
+17993355,2,0,0,java.util.HashMap,Unfortunately HashMap does NOT retain the order in witch the data was added.For you specific case you should use a LinkedHashMap because this kind of map is exactly like HashMap but keeps the order and you can iterate over it to get the last entries.
+18057219,2,1,1,java.util.HashMap,A simple HashMap is not threadsafe to use.
+18092153,2,0,2,java.util.HashMap,here HashMap can not copy the date because it could be anything.
+18147401,2,0,0,java.util.HashMap,"I'm not a Java programmer, but: HashMap is not safe for concurrent access."
+18148055,2,0,2,java.util.HashMap,And of course HashMap is not concurrent as the comments have pointed out.
+18167795,2,1,12,java.util.HashMap,HashMap does not manatain the order of insertion of keys.
+18307748,2,1,0,java.util.HashMap,The main difference is that HashTable is synchronized (used for threaded applications) and HashMap is not.
+18314323,2,0,1,java.util.HashMap,"doesn't create new HashMap<> objects, but simple let new_lessons and lessons pointing to this.lessons"
+18365941,2,1,1,java.util.HashMap,"You are almost certainly getting a ClassCastException, because elements of TreeSet must implement Comparable and HashMap doesn't."
+18379657,2,0,1,java.util.HashMap,"The one could be a List<HashMap<String, Object>>, while the others can be a List<TreeMap<String, Object>>, which are not compatible (you can't add a HashMap to a List<TreeMap> and vice versa)."
+18409287,2,1,4,java.util.HashMap,where the inner HashMap doesn't have type arguments.
+18425764,2,0,0,java.util.HashMap,"HashMap doesn't guarantee ordering, therefore if you need ordering, use ArrayList or LinkedList."
+18431602,2,0,3,java.util.HashMap,A HashMap does not guarantee the order after you sorted the map.
+18542082,2,0,0,java.util.HashMap,I suggest using a ConcurrentHashMap and trust that the Java team saying that HashMap is not synchronized is enough.
+18542149,2,0,3,java.util.HashMap,So theoretically it is proven that HashMap is not thread safe.
+18560385,2,0,1,java.util.HashMap,That's because a HashMap does not preserve the order in which the records are inserted.
+18611367,2,0,1,java.util.HashMap,"I would stick with the copy approach, although I wouldn't copy the HashMap."
+18631094,2,0,0,java.util.HashMap,"HashMap does not save any order, I think you should use LinkedHashMap that iterates in same order that values were inserted."
+18716063,2,0,4,java.util.HashMap,First expression doesn't initialize a HashMap.
+18768180,2,0,1,java.util.HashMap,"If you are learning Maps  TreeMap sorts but natural order of the key (Nice for printing) HashMap doesn't have a very predictable ordering  If you are learning arrays, there are great examples in this thread already ex."
+18913684,2,0,1,java.util.HashMap,HashMap does not implement Collection.
+27872027,2,0,0,java.util.HashMap,"The advantage of this approach is that even if the entire HashMap cannot fit in memory, we can break it into smaller blocks and use this approach."
+19131786,2,1,2,java.util.HashMap,Because a HashMap doesn't guarantee any order of iteration of it's element.
+19148536,2,0,0,java.util.HashMap,"Now, if the HashMap doesn't work as expected with your custom object then 99.99% you are not respecting one or more of these contract entries."
+19166071,2,0,1,java.util.HashMap,The implicitly-supplied (String) casts will only throw an error if the values returned from the HashMap are not Strings (or nulls).
+19164731,2,0,1,java.util.HashMap,HashMap doesn't preserve order of insertion  Hash table based implementation of the Map interface.
+19217491,2,0,0,java.util.HashMap,HashMap does not gaurantee you the order.
+19220458,2,1,7,java.util.HashMap,"Surely, you can't add a HashMap<String, HashSet<Assassin>> into the superMap."
+19234819,2,0,2,java.util.HashMap,(So a Hashtable—unlike a HashMap—will not become internally corrupted if multiple threads are concurrently trying to modify the data.)
+19240006,2,0,0,java.util.HashMap,In case you don't know HashMap this is how to initialize it.
+19318895,2,0,8,java.util.HashMap,HashMap doesn't maintain insertion order.
+19738696,2,0,0,java.util.HashMap,"java.util.HashMap is not Parcelable, so your options are:  use put/getSerializable, which will work fine within your app encode the HashMap as json or another remotable format if sending outside your app take out the map entries one by one and put them in the Bundle directly (assuming they have string keys)"
+19853387,2,0,2,java.util.HashMap,"HashMap is not sorted, your results are simply accidental."
+19853242,2,1,5,java.util.HashMap,HashMap is not a sorted collection and you should not use it as such.
+19872768,2,0,3,java.util.HashMap,HashMap does not allow duplicate keys.
+21434968,2,1,0,java.util.HashMap,"The answer is one word it will got crashed and will throw Exception might be UnsupportedOperationException.the reason behind this is .. As HashMap is not thread safe so when another thread will try to read the data, it will not allow and stuff will occurs which completely depend upon implementation."
+20102269,2,0,1,java.util.HashMap,"Capacity is an internal size of a hash table and is always a power of two, so HashMap can't have capacity 20."
+20240492,2,0,4,java.util.HashMap,A HashMap does not maintain the order of the elements inserted in it.
+20240513,2,0,1,java.util.HashMap,A HashMap doesn't have a position.
+20240631,2,0,2,java.util.HashMap,HashMap doesn't grantee the order.
+20405425,2,0,0,java.util.HashMap,"If you don't things like HashMap, HashSet, etc all have undefined and incorrect behavior."
+20434941,2,0,2,java.util.HashMap,HashMap is not designed to retrieve elements efficienctly based on their value.
+20468573,2,0,3,java.util.HashMap,"HashMaps are not inherently ordered, so taking out the elements, ordering them, and putting them back in a HashMap will remove the ordering."
+20566290,2,0,2,java.util.HashMap,Since HashMap is not synchronized.
+20611173,2,0,0,java.util.HashMap,If you can't use HashMap for some reason you can try ordering your xml data and use a binary search algorithm.
+20710311,2,0,3,java.util.HashMap,"The answer in that case is that HashMap is not thread safe, but it doesn't need to be."
+20762935,2,1,1,java.util.HashMap,"Also as an FYI, public SomeClass( private HashMap<String, String> hashMap ) doesn't compile."
+20763006,2,0,1,java.util.HashMap,"Treemap is a sorted map which contains keys in sorted order and HashMap can't gurantee you sorted map.So,always choose Treemap when ever you want sorted keys"
+20842180,2,1,1,java.util.HashMap,"update: 2013-12-31  I am not  trying to make things complex,but I really feel it is my responsibility to not  mislead others,so I try to fixed the code  again.Currently, HashMap can't be append,please improve it.Thanks!"
+20859781,2,0,2,java.util.HashMap,"The HashMap is not the only one existing, a TreeMap, for example, exists too, which provides roughly the same interface but a totally different implementation."
+20952316,2,0,0,java.util.HashMap,"Otherwise you're trying to retrieve the testMap field of a HashMap, which doesn't exist."
+20975186,2,0,0,java.util.HashMap,To know the insert order of the elements in a collection like HashMap is not possible.
+21077216,2,1,4,java.util.HashMap,"The ordering of a plain HashMap is not defined:  This class makes no guarantees as to the order of the map; in particular, it does not guarantee that the order will remain constant over time."
+21305511,2,1,5,java.util.HashMap,"Well HashMap isn't thread-safe to start with, so no... consider using ConcurrentHashMap instead."
+21411784,2,1,1,java.util.HashMap,A HashMap doesn't generally make a good fit for a table model because the table needs the ability to access data at an row/col location.
+21423052,2,0,0,java.util.HashMap,HashMap does not allow duplicate key.It will overwrite previous value if inserting new value on same key.
+21491068,2,0,0,java.util.HashMap,"HashMap does not have that protection, because in most cases the right thing to protect is not just the hashtable access but the logic surrounding that access ... and if the user is going to implement their own synchronization, doing it again in the hashmap costs performance for no functional gain."
+21536460,2,0,0,java.util.HashMap,The standard HashMap won't move values between buckets once the value has been inserted.
+21616323,2,0,1,java.util.HashMap,"In your scenario, until you have proved that Java's standard HashMap is not fast enough, I think you might need to worry about garbage collection if stop the world here and there might pose a problem."
+21674218,2,0,0,java.util.HashMap,You cannot access HashMap elements by index.
+21696168,2,0,1,java.util.HashMap,@Unmesha SreeVeni : Use LinkedHashMap to delete last element because HashMap does not maintain order of insertion of the elements.
+21748313,2,0,0,java.util.HashMap,"The reason why get() with HashMap might not work is probably due to the fact that Drools expects the facts to follow JavaBeans standard, and thus the method would need to be getGet() for it to work directly."
+21770555,2,0,1,java.util.HashMap,Like every one is saying (AND is right about) is that you should assume that the keys in an HashMap are not sorted.
+21773984,2,0,3,java.util.HashMap,"HashMap is not organised in any particular order, or more precisely, the order is not guaranteed."
+21839196,2,0,1,java.util.HashMap,"The keys of a HashMap can't be duplicates, because they are represented in a Set, so merging the two maps should do the work."
+21930596,2,1,1,java.util.HashMap,"Also, you had a HashMap rather than a List, but HashMaps aren't Iterable, so you can't use the extended for loop on them."
+21931584,2,1,2,java.util.HashMap,"The List will preserve order, whereas a normal HashMap wouldn't."
+21971704,2,0,0,java.util.HashMap,Another suggestion: You haven't studied HashMap but still you can write your own HashMap like implementation or closely resemble to that.
+22000823,2,0,0,java.util.HashMap,A HashMap doesn't sort anything; its primary purpose/advantage is to offer near-O(1) lookups (which you can use for lookups by ID).
+22009371,2,1,0,java.util.HashMap,Hashmap can't contain duplicate keys(HashMap) and in your case  if(map.containsKey(word) && map.get(word) > 1) will always return false it should be if(map.containsKey(word) && map.get(word) == 1)
+22043137,2,0,1,java.util.HashMap,Don't store the HashMap in the database.
+22171146,2,0,1,java.util.HashMap,"A HashMap can't be sorted, but if you want to display the contents of the map sorted, you could sort a list of your projects by unit (look for a Comparator on Project) and get the value of the corresponding project from the map."
+22203466,2,0,1,java.util.HashMap,"So while this would work with ArrayList<Integer> keys, for anything with customized keys, containing non-standard classes, unless you are correctly implementing hashCode() for those objects, the HashMap may not function properly."
+22375585,2,0,0,java.util.HashMap,HashMap does not store the values based on indices.
+22392364,2,0,5,java.util.HashMap,A HashMap doesn't have any predictable order.
+22960400,2,0,0,java.util.HashMap,"Since you didn't populate the HashMap, it should be empty."
+22587479,2,0,0,java.util.HashMap,"HashMap is not sorted, It stores in Key-Value pairs."
+22721586,2,0,1,java.util.HashMap,"You can't iterate over HashMap directly, as there is no numeric index of values within HashMap."
+22813217,2,1,6,java.util.HashMap,"Nevertheless, we should never rely on this statement because the internal implementation of HashMap is not a part of its public contract and is a subject to change in future."
+22819458,2,0,0,java.util.HashMap,"As far as i see from the javadoc, HashMap does not add any new methods, so for these two classes there is no difference."
+22892642,2,0,0,java.util.HashMap,"The main method is Static (i.e. one instance per class), the HashMap is not static, that means you will have to instantiate the method."
+22892691,2,0,0,java.util.HashMap,The above code will not compile because non static variable HashMap cannot be referenced in static context.Make sure try to add static modifier to HashMap.
+22945210,2,1,4,java.util.HashMap,You cannot use a HashMap with multiple threads without external synchronization.
+22975564,2,0,0,java.util.HashMap,"You can't call put and pass the HashMap into the method at the same time, because the put method doesn't return the HashMap."
+22977310,2,0,2,java.util.HashMap,"HashMap cannot be sorted, you should use some kind of a sorted map, like TreeMap, but maps can only sort by keys."
+22978064,2,0,2,java.util.HashMap,"If you want a Map with sorted keys, I wouldn't use a HashMap but rather a TreeMap, where the Map keys are sorted for you in their natural order (if the keys implement Comparable) or a chosen order if you use a Comparator."
+23076186,2,0,2,java.util.HashMap,The key is modified but HashMap can't detect it and so it won't move the entry to the correct index.
+23111523,2,1,1,java.util.HashMap,Unfortunately HashMap won't distinguish between a null value and no entry when performing a HashMap.get().
+23115856,2,1,1,java.util.HashMap,Moreover HashMap is not thread-safe in nature.
+23139116,2,0,2,java.util.HashMap,"I haven't looked at any specific implementation code, but a typical HashMap iterator will have an index for a hash chain in the main hash array, and a pointer to a node within the hash chain:  A Map.remove won't change the hashmap size, so the chain index won't be invalidated."
+23498030,2,0,0,java.util.HashMap,According to Oracle Java 7 API : implementation of HashMap is not synchronized.
+23538665,2,0,0,java.util.HashMap,It is possible to search the values with keys for exemple but you cannot sort HashMap.
+23615161,2,0,5,java.util.HashMap,"However, HashMap is not the only class to implement the Map interface."
+23627937,2,1,4,java.util.HashMap,"One difference to be aware of is that Vector and Hashtable are synchronized, while ArrayList and HashMap are not."
+23692801,2,0,0,java.util.HashMap,Two tips here:   You really didn't need a HashMap for the Student class.
+23695884,2,0,1,java.util.HashMap,HashMap is not thread-safe by default.
+23747825,2,0,1,java.util.HashMap,This is because your killable HashMap does not contain the name of the damaged player.
+23802029,2,1,1,java.util.HashMap,"Since HashMap doesn't store the elements in order, the first 100 elements you try to get using the keySet() may not be actually be the first 100 inserted."
+23807675,2,1,5,java.util.HashMap,HashMap does not store a copy of the value for each key mapping to that value.
+23828374,2,0,3,java.util.HashMap,Java HashMap doesn't keep any order.
+23828628,2,0,8,java.util.HashMap,"For example, their HashMap doesn't create the Entry objects until they really need to."
+23859718,2,0,2,java.util.HashMap,HashMap does not sort the data; it hashes the keys to assign the data to buckets!
+24137133,2,0,0,java.util.HashMap,A HashMap shouldn't throw that exception.
+26036465,2,0,0,java.util.HashMap,it uses HashMap to hold enum values and HashMap doesn't support case insensitive keys.
+24263855,2,0,1,java.util.HashMap,HashMap is not ordered: index i in a HashMap does not mean anything.
+24264408,2,0,3,java.util.HashMap,"Asking for ""the first elemet"" of a HashMap does not make sense, because the order can (and will, in general) change as elements are added and removed."
+24372375,2,0,2,java.util.HashMap,So using a HashMap really doesn't make sense because the extra work you'd have to do anyways makes a HashMap less efficient than a heap in the end.
+24372405,2,1,3,java.util.HashMap,"Note that the HashMap won't store your items organized in neat crescent order, even if your keys are numeric Strings or Integer."
+24390515,2,0,2,java.util.HashMap,"In Java 7, HashMap does not provide the operations putIfAbsent, etc."
+24469840,2,0,2,java.util.HashMap,"But HashMap is not ThreadSafe, for thread safety there is ConcurrentHashMap."
+24540751,2,0,4,java.util.HashMap,A HashMap is not guaranteed to have atomic operations.
+24805703,2,0,1,java.util.HashMap,"HashMap doesn't have a concept of ""first""."
+25072367,2,0,1,java.util.HashMap,HashMap isn't working correctly because you modify values that affect the results of equals and hashCode.
+25127708,2,0,1,java.util.HashMap,"In case you don't, the proposed structures are still adaptable: in fact, the array (or the HashMap) is not going to change, while the HashSet also offers constant add time."
+25220247,2,0,1,java.util.HashMap,HashMap does not gurantee ordering of elements Use LinkedHashMap(entry order) or TreeMap (sorted order) if ordering is requrired.
+25220248,2,0,2,java.util.HashMap,The order in which you'll receive elements from a HashMap is not guaranteed.
+25438926,2,0,1,java.util.HashMap,"But as per the docs, HashMap is not a supported field type in Datastore."
+25438926,2,0,1,java.util.HashMap,"So to my knowledge, HashMap cannot be queried as there is no indexes created for it."
+25449987,2,0,0,java.util.HashMap,"Intended use of HashMap is not sorting, but still you can check from this topic to find some possibilities and ideas -and possibly the answer- here."
+25521007,2,0,2,java.util.HashMap,"It's because the Map you're putting them into is a HashMap, which isn't sorted."
+25610054,2,1,0,java.util.HashMap,"HashMap is not limited, your problem is probably you have repeating keys.."
+25609897,2,0,2,java.util.HashMap,"HashMap is not limited, provided to have a load factor is increased."
+25661973,2,0,2,java.util.HashMap,"The difference is that HashMap is not thread-safe, which means that if you have several threads using it you need to take care of concurrent operations yourself."
+25708396,2,1,1,java.util.HashMap,The implementation of HashMap does not provide any order of the items.
+25704701,2,0,0,java.util.HashMap,HashMap won't sort the data by key.
+25714623,2,1,0,java.util.HashMap,"You can't do map.put(10), because HashMap doesn't have a method with a compatible signature."
+25762355,2,0,0,java.util.HashMap,"HashMap doesn't deliver any meaningful ordering at all and if that method should deliver some ordering, it is simply broken - implementation is faulty."
+25885551,2,0,0,java.util.HashMap,"there are gaps), then HashMap is not a suitable data structure."
+25933619,2,0,0,java.util.HashMap,HashMap does not call  hashcode when null is passed as key and null Key is handled as special case.
+26382975,2,1,3,java.util.HashMap,"As from what I've investigated in the JSONObject source code, you can see that it uses a HashMap internally, and as you know HashMap doesn't keep any order."
+26075027,2,1,0,java.util.HashMap,"1st question: I would also compose with HashMap, instead of extending it, because your Cache system ISN'T a HashMap ; it just HAS a HashMap."
+26205661,2,0,1,java.util.HashMap,The HashMap doesn't store things in a given order - it just sticks them whoever the hash function says to put them.
+26206500,2,0,4,java.util.HashMap,HashMap doesn't care about values.
+26230430,2,0,0,java.util.HashMap,"Note that you should note that your logic flow must never rely on accessing the HashMap elements in some order, simply put because HashMaps are not ordered Collections and that is not what they are aimed to do."
+26296947,2,1,3,java.util.HashMap,"The strange thing is when i call the hashmap with, the order is   completly an other and the keys doesnt fit to the insertion :  HashMap does NOT maintain the order of insertion but there is an alternative called LinkedHashMap that maintains the insertion order."
+26320893,2,0,2,java.util.HashMap,"Failure to do so violates the general contract for the hashCode method, and any classes that use the hash code, such as HashMap will not function properly."
+26331088,2,0,0,java.util.HashMap,The much better question to ask requires that you include the name of the class it can't find: java.util.HashMap$Entry.
+26379131,2,0,0,java.util.HashMap,"I don't see where you need to access a specific person by a key, so you don't need a HashMap, just a List."
+26417641,2,0,0,java.util.HashMap,"I think if you create classes for each item, you can add an ID field also then you won't need a HashMap."
+26418369,2,0,0,java.util.HashMap,"The problem in the code your presented isn't modifying the HashMap, it's modifying the ArrayList while iterating it."
+26418985,2,1,1,java.util.HashMap,HashMap does not provide any way to manipulate keys without iterating over them.
+26548400,2,0,0,java.util.HashMap,"HashMap is not thread-safe, and you are not protecting it adequately."
+26623160,2,0,2,java.util.HashMap,On the other hand HashMap doesn't maintain any order or keys or values.
+26646260,2,0,1,java.util.HashMap,"So your HashMap would not simply work, and instead of saving memory you would not only create a new Point each time, but also add an entry to your HashMap and perform unnecessary calculations."
+26686574,2,1,3,java.util.HashMap,HashMap does not need keys to be Comparable but still implements Map interface.
+26836232,2,0,2,java.util.HashMap,The values of a HashMap do not need to be immutable.
+26927971,2,1,3,java.util.HashMap,"So, in recent versions of Java, HashMap may not be resized based on threshold alone."
+27128286,2,0,3,java.util.HashMap,"HashMap does not support duplicate keys, which are hashed."
+27136712,2,1,2,java.util.HashMap,So the value sitting in the HashMap is not actually an array; it was a string from the moment it was inserted.
+27186063,2,0,1,java.util.HashMap,"The performance difference between using one or two HashMaps should not matter much, so go for the simpler solution, the single HashMap."
+27198642,2,0,1,java.util.HashMap,It is true that HashMap doesn't preserve insertion order.
+27234137,2,0,5,java.util.HashMap,The code is not correct due to the fact that the read from the HashMap is not guarded by any lock.
+27263346,2,1,1,java.util.HashMap,"To further clarify, reduce() method is not a concurrent method but rather will be executed sequentially in a single Reducer JVM instance so your HashMap will not be accessed concurrently."
+27304065,2,0,1,java.util.HashMap,And HashMap doesn't preserve the order of the insertion of the elements.
+27334607,2,1,2,java.util.HashMap,"Therefore, the space complexity is O(n), since the HashMap internal storage consists of an array whose size would reach a power of 2 close to n (assuming you didn't give the HashMap an initial capacity that is much larger than n), and each element of the array is a linked list with an O(1) average number of elements."
+27388478,2,0,0,java.util.HashMap,"No, simply synchronizing the method of a HashMap will not allow two threads to add a key-value pair at the same time, they have to wait and go one at a time."
+27405412,2,0,1,java.util.HashMap,"Edit: The definition of the HashMap cannot be changed, so this approach would no longer be applicable."
+27615862,2,0,3,java.util.HashMap,"So if the HashMap does not contain a value for ìndex, if will return null, no problem there."
+27646768,2,0,2,java.util.HashMap,"If each call to hashCode for the same instance returns a different value, you can't expect your HashMap to locate your keys."
+27797784,2,0,0,java.util.HashMap,I do not belive JDK built-in HashMap can not deal with this.
+27850467,2,0,1,java.util.HashMap,"ADDITIONAL NOTE : if you see the elements are not ordered , it's because HashMap doesn't maintain an order, you should change to Map<String, Integer> amap = new LinkedHashMap<String, Integer>(); to see the ordered version of your elements."
+27916645,2,0,6,java.util.HashMap,"The reason LinkedHashMap maintains insertion order while HashMap doesn't, despite the fact that all but 4 methods are inherited, is that it's very cleverly written."
+27970742,2,0,0,java.util.HashMap,The HashMap does not hold the order.
+28051393,2,1,2,java.util.HashMap,"You mention using a HashMap to hold your Map<Integer, String> of line numbers + json entries, but HashMap does not maintain insertion order for entry iteration."
+28269352,2,0,0,java.util.HashMap,"Some of them (like TreeMap) sort by key, some of them (like HashMap) don't sort at all."
+28392228,2,0,3,java.util.HashMap,"A HashMap is not ordered, so there is no 5th value of the map."
+28530760,2,0,2,java.util.HashMap,"One possible cause is that the reconstructed HashMap may not have the same capacity (number of buckets) as the original one, which might increase the frequency of hash collisions or (if the size is increased) decrease locality of main memory access (resulting in more cache misses)."
+28593479,2,0,2,java.util.HashMap,The keys on a Map and a HashMap are not ordered.
+28639572,2,1,4,java.util.HashMap,inverted_index is a HashMap and HashMap is not sorted.
+28681372,2,0,1,java.util.HashMap,"HashMap doesn't preserve order:  This class makes no guarantees as to the order of the map; in particular, it does not guarantee that the order will remain constant over time."
+28681378,2,0,1,java.util.HashMap,HashMap does not guarantee ordering of any kind.
+28857617,2,0,0,java.util.HashMap,"Since HashMap does not support structure sharing, there is no better approach than the obvious one."
+28857178,2,0,0,java.util.HashMap,"No, because HashMap doesn't maintain an order of it's entries."
+28898171,2,0,1,java.util.HashMap,"HashMap is not sorted, and TreeMap is sorted by key only."
+28976099,2,1,6,java.util.HashMap,"This is, by the way, another small advantage of the strategy of storing fields in local variables: It offers a (very limited, but sometimes handy) form of ""thread safety"": It is made sure that the length of an array (like the tab array in the getNode method of HashMap) can not change while the method is being executed."
+28982253,2,0,0,java.util.HashMap,"HashMap does not have a concept of ordering, so getting the n-th entry does not make sense."
+29086304,2,0,0,java.util.HashMap,"You can change your HashTable to a HashMap<String, Integer> (http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html) since the put of HashMap will not add a new key:  Associates the specified value with the specified key in this map."
+29346222,2,1,7,java.util.HashMap,HashMap does not provide any guarantees of order among its entries.
+29516303,2,0,4,java.util.HashMap,Same question for HashMap  HashMap isn't thread safe at all.
+29522893,2,0,2,java.util.HashMap,I used the SortedMap interface to ensure an unordered implementation like HashMap cannot be used.
+29537051,2,0,1,java.util.HashMap,"Well, that doesn't fit to HashMap idea."
+29582248,2,0,5,java.util.HashMap,"Now, the OpenJDK and Oracle implementations of HashMap do not use the key hash codes directly,  but apply another hashing function to the provided hashes before distributing them over the buckets."
+29586957,2,1,2,java.util.HashMap,This does not work because HashMap does not implement your IMap interface - so you cannot assign a HashMap to a variable of type IMap.
+29861270,2,0,10,java.util.HashMap,"Since HashMap doesn't preserver the order of elements, it will definitely not do for you."
+30054656,2,1,2,java.util.HashMap,"Below, there are couple differences relevant for your case: java.util.Hashtable is synchronized, but java.util.HashMap is not."
+30090750,2,0,1,java.util.HashMap,"If it is necessary to use regular expression based lookup, HashMap is not proper data structure to use."
+30237714,2,1,10,java.util.HashMap,"Note that the order is not guaranteed here, because HashMap isn't ordered."
+30263100,2,1,1,java.util.HashMap,"(As a reminder, a HashMap doesn't guarantee order of the put() call."
+30311977,2,0,0,java.util.HashMap,A HashMap does not guarantee the iteration order of it's elements.
+30318953,2,0,0,java.util.HashMap,I think you should use a different data-type or structure than HashMap as HashMaps do not guarantee order.
+30514840,2,0,0,java.util.HashMap,"For what you say you want (items with prices near the desired item), a HashMap isn't an efficient datastore."
+30652493,2,0,2,java.util.HashMap,Fortunately things are not this bad in Java because HashMap doesn't use just the lowest bits of the hash code: it scrambles the bits so that it's not quite as easy to produce bad scenarios accidentally.
+30705217,2,1,3,java.util.HashMap,The ordering is off because HashMap doesn't return entries in their insertion order.
+30757794,2,0,1,java.util.HashMap,HashMap doesn't fallow the iteration order by defenition.
+30783794,2,0,1,java.util.HashMap,"You don't need HashMap, a simple item holder class with a status property would help you."
+31039178,2,1,3,java.util.HashMap,"Since HashMap cannot contain multiple identical keys, the last item is the only one remaining in the map after forEach finishes."
+31109463,2,0,5,java.util.HashMap,Other implementations (such as HashMap) don't support concurrency and shouldn't be used by multiple threads at the same time.
+31217738,2,1,2,java.util.HashMap,"If your Person class overrides both hashCode and equals, so that p1.equals(p2) is true and p1.hashCode()==p2.hashCode(), you can't retrieve both ""11"" and ""22"" from the Map, since HashMap doesn't allow duplicate keys."
+31312685,2,0,2,java.util.HashMap,"In this solution you must note:  I use Java long type to read the id Oracle number (if your actual numbers exceed Java long max value then you must use BigInteger) HashMap is not thread-safe, so you must use ConcurrentHashMap to wrap the unsafe HashMap while populating it."
+31590168,2,0,1,java.util.HashMap,"The order by definately works, what doesn't is the HashMap."
+31605420,2,0,2,java.util.HashMap,To store the state in an HashMap is not a good option because: 1.
+31613129,2,0,0,java.util.HashMap,"Furthermore, while HashMap does not use the compareTo function, the way you've implemented it seems off."
+31674613,2,0,0,java.util.HashMap,Remember that the HashMap does NOT know your implementation of the hashcode function and Load Factor works on the effective size of the Map.
+31854616,2,0,1,java.util.HashMap,Note: HashMap will not maintain order of keys.
+31989954,2,0,0,java.util.HashMap,"NOTES:  I would recommend to return a boolean to check if employee has been updated, deleted, etc...  public boolean deleteEmployee(int id,Map<Employee,Hobby> m1) I would keep the employees in another way, HashMap does not allow duplicates, so you cannot save more than one Hobby in each employee if you don't declare it like HashMap<Employee, List<Hobby>>."
+32010307,2,1,1,java.util.HashMap,You can't cast a HashMap to a Set of entries.
+32016951,2,0,0,java.util.HashMap,"If the output is required to be printed in order, then printing on each iteration of the loop would be better than putting into the HashMap, as HashMaps are not ordered."

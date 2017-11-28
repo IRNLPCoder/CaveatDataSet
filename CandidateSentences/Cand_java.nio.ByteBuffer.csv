@@ -1,0 +1,27 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+6196981,2,0,1,java.nio.ByteBuffer,Hopefully ByteBuffer is not needed by the JVM before your agent can hook into it.
+846439,2,0,1,java.nio.ByteBuffer,To my dismay the NIO ByteBuffer did not perform well.
+4140432,2,1,1,java.nio.ByteBuffer,You shouldn't allocate your ByteBuffer once per read.
+4534595,2,0,1,java.nio.ByteBuffer,"It is attempting to access the direct memory in your ByteBuffer, which it probably shouldn't be doing, and is failing because the class deriving from ByteBuffer doesn't store data directly."
+4651343,2,0,1,java.nio.ByteBuffer,It allocated memory by direct ByteBuffer is not allocated in the java heap and it's not subject of standard garbage collection.
+5192233,2,0,5,java.nio.ByteBuffer,"You cannot extend java.nio.ByteBuffer, simple as that."
+7641874,2,0,0,java.nio.ByteBuffer,"During your constructor, save away the hashCode of the ByteBuffer final int originalBBHashCode = byteBuffer.hashCode(); Then, at the few critical places in your code where you want to verify that the ByteBuffer hasn't changed, verify that the byteBuffer.hashCode() == originalBBHashCode."
+7718843,2,0,2,java.nio.ByteBuffer,I'm trying to track down a nasty bug where the file in question is   left open because there is at least one ByteBuffer that isn't released   to garbage collection  That doesn't make sense.
+7718843,2,0,2,java.nio.ByteBuffer,An uncollected ByteBuffer won't stop a file being closed.
+7984792,2,1,3,java.nio.ByteBuffer,You can memory map them to ByteBuffer() which doesn't consume heap (actually they use about 128 bytes) or direct memory but can be accessed randomly.
+9400187,2,0,1,java.nio.ByteBuffer,"If you're like me an don't master ByteBuffer, to complement Jon's answer, you could also create your own OutputStream implementation wrapping your byte array, and use an OutputStreamWriter to write the String to this custom OutputStream."
+27491859,2,0,0,java.nio.ByteBuffer,The array method of a ByteBuffer is not something that anyone should normally use.
+12827703,2,0,0,java.nio.ByteBuffer,You don't need ByteBuffer at all—you already have your byte array.
+14252075,2,0,0,java.nio.ByteBuffer,"However, if you have to manipulate the data in Java, a ByteBuffer may not make much difference, as you'll eventually have to copy the data into the Java heap to manipulate it."
+15078888,2,0,1,java.nio.ByteBuffer,A ByteBuffer does not contain characters.
+18033769,2,1,1,java.nio.ByteBuffer,"Note that the absolute put method is optional, which means that a class that extends the abstract class ByteBuffer may not provide an implementation for it, for example it might throw a ReadOnlyBufferException."
+18221314,2,0,1,java.nio.ByteBuffer,I'm a little surprised that ByteBuffer is not as fast as byte[].
+18635162,2,0,0,java.nio.ByteBuffer,For raw bytes an array or a ByteBuffer would be more suitable (but even ByteBuffer can't be resized dynamically).
+20690321,2,0,1,java.nio.ByteBuffer,As you can see here : https://github.com/LWJGL/lwjgl/blob/master/src/java/org/lwjgl/util/WaveData.java    data.dispose() clears the ByteBuffer which doesn't discard data but reset read/write position (see http://docs.oracle.com/javase/7/docs/api/java/nio/Buffer.html#clear%28%29)
+22351273,2,1,1,java.nio.ByteBuffer,"Sorry, ByteBuffer wasn't good for me cause it involves playing with the position of the buffer."
+22333102,2,0,1,java.nio.ByteBuffer,The speed     advantage of the direct ByteBuffer is not access speed but the     ability to talk directly with the operating system’s native I/O     operations.
+23148866,2,0,5,java.nio.ByteBuffer,ByteBuffer does not have a length() method.
+24589952,2,1,2,java.nio.ByteBuffer,You have to be very sure you won't use this ByteBuffer after calling this.
+27694872,2,0,2,java.nio.ByteBuffer,"When converting from bytes to chars, my earlier statement still applies:  You don't need ByteBuffer or CharBuffer or Charset or CharsetDecoder."
+28219244,2,1,0,java.nio.ByteBuffer,The Jackson cannot serialize ByteBuffer as it is an abstract class.
+29388837,2,0,1,java.nio.ByteBuffer,The thread that's blocked in select() isn't using the ByteBuffer while it's blocked.

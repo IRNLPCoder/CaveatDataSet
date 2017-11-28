@@ -1,0 +1,95 @@
+PostId,TypeId,IsBest,Score,API,Sentences
+321454,2,0,5,java.sql.ResultSet,Note that your current solution won't close the ResultSet if closing the PreparedStatement  fails - it's better to use nested finally blocks.
+1328553,2,0,0,java.sql.ResultSet,"If this is a temporary tool or you don't expect the ResultSet size to grow, this may work as a permanent solution."
+1531707,2,1,1,java.sql.ResultSet,"The ResultSet object that you are getting via getObject() isn't the ResultSet of the CallableStatement, so it is by default not updatable."
+1910129,2,0,3,java.sql.ResultSet,You can't use ResultSet after you've closed Connection and/or PreparedStatement.
+1976760,2,0,2,java.sql.ResultSet,"That said, Oracle's JDBC driver didn't support ResultSet#getGeneratedKeys() for a long time and is still somewhat troublesome with it."
+2037457,2,1,6,java.sql.ResultSet,"Since the query isn't valid, no ResultSet is returned and you get the null pointer."
+2397128,2,1,4,java.sql.ResultSet,You shouldn't be passing ResultSet instances around.
+2794221,2,0,3,java.sql.ResultSet,"No, ResultSet should not be exposed to more than one thread."
+3040139,2,0,1,java.sql.ResultSet,"If I'm not mistaken, the default behavior for a ResultSet is not to obtain all the rows at once, so there is no way to know from the object itself how many rows would be returned from the query without first iterating (and thus retrieving) all of them."
+3240526,2,0,0,java.sql.ResultSet,getting the MetaData for the ResultSet will not allow you to get the info that was passed in.
+3412937,2,0,0,java.sql.ResultSet,Your ResultSet is not updatable.
+3461799,2,0,2,java.sql.ResultSet,The scope and lifetime of the ResultSet can't be any wider than its parent Connection and Statement.
+3920257,2,1,3,java.sql.ResultSet,"ResultSet does not advertise on the javadoc as being thread safe, so assume it is NOT."
+4282172,2,0,4,java.sql.ResultSet,"Statement#executeUpdate() doesn't return a ResultSet, but an int representing the affected rows."
+4285623,2,0,3,java.sql.ResultSet,"My simple answer is no, for the various reasons:  ResultSet doesn't conform to JavaBeans specification (it has no getters/setters method and it's not serializable)."
+4507507,2,0,13,java.sql.ResultSet,If you don't close the ResultSet (cursor) it will throw  an error like Maximum open cursors exceeded.
+4687133,2,1,1,java.sql.ResultSet,"You certainly aren't closing your resources properly in your method; you don't close the ResultSet at all, and you should close everything in a finally block."
+4735874,2,0,3,java.sql.ResultSet,"For instance, you aren't closing your ResultSet or your Connection, not to mention the statement variable, which should definitely be local."
+5157551,2,0,1,java.sql.ResultSet,"ResultSet does not store all the rows, it keeps a cursor open on the database."
+5417409,2,0,3,java.sql.ResultSet,"It accepts only any type of Collection , ResultSet isn't."
+5664864,2,0,7,java.sql.ResultSet,Your JTable shouldn't have a ResultSet.
+5829065,2,1,1,java.sql.ResultSet,If you then look at the super classes or interfaces of org.alfresco.repo.search.impl.lucene.PagingLuceneResultSet I'd say you won't find any java.sql.ResultSet.
+6375388,2,1,9,java.sql.ResultSet,"JSP using MVC and JDBC   Unrelated to the problem, the way as you traversed the ResultSet didn't give me a strong feeling that the datamodel is properly been designed."
+6697395,2,1,2,java.sql.ResultSet,That won't return a ResultSet.
+6815082,2,0,1,java.sql.ResultSet,"The opposite is certainly not true (closing a ResultSet will not close the connection), and there is also no way to get the parent Connection from a ResultSet (which I think was the gist of your question)."
+6852871,2,0,0,java.sql.ResultSet,A ResultSet is not a Java collection so there is no real first element.
+7877840,2,0,0,java.sql.ResultSet,"In fact, you shouldn't return the ResultSet and keep it open for too long."
+8006342,2,0,0,java.sql.ResultSet,"If it's directly from database, ResultSet does not fetch all result rows at once."
+9995449,2,0,0,java.sql.ResultSet,What you have to do is create a separate object of statement for running this query so that keywordset ResultSet won't get affected ... ...:)
+8338171,2,1,6,java.sql.ResultSet,"Actually, the ResultSet doesn't have a clue about the real number of rows it will return."
+8918431,2,1,2,java.sql.ResultSet,"Now, one difference between ResultSet and Map is that a ResultSet is not (always) random access."
+9176634,2,0,2,java.sql.ResultSet,"This seems to be by design, according to ""ResultSet Can Not Re-Read Row Data""' Error When Reading Data from a JDBC ResultSet Object:  This error occurs with ResultSet objects that contain a BLOB column (for example, text, ntext, or image data types)."
+10205056,2,1,2,java.sql.ResultSet,"ResultSet is not a collection, it is merely an abstraction of the cursor that is being used to get the data in a row-wise manner."
+10346871,2,1,1,java.sql.ResultSet,First: You really shouldn't pass the ResultSet to the constructor of Product!
+10346969,2,0,0,java.sql.ResultSet,"But like my precursor write: Don't set ResultSet in constructor of Product, because you will work on another copy of ResultSet (ResultSet is heavy) and if you have many data, that shrunk performance."
+10484340,2,0,0,java.sql.ResultSet,The fact that a column is in your ResultSet does not force anything about what you display on the screen.
+10613954,2,1,1,java.sql.ResultSet,"First, don't cache the ResultSet, create some domain objects with the data and then cache them."
+10660653,2,0,1,java.sql.ResultSet,"Remember to apply an ""order by"" clause otherwise the last entry in your ResultSet may not be what you expect."
+10923166,2,0,2,java.sql.ResultSet,"They of course should be closed when you're done with them, but closing the ResultSet doesn't automatically close the Statement for good reason."
+11307386,2,0,0,java.sql.ResultSet,And hence you can't use returned ResultSet instance any more constructively.
+11493249,2,0,1,java.sql.ResultSet,One possible source of the database deadlock is that you don't close your ResultSet until you close the database connection itself at the end of the program.
+12559443,2,1,0,java.sql.ResultSet,The ResultSet cannot be rearranged manually (only with sql) .
+12771273,2,1,3,java.sql.ResultSet,Compare executeQuery and executeUpdate here: http://docs.oracle.com/javase/1.4.2/docs/api/java/sql/PreparedStatement.html You won't get a ResultSet from executeUpdate because it returns an int.
+13616116,2,1,2,java.sql.ResultSet,"By the way, I assumed that query is a java.sql.ResultSet, but ResultSet doesn't have getInteger, it has getInt."
+13655750,2,1,1,java.sql.ResultSet,"you need to use executeUpdate() method, which doesn't return ResultSet, but it will return numberOfRowsUpdated Use PreparedStatement instead"
+13840075,2,0,1,java.sql.ResultSet,You don't close ResultSet or Statement.
+13947118,2,0,2,java.sql.ResultSet,The query you are using doesn't produce a ResultSet but affects Rows obviously.
+14171532,2,1,2,java.sql.ResultSet,If the resultset is not huge; you can firstly use ResultSet object to iterate on all resultSet --> do validation on each result --> passing records are put in an ArrayList.
+14383529,2,1,2,java.sql.ResultSet,"You need to rewrite your code that you don't return a ResultSet, but just return the image's content as byte[], or to move the DB job to inside the servlet."
+14973144,2,0,0,java.sql.ResultSet,ResultSet doesn't support Address class.
+15599959,2,1,2,java.sql.ResultSet,You can't send ResultSet object accross network using Socket because ResultSet does not implements Serializable.
+16679338,2,1,1,java.sql.ResultSet,Don't use ResultSet methods for populating the model.
+16831289,2,1,0,java.sql.ResultSet,"Since,ResultSet Doesn't support Serialization i have also created a Model class and Return List of the model class object to the client.By adding Serialization to every class you want to transfer as parameter ,and also including your skeleton implementation serialization ,Note that all the class need to be defined on client side."
+16809673,2,0,0,java.sql.ResultSet,ResultSet isn't Serializable.
+16993332,2,0,0,java.sql.ResultSet,"ResultSet.getRow() As for why your code isn't entering the ResultSet loop, you may need to look at permissions to make sure your database user has access to that table."
+17121469,2,1,2,java.sql.ResultSet,"The implementation simply wraps the ResultSet and forwards calls directly to it, so if the ResultSet is not scrollable then the JdbcRowSet isn't either."
+17368974,2,0,1,java.sql.ResultSet,"A ResultSet is not a container you can use to pass data around in, it's only a wrapper around a cursor."
+17521546,2,0,1,java.sql.ResultSet,You can't read every ResultSet row more than once.
+17563295,2,1,0,java.sql.ResultSet,"If you are able to connect, then it could be that your ResultSet is not pointing to anything after you execute the query."
+17609577,2,0,0,java.sql.ResultSet,But you cannot reuse a ResultSet object.
+18928959,2,0,1,java.sql.ResultSet,Then if the ResultSet is not empty you know you the proper password was entered for the given userid.
+19271387,2,0,3,java.sql.ResultSet,"The Oracle JDBC driver does not return the generated id when using Statement.RETURN_GENERATED_KEYS so the first column of the generated keys ResultSet is not an int, instead it returns a ROWID (see the JDBC tutorial on rowids) of the inserted row (so you can query the row yourself)."
+20017005,2,0,2,java.sql.ResultSet,"Probably your ResultSet is not scroll insensitive, that is, it can only be traversed forward."
+20157253,2,1,0,java.sql.ResultSet,Don't return ResultSet or Statement at all.
+20603438,2,1,1,java.sql.ResultSet,A ResultSet can't be serialized into a SOAP message.
+20670475,2,1,1,java.sql.ResultSet,"It doesn't make much sense to write a ResultSet to RDF though, since a ResultSet doesn't contain triples;  it contains variable bindings."
+20834380,2,1,1,java.sql.ResultSet,"The default sensitivity of a ResultSet is TYPE_FORWARD_ONLY, which means that it cannot be scrolled; you cannot call any of these methods that move the cursor -  previous  first  last  beforeFirst  afterLast  relative(int rows) absolute(int row)  Except next, your ResultSet cannot be scrolled."
+23074977,2,1,2,java.sql.ResultSet,"The problem is ResultSet does not contain the value of ""applied"" column which is ""true"" in case the mutation succeeds and ""false"" when the transactions prevent changing the data ."
+21673507,2,1,3,java.sql.ResultSet,ResultSet cannot easily be cloned and in general it is not the best practice to keep it opened for a while assigned to the object field.
+21767849,2,0,0,java.sql.ResultSet,Don't pass ResultSet at all.
+21767855,2,0,0,java.sql.ResultSet,"ResultSet doesn't have any kind of map operator on it, so without using a nice library to wrap JDBC, you have to resort to a mutable List and a procedural loop to append to it."
+22139876,2,0,0,java.sql.ResultSet,"Based on Statement javadoc, ResultSet need not be closed explicitly."
+22810098,2,1,0,java.sql.ResultSet,"Indeed the ResultSet is not used correctly in UserExists, what may cause the error."
+23012266,2,1,2,java.sql.ResultSet,"Note that you can't use a ResultSet directly, for a number of reasons."
+23106991,2,1,3,java.sql.ResultSet,"You didn't set ResultSet type , so you left it to its default value, which is : ResultSet.TYPE_FORWARD_ONLY."
+26071632,2,0,0,java.sql.ResultSet,The field ResultSet.CONCUR_UPDATABLE creates a ResultSet object that can be updated while CONCUR_READ_ONLY creates a ResultSet that cannot be updated but only it can be read.
+24041063,2,0,1,java.sql.ResultSet,"WebService Help One thing which I would suggest, if your ResultSet isn't very large, is to use a ResultSetRewindable (provided by ResultSetFactory.copyResults)."
+24656886,2,1,0,java.sql.ResultSet,A DELETE statement doesn't return a ResultSet and therefore you should use the method stmt.executeUpdate(quer); instead of stmt.executeQuery(quer);.
+24698960,2,1,1,java.sql.ResultSet,"Your code is a bit off, but if I understand you then don't close your ResultSet in the finally block of your executeStatement method."
+24870451,2,1,4,java.sql.ResultSet,"As far as I know the ResultSet does not ""contain"" the data."
+24999288,2,1,0,java.sql.ResultSet,The byte code for java.sql.ResultSet is not loaded into the JVM until your code needs it at runtime.
+25751559,2,1,0,java.sql.ResultSet,"This is similar to the ResultSet, which doesn't contain the data, it's something you use to retrieve the data."
+26127906,2,0,2,java.sql.ResultSet,A ResultSet is not an ArrayList.
+26127577,2,0,0,java.sql.ResultSet,"No, ResultSet is not considered an ArrayList but rather a table."
+26648334,2,1,1,java.sql.ResultSet,You need to check that your ResultSet is not null.
+26681111,2,1,2,java.sql.ResultSet,"executeUpdate is suitable for any statement that cannot produce a ResultSet, which makes it fit the bill perfectly for a DDL statement."
+26687842,2,0,0,java.sql.ResultSet,"If you don't fetch the data from the ResultSet in the same method that produced it, you can't close the ResultSet and the DB connection until you do."
+26917912,2,0,2,java.sql.ResultSet,java.sql.ResultSet does not have a method getChars.
+28296983,2,0,0,java.sql.ResultSet,"When the BuildTable button is pressed, it goes through the code, executes the asynctask then waits until the ResultSet is not null."
+28457963,2,0,3,java.sql.ResultSet,"ResultSet doesn't implement toString method, so what you're seeing is the default implementation defined in Object#toString."
+29255119,2,0,0,java.sql.ResultSet,"I think the problem is that the columns of a ResultSet are not related to any table, they are related just to the query."
+29953090,2,0,1,java.sql.ResultSet,Your insert query doesn't product a ResultSet.
+31189694,2,0,0,java.sql.ResultSet,you should use executeUpdate() to do updates to database instead of executeQuery() method and executeUpdate() doesn't return a ResultSet .
+31355007,2,0,0,java.sql.ResultSet,Usually compiler thrown error that your query doesn't return ResultSet when you use .executeQuery on DML
